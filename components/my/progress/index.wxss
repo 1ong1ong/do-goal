@@ -1,0 +1,14 @@
+/* components/my/progress/index.wxss */
+
+.line {
+  height: 26rpx;
+  width: 100%;
+  background-color: #F8F8F8;
+  border-radius: 26rpx;
+}
+
+.inner_line {
+  height: 26rpx;
+  background-image: linear-gradient(to right, #e75500, #ee8d55);
+  border-radius: 26rpx;
+}

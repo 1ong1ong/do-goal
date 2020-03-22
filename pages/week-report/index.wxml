@@ -1,0 +1,55 @@
+<!--pages/week-report/index.wxml-->
+<view class="container">
+  <view class="up">
+    <view class="date_title">2020年03月09日 - 2020年03月15日</view>
+    <view class="week_line">
+      <view class="week">
+        第11周
+      </view>
+      <open-data class="avatar" type="userAvatarUrl"></open-data>
+    </view>
+
+    <view class="divide_line">
+      <progress class="line"></progress>
+      <view class="font">目标完成率 90%</view>
+    </view>
+
+    <view class="perfect_day">
+      <image src="../../assets/imgs/perfect-day.jpg" mode="scaleToFill" />
+      <view class="text">1</view>
+    </view>
+    <view class="foot_text">
+      收获1个完美日
+    </view>
+  </view>
+
+  <van-divider contentPosition="center">上周周报</van-divider>
+
+  <view class="down">
+    <view class="date_title">2020年03月09日 - 2020年03月15日</view>
+    <view class="week_line">
+      <view class="week">
+        第11周
+      </view>
+      <open-data class="avatar" type="userAvatarUrl"></open-data>
+    </view>
+
+    <view class="divide_line">
+      <progress class="line"></progress>
+      <view class="font">目标完成率 90%</view>
+    </view>
+
+    <view class="perfect_day">
+      <image src="../../assets/imgs/perfect-day.jpg" mode="scaleToFill" />
+      <view class="text">1</view>
+    </view>
+    <view class="foot_text">
+      收获1个完美日
+    </view>
+  </view>
+
+  <view class="footer">
+    <van-cell title="查看更多历史周报" is-link border="{{false}}" custom-class="foot_cell" title-class="title_cell" value-class="value_cell"/>
+  </view>
+</view>
+

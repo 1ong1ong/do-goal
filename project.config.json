@@ -59,7 +59,14 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/week-report/index",
+					"pathName": "pages/week-report/index",
+					"scene": null
+				}
+			]
 		}
 	}
 }

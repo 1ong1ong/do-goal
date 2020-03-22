@@ -2,7 +2,10 @@
 
 
 <view class="container">
-  <view class="week_info">
+  <view class="top-img">
+    <image src="../../assets/imgs/tooth.gif" mode="top" />
+  </view>
+  <view class="week_info" bindtap='goWeekReport'> 
     <view class="week_days">
       <day-circle draw-id="day01" percent="10" text="一" show-point="{{currentDay === 1}}" />
       <day-circle draw-id="day02" percent="50" text="二" show-point="{{currentDay === 2}}" />
@@ -43,7 +46,7 @@
       </view>
     </van-cell>
 
-<van-cell use-label-slot="true">
+    <van-cell use-label-slot="true">
       <view slot="icon">
         <view class="goal_icon">
           <do-icon name="sun" size="76rpx" color="#1989fa" />

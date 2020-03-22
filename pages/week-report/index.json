@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "progress": "../../components/my/progress",
+    "van-cell": "../../components/vant/cell",
+    "van-divider": "../../components/vant/divider"
+  },
+  "navigationBarTitleText": "周报"
+}

@@ -1,0 +1,4 @@
+<!--components/my/progress/index.wxml-->
+<view class="line">
+  <view class="inner_line" style="width:{{percent}}%;"></view>
+</view>
