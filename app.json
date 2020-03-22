@@ -1,14 +1,37 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Do目标",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#1989fa",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "assets/imgs/up-select.png",
+        "iconPath": "assets/imgs/up-unselect.png",
+        "pagePath": "pages/index/index",
+        "text": "目标"
+      },
+      {
+        "selectedIconPath": "assets/imgs/discovery-select.png",
+        "iconPath": "assets/imgs/discovery-unselect.png",
+        "pagePath": "pages/index/index",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "assets/imgs/my-select.png",
+        "iconPath": "assets/imgs/my-unselect.png",
+        "pagePath": "pages/index/index",
+        "text": "我的"
+      }
+    ]
+  }
 }

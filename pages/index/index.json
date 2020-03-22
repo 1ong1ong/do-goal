@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-button": "../../components/vant/button",
+    "van-cell": "../../components/vant/cell",
+    "day-circle": "../../components/my/day-circle",
+    "do-icon": "../../components/my/icon"
+  }
 }

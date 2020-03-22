@@ -1,0 +1,7 @@
+<!--components/my/icon/index.wxml-->
+<view
+  class="custom-class do-font do-icon{{ name }}"
+  style="{{ color ? 'color: ' + color : '' }}; {{ size ? 'font-size: ' + size : '' }}"
+  bind:tap="onClick"
+>
+</view>
