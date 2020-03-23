@@ -11,7 +11,7 @@
 
 .title {
     height: 80rpx;
-    font-size: 40rpx;
+    font-size: 50rpx;
     font-weight: bold;
     line-height: 80rpx;
 }
