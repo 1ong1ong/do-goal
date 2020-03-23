@@ -49,7 +49,7 @@
   </view>
 
   <view class="footer">
-    <van-cell title="查看更多历史周报" is-link border="{{false}}" custom-class="foot_cell" title-class="title_cell" value-class="value_cell"/>
+    <van-cell bind:click='goHistoryWeekReport' title="查看更多历史周报" is-link border="{{false}}" custom-class="foot_cell" title-class="title_cell" value-class="value_cell"/>
   </view>
 </view>
 

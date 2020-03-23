@@ -1,0 +1,24 @@
+/* pages/history-week-report/index.wxss */
+
+.container {
+    height: 100%;
+    padding: 30rpx 20rpx;
+}
+
+.head_title {
+    margin-bottom: 80rpx;
+}
+
+.title {
+    height: 80rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    line-height: 80rpx;
+}
+
+.desc {
+    height: 40rpx;
+    font-size: 24rpx;
+    line-height: 40rpx;
+    color: #4e4e4e;
+}

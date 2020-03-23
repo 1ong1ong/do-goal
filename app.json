@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/week-report/index"
+    "pages/week-report/index",
+    "pages/history-week-report/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

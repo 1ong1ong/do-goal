@@ -1,0 +1,17 @@
+<!--pages/history-week-report/index.wxml-->
+<view class="container">
+    <view class="head_title">
+        <view class="title">历史周报</view>
+        <view class="desc">只展示最近3个月的周报哦</view>
+    </view>
+    <view class="list">
+        <van-cell bind:click='goWeekReport' is-link center title="2020年第12周" label="03.16-03.22"/>
+        <van-cell bind:click='goWeekReport' is-link center title="2020年第11周" label="03.16-03.22"/>
+        <van-cell bind:click='goWeekReport' is-link center title="2020年第10周" label="03.16-03.22"/>
+        <van-cell bind:click='goWeekReport' is-link center title="2020年第09周" label="03.16-03.22"/>
+        <van-cell bind:click='goWeekReport' is-link center title="2020年第08周" label="03.16-03.22"/>
+        <van-cell bind:click='goWeekReport' is-link center title="2020年第07周" label="03.16-03.22"/>
+        <van-cell bind:click='goWeekReport' is-link center title="2020年第06周" label="03.16-03.22"/>
+        <van-cell bind:click='goWeekReport' is-link center title="2020年第05周" label="03.16-03.22"/>
+    </view>
+</view>
