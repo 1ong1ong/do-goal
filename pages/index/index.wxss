@@ -54,6 +54,8 @@
 }
 .goal_list {
   margin-top: 20rpx;
+  height: 100%;
+  overflow: scroll;
 }
 .goal_icon {
   height: 100%;

@@ -4,5 +4,6 @@
     "van-cell": "../../components/vant/cell",
     "van-divider": "../../components/vant/divider"
   },
-  "navigationBarTitleText": "周报"
+  "navigationBarTitleText": "周报",
+  "backgroundColor": "#F8F8F8"
 }
