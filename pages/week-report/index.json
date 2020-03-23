@@ -2,7 +2,8 @@
   "usingComponents": {
     "progress": "../../components/my/progress",
     "van-cell": "../../components/vant/cell",
-    "van-divider": "../../components/vant/divider"
+    "van-divider": "../../components/vant/divider",
+    "van-button": "../../components/vant/button"
   },
   "navigationBarTitleText": "周报",
   "backgroundColor": "#F8F8F8"

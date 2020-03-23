@@ -102,7 +102,37 @@
   border-radius: 10rpx;
   background-color: white;
 }
+.down_share {
+  width: 88rpx;
+  height: 88rpx;
+  position: absolute;
+  right: 0;
+}
 
+.down .perfect_day {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  position: relative;
+}
+
+.down .perfect_day image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.down .perfect_day .text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 300rpx;
+  color: white;
+  font-size: 70rpx;
+  font-weight: bold;
+}
 .footer {
   margin-top: 30rpx;
   padding: 10rpx 30rpx;

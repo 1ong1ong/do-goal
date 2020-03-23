@@ -31,7 +31,7 @@
       <view class="week">
         第11周
       </view>
-      <open-data class="avatar" type="userAvatarUrl"></open-data>
+      <van-button class="down_share" color="#EEB587">分享</van-button>
     </view>
 
     <view class="divide_line">
