@@ -31,7 +31,9 @@
       <view class="week">
         第11周
       </view>
-      <van-button class="down_share" color="#EEB587">分享</van-button>
+      <view class="down_share" >
+        <van-button size="small" color="#FBB448" icon="friends-o" round>分享</van-button>
+      </view>
     </view>
 
     <view class="divide_line">
@@ -43,8 +45,37 @@
       <image src="../../assets/imgs/perfect-day.jpg" mode="scaleToFill" />
       <view class="text">1</view>
     </view>
-    <view class="foot_text">
-      收获1个完美日
+    <view class="down_perfect_day_text">
+      这周有一天完成了所有目标的打卡
+    </view>
+    <view class="down_tooltip">
+      <view class="triangle"/>
+      逆风的方向更适合飞翔，不怕万人阻挡只怕自己投降
+    </view>
+
+    <view class="down_count">
+      <view class="count_item">
+        <view class="count_num">5</view>
+        <view class="count_text">坚持天数</view>
+      </view>
+      <view class="count_item">
+        <view class="count_num">8</view>
+        <view class="count_text">打卡次数</view>
+      </view>
+    </view>
+
+    <view class="week_days">
+      <day-circle circleColor="#e23c1e" draw-id="day01" percent="10" text="一"/>
+      <day-circle circleColor="#e23c1e" draw-id="day02" percent="50" text="二"/>
+      <day-circle circleColor="#e23c1e" draw-id="day03" percent="20" text="三"/>
+      <day-circle circleColor="#e23c1e" draw-id="day04" percent="80" text="四"/>
+      <day-circle circleColor="#e23c1e" draw-id="day05" percent="100" text="五"/>
+      <day-circle circleColor="#e23c1e" draw-id="day06" percent="40" text="六"/>
+      <day-circle circleColor="#e23c1e" draw-id="day07" percent="0" text="日"/>
+    </view>
+
+    <view class="share_btn">
+      <van-button size="normal" color="#e23c1e" round block>晒一晒 ></van-button>
     </view>
   </view>
 

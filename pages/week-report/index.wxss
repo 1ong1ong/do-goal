@@ -19,7 +19,7 @@
   color: white;
   font-size: 28rpx;
   line-height: 44rpx;
-  letter-spacing: 8rpx;
+  letter-spacing: 7rpx;
   text-align: center;
   border-radius: 6rpx;
 }
@@ -103,10 +103,13 @@
   background-color: white;
 }
 .down_share {
-  width: 88rpx;
-  height: 88rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
   position: absolute;
   right: 0;
+  top: 0;
 }
 
 .down .perfect_day {
@@ -132,6 +135,82 @@
   color: white;
   font-size: 70rpx;
   font-weight: bold;
+}
+
+.down_perfect_day_text {
+  margin-top: 40rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.down_tooltip {
+  height: 50rpx;
+  background-color: #ffd0c4;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  letter-spacing: 2rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  margin-top: 30rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.triangle {
+  height: 40rpx;
+  width: 40rpx;
+  transform: rotate(45deg);
+  background-color: #FFD0C4;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10rpx;
+  z-index: -1;
+}
+
+
+.down_count {
+  margin-top: 60rpx;
+  height: 160rpx;
+  display: flex;
+  justify-content: start;
+}
+.count_item {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+}
+.count_num {
+  width: 100%;
+  text-align: center;
+  font-size: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: 600;
+  font-family: "Microsoft YaHei UI", sans-serif;
+}
+.count_text {
+  font-size: 24rpx;
+  margin-top: -30rpx;
+}
+
+.week_days {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.week_days view {
+  padding: 3rpx;
+}
+
+.share_btn {
+  width: 100%;
+  margin-top: 40rpx;
 }
 .footer {
   margin-top: 30rpx;

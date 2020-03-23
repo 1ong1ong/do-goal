@@ -9,7 +9,7 @@
   </view>
 
   <view wx:else class="circle_box" style="width:{{size}}rpx;height:{{size}}rpx;">
-    <view class="circle_box_inner" style="width:{{size-circleWidth}}rpx;height:{{size-circleWidth}}rpx;border-radius:{{(size)/2}}rpx;background-color:{{circleColor}};padding:-{{circleWidth}}rpx">
+    <view class="circle_box_inner" style="width:{{size-circleWidth}}rpx;height:{{size-circleWidth}}rpx;border-radius:{{size}}rpx;background-color:{{circleColor}};padding:-{{circleWidth}}rpx">
       <van-icon name="success" color="white" size="{{size/2}}rpx" />
     </view>
   </view>
