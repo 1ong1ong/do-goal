@@ -12,7 +12,7 @@ Page({
    * 路由到历史周报页面
    */
   goHistoryWeekReport() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/history-week-report/index'
     });
   }

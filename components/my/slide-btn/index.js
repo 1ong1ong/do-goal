@@ -22,7 +22,7 @@ Component({
     },
     sliderWidth: {
       type: Number,
-      value: 160
+      value: 180
     },
     sliderHeight: {
       type: Number,

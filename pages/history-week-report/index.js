@@ -9,10 +9,10 @@ Page({
   },
 
   /**
-   * 路由到周报页面
+   * 重定向到周报页面
    */
   goWeekReport() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/week-report/index'
     });
   },

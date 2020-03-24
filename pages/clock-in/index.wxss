@@ -1,36 +1,47 @@
 /* pages/clock-in/index.wxss */
 
 .content {
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .top {
-    position: fixed;
-    top: 120rpx;
-    z-index: 10;
-    width: 100%;
-    font-size: 40rpx;
-    height: 60rpx;
-    line-height: 60rpx;
-    display: flex;
-    align-items: center;
-    justify-content: start;
+  position: fixed;
+  top: 96rpx;
+  z-index: 10;
+  width: 100%;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 20rpx;
+}
+
+.top_text {
+  height: 100%;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 64rpx;
+  margin-left: 10rpx;
+  color: white
 }
 
 .slide_btn {
-    width: 100%;
-    position: fixed;
-    bottom: 200rpx;
-    z-index: 10;
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: center;
+  width: 100%;
+  position: fixed;
+  bottom: 100rpx;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
 }
 
 .text {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 40rpx;
+  color: white;
+  font-size: 34rpx;
 }

@@ -3,7 +3,7 @@ Page({
   data: {
     screenWidth: 0, //屏幕宽度
     screenHeight: 0, // 屏幕高度
-    backgroundImageUrl: "https://imgs.cxlsky.com/image1560859124701.jpg"
+    backgroundImageUrl: "https://imgs.cxlsky.com/zaoqi.png"
   },
 
   onLoad: function () {
@@ -24,5 +24,12 @@ Page({
    */
   goalConfirm() {
     console.log("confirm")
+  },
+
+  /**
+   * 回到上一页
+   */
+  goBackBage() {
+    wx.navigateBack();  
   }
 })

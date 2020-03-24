@@ -17,7 +17,7 @@ Component({
     },
     size: { // 大小 width/height
       type: Number,
-      value: 66
+      value: 60
     },
     text: { // 显示文本
       type: String,
@@ -25,7 +25,7 @@ Component({
     },
     circleWidth: { //圆形的宽度
       type: Number,
-      value: 3
+      value: 2.5
     },
     circleColor: {
       type: String,

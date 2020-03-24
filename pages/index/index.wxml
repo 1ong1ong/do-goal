@@ -3,7 +3,7 @@
 
 <view class="container">
   <view class="top-img">
-    <image src="../../assets/imgs/tooth.gif" mode="top" />
+    <image src="../../assets/imgs/top.png" mode="scaleToFill" />
   </view>
   <view class="week_info" bindtap='goWeekReport'>
     <view class="week_days">

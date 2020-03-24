@@ -36,8 +36,8 @@
 }
 
 .point {
-  width: 10rpx;
-  height: 10rpx;
-  border-radius: 10rpx;
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
   margin: 0 auto;
 }

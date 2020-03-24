@@ -205,7 +205,7 @@
 }
 
 .week_days view {
-  padding: 3rpx;
+  padding: 3.5rpx;
 }
 
 .share_btn {
