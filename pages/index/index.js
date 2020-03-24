@@ -16,5 +16,13 @@ Page({
       url: '/pages/week-report/index'
     });
   },
-  
-})
+
+  /**
+   * 路由到打卡详情页面
+   */
+  goGoalDetail() {
+    wx.navigateTo({
+      url: '/pages/clock-in/index'
+    });
+  }
+});

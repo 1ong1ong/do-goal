@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/clock-in/index",
     "pages/index/index",
     "pages/week-report/index",
     "pages/history-week-report/index"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

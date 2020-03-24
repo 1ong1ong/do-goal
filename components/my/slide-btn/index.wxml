@@ -1,0 +1,6 @@
+<!--components/my/slide-btn/index.wxml-->
+<view class="slider_content" style="width:{{sliderWidth}}rpx;height:{{sliderHeight}}rpx;border-radius: {{sliderWidth/2}}rpx;">
+    <view class="slider" bindtouchstart="touchBtnStart" bindtouchmove="touchBtnMove" bindtouchend="touchBtnEnd"
+          style="bottom:{{moveBtnBottom}}rpx;background-color:{{SendBtnColor}};width:{{sliderWidth-20}}rpx;height:{{sliderWidth-20}}rpx;border-radius: {{(sliderWidth-20)/2}}rpx;"/>
+</view>
+<!-- bindtouchend="moveSendBtnEnd" bindtouchmove="moveSendBtn"  -->

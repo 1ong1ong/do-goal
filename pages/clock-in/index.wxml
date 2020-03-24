@@ -1,0 +1,4 @@
+<!--pages/clock-in/index.wxml-->
+<view class="content">
+    <slide-btn screen-width="{{screenWidth}}" bind:confirm="goalConfirm"/>
+</view>
