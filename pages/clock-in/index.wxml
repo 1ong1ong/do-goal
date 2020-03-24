@@ -1,4 +1,23 @@
 <!--pages/clock-in/index.wxml-->
-<view class="content">
-    <slide-btn screen-width="{{screenWidth}}" bind:confirm="goalConfirm"/>
+<view class="container" style="height:{{screenHeight}}rpx;">
+
+    <view class="top">
+        <van-icon name="arrow-left" color="white" size="40rpx"/>
+        早起
+    </view>
+    <view class="slide_btn">
+        <slide-btn
+                screen-width="{{screenWidth}}"
+                move-btn-color="#dad472"
+                bind:confirm="goalConfirm"/>
+        <view class="text">
+            查看更多
+        </view>
+    </view>
+    <van-image
+            width="100%"
+            height="{{screenHeight}}rpx"
+            fit="fill"
+            src="{{backgroundImageUrl}}"
+    />
 </view>

@@ -2,6 +2,8 @@
 Page({
   data: {
     screenWidth: 0, //屏幕宽度
+    screenHeight: 0, // 屏幕高度
+    backgroundImageUrl: "https://imgs.cxlsky.com/image1560859124701.jpg"
   },
 
   onLoad: function () {
@@ -10,7 +12,8 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          screenWidth: res.screenWidth
+          screenWidth: res.screenWidth,
+          screenHeight: res.screenHeight / (res.screenWidth / 750)
         })
       },
     })
@@ -18,7 +21,7 @@ Page({
 
   /**
    * 打卡确认
-    */
+   */
   goalConfirm() {
     console.log("confirm")
   }

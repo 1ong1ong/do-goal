@@ -1,6 +1,11 @@
 <!--components/my/slide-btn/index.wxml-->
-<view class="slider_content" style="width:{{sliderWidth}}rpx;height:{{sliderHeight}}rpx;border-radius: {{sliderWidth/2}}rpx;">
+
+<view class="container" style="width:{{sliderWidth}}rpx;height:{{sliderHeight}}rpx;">
+    <view class="slider_content"
+          style="width:{{sliderWidth}}rpx;height:{{sliderHeight}}rpx;border-radius: {{sliderWidth/2}}rpx;background-color:{{sliderColor}};opacity:{{opacity}}">
+    </view>
     <view class="slider" bindtouchstart="touchBtnStart" bindtouchmove="touchBtnMove" bindtouchend="touchBtnEnd"
-          style="bottom:{{moveBtnBottom}}rpx;background-color:{{SendBtnColor}};width:{{sliderWidth-20}}rpx;height:{{sliderWidth-20}}rpx;border-radius: {{(sliderWidth-20)/2}}rpx;"/>
+          style="bottom:{{moveBtnBottom}}rpx;background-color:{{moveBtnColor}};width:{{sliderWidth-20}}rpx;height:{{sliderWidth-20}}rpx;border-radius: {{(sliderWidth-20)/2}}rpx;">
+        <van-icon name="arrow-up" color="white" size="{{sliderWidth/2}}rpx"/>
+    </view>
 </view>
-<!-- bindtouchend="moveSendBtnEnd" bindtouchmove="moveSendBtn"  -->

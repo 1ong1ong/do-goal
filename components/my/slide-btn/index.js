@@ -4,9 +4,17 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    SendBtnColor: {
+    moveBtnColor: {
       type: String,
-      value: '#ffc282'
+      value: '#ffbb00'
+    },
+    sliderColor: {
+      type: String,
+      value: '#e5e5e5'
+    },
+    opacity: {
+      type: Number,
+      value: 0.5
     },
     screenWidth: {
       type: Number,
@@ -14,7 +22,7 @@ Component({
     },
     sliderWidth: {
       type: Number,
-      value: 180
+      value: 160
     },
     sliderHeight: {
       type: Number,
