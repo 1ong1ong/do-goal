@@ -1,0 +1,245 @@
+/* pages/history-week-report-detail/index.wxss */
+
+page {
+  height: 100%;
+  background-color: #f8f8f8;
+}
+
+.container {
+  padding: 30rpx 20rpx;
+}
+
+.date_title {
+  height: 44rpx;
+  background-image: linear-gradient(to right, #d7201a, #ee5d44);
+  color: white;
+  font-size: 28rpx;
+  line-height: 44rpx;
+  letter-spacing: 7rpx;
+  text-align: center;
+  border-radius: 6rpx;
+}
+
+.week_line {
+  height: 88rpx;
+  padding: 10rpx 0;
+  position: relative;
+}
+
+.week {
+  position: absolute;
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #e23c1e;
+}
+
+.avatar {
+  width: 88rpx;
+  height: 88rpx;
+  position: absolute;
+  right: 0;
+}
+
+.divide_line {
+  height: 26rpx;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.line {
+  height: 100%;
+  width: 70%;
+}
+
+.font {
+  height: 100%;
+  width: 30%;
+  font-size: 24rpx;
+  line-height: 26rpx;
+  padding-left: 26rpx;
+}
+
+.perfect_day {
+  width: 220rpx;
+  height: 220rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  position: relative;
+}
+
+.perfect_day image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.perfect_day .text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 220rpx;
+  color: white;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.foot_text {
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+
+.down {
+  padding: 30rpx;
+  box-shadow: 0rpx 4rpx 10rpx #e1e1e1;
+  border-radius: 10rpx;
+  background-color: white;
+}
+
+.down_share {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.down .perfect_day {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  position: relative;
+}
+
+.down .perfect_day image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.down .perfect_day .text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 300rpx;
+  color: white;
+  font-size: 70rpx;
+  font-weight: bold;
+}
+
+.down_perfect_day_text {
+  margin-top: 40rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.down_tooltip {
+  height: 50rpx;
+  background-color: #ffd0c4;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  letter-spacing: 2rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  margin-top: 30rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.triangle {
+  height: 40rpx;
+  width: 40rpx;
+  transform: rotate(45deg);
+  background-color: #ffd0c4;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10rpx;
+  z-index: -1;
+}
+
+.down_count {
+  margin-top: 60rpx;
+  height: 160rpx;
+  display: flex;
+  justify-content: start;
+}
+
+.count_item {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+}
+
+.count_num {
+  width: 100%;
+  text-align: center;
+  font-size: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: 600;
+  font-family: "Microsoft YaHei UI", sans-serif;
+}
+
+.count_text {
+  font-size: 24rpx;
+  margin-top: -30rpx;
+}
+
+.week_days {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.share_btn_border {
+  height: 160rpx;
+  width: 100%;
+  box-shadow: 0rpx -5rpx 5rpx #e5e5e5;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0;
+  background-color: white;
+}
+.share_btn {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  height: 100rpx;
+}
+
+.share_btn button {
+  width: 40%;
+  border: none;
+  background-color: #e23c1e;
+  border-radius: 100rpx;
+  color: white;
+}
+
+.share_btn button:first-child {
+  padding-right: 20rpx;
+}
+
+.share_btn button:last-child {
+  padding-left: 20rpx;
+}

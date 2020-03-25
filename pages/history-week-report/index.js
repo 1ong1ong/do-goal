@@ -13,7 +13,7 @@ Page({
    */
   goWeekReport() {
     wx.redirectTo({
-      url: '/pages/week-report/index'
+      url: '/pages/history-week-report-detail/index'
     });
   },
 

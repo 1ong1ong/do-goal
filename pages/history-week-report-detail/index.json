@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "progress": "../../components/my/progress",
+    "van-cell": "../../components/vant/cell",
+    "van-divider": "../../components/vant/divider",
+    "van-button": "../../components/vant/button",
+    "day-circle": "../../components/my/day-circle"
+  },
+  "navigationBarTitleText": "",
+  "backgroundColor": "#F8F8F8"
+}

@@ -35,6 +35,8 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -76,6 +78,13 @@
 					"id": -1,
 					"name": "pages/clock-in/index",
 					"pathName": "pages/clock-in/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/history-week-report-detail/index",
+					"pathName": "pages/history-week-report-detail/index",
 					"scene": null
 				}
 			]
