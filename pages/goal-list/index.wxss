@@ -1,14 +1,36 @@
 /* pages/goal-list/index.wxss */
 
-.tabs_root {
-    border-top: none;
-    background-color: aqua;
-}
-.tabs_nav {
-    border: none;
-    box-shadow: none;
+.diy_tab_view {
+    height: 1000rpx;
 }
 
 .tab_view {
     height: 1000rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+
+.goal_icon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+}
+.goal_title {
+    /* font-weight: bold; */
+    font-size: 30rpx;
+}
+.goal_right_icon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
 }

@@ -12,13 +12,15 @@ App({
     wx.getSystemInfo({
       success(res) {
         console.log(res);
-        that.globalData.navBarHeight = res.statusBarHeight
+        that.globalData.screenWidth= res.screenWidth;
+        that.globalData.screenHeight= res.screenHeight / (res.screenWidth / 750)
       }
     })
 
   },
   globalData: {
     userInfo: null,
-    navBarHeight: 0
+    screenWidth: 0,
+    screenHeight: 0
   }
 })

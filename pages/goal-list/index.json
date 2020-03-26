@@ -3,7 +3,10 @@
     "van-tab": "../../components/vant/tab",
     "van-tabs": "../../components/vant/tabs",
     "van-icon": "../../components/vant/icon",
-    "van-nav-bar": "../../components/vant/nav-bar"
+    "van-nav-bar": "../../components/vant/nav-bar",
+    "do-icon": "../../components/my/icon",
+    "van-cell": "../../components/vant/cell",
+    "van-image": "../../components/vant/image"
   },
   "disableScroll": true,
   "navigationBarTitleText": "",
