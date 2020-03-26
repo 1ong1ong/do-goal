@@ -7,7 +7,7 @@
         </view>
     </van-nav-bar>
 
-    <van-tabs active="1" swipeable animated border="{{false}}" color="#1989fa" titleActiveColor="#1989fa" custom-class="tabs_custom">
+    <van-tabs active="1" swipeable animated border="{{false}}" color="#1989fa" titleActiveColor="#1989fa" custom-class="tabs_custom" sticky swipeThreshold="5">
         <van-tab title="自定义" name="0" custom-class="tabs_custom">
             <view class="diy_tab_view">
                 <van-image width="100%" height="{{width}}px" fit="fill" src="https://imgs.cxlsky.com/diy_background.png" />
@@ -19,11 +19,11 @@
                     做不一样的烟火
                 </view>
                 <view class="diy_btn">
-                    <van-button size="normal" color="#e23c1e" round block>晒一晒 ></van-button>
+                    <van-button size="normal" color="#1989fa" round block>添加自定义目标</van-button>
                 </view>
         </van-tab>
         <van-tab title="推荐" name="1">
-            <scroll-view scroll-y enable-back-to-top>
+           <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">
                 <view class="tab_view">
                     <van-cell use-label-slot="true">
                         <view slot="icon">
@@ -302,10 +302,10 @@
                         </view>
                     </van-cell>
                 </view>
-            </scroll-view>
+           </scroll-view>
         </van-tab>
         <van-tab title="生活" name="2">
-            <scroll-view scroll-y enable-back-to-top>
+            <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">
                 <view class="tab_view">
                     <van-cell use-label-slot="true">
                         <view slot="icon">
@@ -587,7 +587,7 @@
             </scroll-view>
         </van-tab>
         <van-tab title="健康" name="3">
-            <scroll-view scroll-y enable-back-to-top>
+            <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">
                 <view class="tab_view">
                     <van-cell use-label-slot="true">
                         <view slot="icon">
@@ -869,7 +869,7 @@
             </scroll-view>
         </van-tab>
         <van-tab title="学习" name="4">
-            <scroll-view scroll-y enable-back-to-top>
+            <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">
                 <view class="tab_view">
                     <van-cell use-label-slot="true">
                         <view slot="icon">
@@ -1151,7 +1151,7 @@
             </scroll-view>
         </van-tab>
         <van-tab title="理财" name="5">
-            <scroll-view scroll-y enable-back-to-top>
+            <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">
                 <view class="tab_view">
                     <van-cell use-label-slot="true">
                         <view slot="icon">
@@ -1433,7 +1433,7 @@
             </scroll-view>
         </van-tab>
         <van-tab title="娱乐" name="6">
-            <scroll-view scroll-y enable-back-to-top>
+            <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">
                 <view class="tab_view">
                     <van-cell use-label-slot="true">
                         <view slot="icon">
@@ -1715,7 +1715,7 @@
             </scroll-view>
         </van-tab>
         <van-tab title="亲子" name="7">
-            <scroll-view scroll-y enable-back-to-top>
+            <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">
                 <view class="tab_view">
                     <van-cell use-label-slot="true">
                         <view slot="icon">

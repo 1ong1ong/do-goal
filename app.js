@@ -13,7 +13,7 @@ App({
       success(res) {
         console.log(res);
         that.globalData.screenWidth= res.screenWidth;
-        that.globalData.screenHeight= res.screenHeight / (res.screenWidth / 750)
+        that.globalData.screenHeight= res.screenHeight
       }
     })
 
