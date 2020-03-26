@@ -384,5 +384,5 @@
   </view>
 </view>
 <view class="goal_add_btn">
-  <van-button round size="small" icon="plus" type="info" plain custom-style="box-shadow: 0rpx 4rpx 10rpx #e1e7ec;border:none;width:200rpx;font-size:28rpx;font-weight:bold">添加目标</van-button>
+  <van-button bind:click="routeGoalList" round size="small" icon="plus" type="info" plain custom-style="box-shadow: 0rpx 4rpx 10rpx #e1e7ec;border:none;width:200rpx;font-size:28rpx;font-weight:bold">添加目标</van-button>
 </view>

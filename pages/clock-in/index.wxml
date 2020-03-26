@@ -1,10 +1,13 @@
 <!--pages/clock-in/index.wxml-->
 <view class="container" style="height:{{screenHeight}}rpx;">
 
-  <view class="top">
-    <van-icon name="arrow-left" color="white" size="40rpx" bind:click="goBackBage"/>
-    <view class="top_text">早起</view>
-  </view>
+  <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
+    <view slot="left" class="nav_bar_left">
+      <van-icon slot="left" name="arrow-left" color="white" size="40rpx"/>
+      <view class="top_text">早起</view>
+    </view>
+  </van-nav-bar>
+
   <view class="slide_btn">
     <slide-btn screen-width="{{screenWidth}}" move-btn-color="#F5CB5B" bind:confirm="goalConfirm" />
     <view class="text">

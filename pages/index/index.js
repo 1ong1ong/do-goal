@@ -24,5 +24,11 @@ Page({
     wx.navigateTo({
       url: '/pages/clock-in/index'
     });
+  },
+
+  routeGoalList() {
+    wx.navigateTo({
+      url: '/pages/goal-list/index'
+    });
   }
 });

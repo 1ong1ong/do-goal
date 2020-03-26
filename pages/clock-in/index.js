@@ -29,7 +29,7 @@ Page({
   /**
    * 回到上一页
    */
-  goBackBage() {
-    wx.navigateBack();  
+  goBackPage() {
+    wx.navigateBack();
   }
 })

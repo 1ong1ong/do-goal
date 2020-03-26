@@ -6,25 +6,12 @@
   background-size: 100% 100%;
 }
 
-.top {
-  position: fixed;
-  top: 96rpx;
-  z-index: 10;
-  width: 100%;
-  height: 64rpx;
+.nav_bar_left {
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-left: 20rpx;
-}
-
-.top_text {
-  height: 100%;
-  font-size: 40rpx;
-  font-weight: bold;
-  line-height: 64rpx;
-  margin-left: 10rpx;
-  color: white
+  color: white;
+  font-size: 38rpx;
 }
 
 .slide_btn {

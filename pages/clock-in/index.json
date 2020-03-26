@@ -2,7 +2,8 @@
   "usingComponents": {
     "slide-btn": "../../components/my/slide-btn",
     "van-image": "../../components/vant/image",
-    "van-icon": "../../components/vant/icon"
+    "van-icon": "../../components/vant/icon",
+    "van-nav-bar": "../../components/vant/nav-bar"
   },
   "disableScroll": true,
   "navigationStyle": "custom"
