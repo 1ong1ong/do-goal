@@ -1,0 +1,362 @@
+<!--pages/goal-list/index.wxml-->
+
+<view class="container">
+    <van-nav-bar bind:click-left="goBackPage" border="{{false}}">
+        <view slot="left" class="nav_bar_left">
+            <van-icon slot="left" name="arrow-left" color="black" size="40rpx"/>
+        </view>
+    </van-nav-bar>
+
+    <van-tabs active="1" swipeable animated nav-class="tabs_nav" custom-class="tabs_root">
+        <van-tab title="自定义" name="0">内容 2</van-tab>
+        <van-tab title="推荐" name="1">
+            <scroll-view class="tab_view" scroll-y enable-back-to-top>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+                <van-cell use-label-slot="true">
+                    <view slot="icon">
+                        <view class="goal_icon">
+                            <do-icon name="sun" size="76rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                    <view slot="title">
+                        <view class="goal_title">
+                            早起
+                        </view>
+                    </view>
+                    <view slot="label">
+                        <view class="goal_label">
+                            已经完成目标
+                            <text style="color:rgb(230, 175, 56)">3</text>天
+                        </view>
+                    </view>
+                    <view slot="right-icon">
+                        <view class="goal_right_icon">
+                            <do-icon name="next" size="36rpx" color="#1989fa" />
+                        </view>
+                    </view>
+                </van-cell>
+            </scroll-view>
+        </van-tab>
+    </van-tabs>
+</view>

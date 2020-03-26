@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-tab": "../../components/vant/tab",
+    "van-tabs": "../../components/vant/tabs",
+    "van-icon": "../../components/vant/icon",
+    "van-nav-bar": "../../components/vant/nav-bar"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom"
+}
