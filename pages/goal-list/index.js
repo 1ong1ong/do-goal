@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    height: app.globalData.screenHeight
+    height: app.globalData.screenHeight,
+    width: app.globalData.screenWidth
   },
 
   /**

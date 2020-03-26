@@ -7,11 +7,20 @@
         </view>
     </van-nav-bar>
 
-    <van-tabs active="1" swipeable animated border="{{false}}" color="#1989fa" titleActiveColor="#1989fa">
-        <van-tab title="自定义" name="0">
+    <van-tabs active="1" swipeable animated border="{{false}}" color="#1989fa" titleActiveColor="#1989fa" custom-class="tabs_custom">
+        <van-tab title="自定义" name="0" custom-class="tabs_custom">
             <view class="diy_tab_view">
-                <van-image width="100%" height="{{height}}" fit="fill" src="https://imgs.cxlsky.com/zaoqi.png" />
+                <van-image width="100%" height="{{width}}px" fit="fill" src="https://imgs.cxlsky.com/diy_background.png" />
             </view>
+                <view class="foot_text">
+                    添加我的专属目标
+                </view>
+                <view class="foot_text">
+                    做不一样的烟火
+                </view>
+                <view class="diy_btn">
+                    <van-button size="normal" color="#e23c1e" round block>晒一晒 ></van-button>
+                </view>
         </van-tab>
         <van-tab title="推荐" name="1">
             <scroll-view scroll-y enable-back-to-top>

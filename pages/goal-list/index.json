@@ -6,7 +6,8 @@
     "van-nav-bar": "../../components/vant/nav-bar",
     "do-icon": "../../components/my/icon",
     "van-cell": "../../components/vant/cell",
-    "van-image": "../../components/vant/image"
+    "van-image": "../../components/vant/image",
+    "van-button": "../../components/vant/button"
   },
   "disableScroll": true,
   "navigationBarTitleText": "",

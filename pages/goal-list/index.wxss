@@ -1,36 +1,67 @@
 /* pages/goal-list/index.wxss */
 
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.tabs_custom {
+  height: 100%;
+}
+
+.tab_class {
+  height: 100%;
+}
+
 .diy_tab_view {
-    height: 1000rpx;
+  height: 100%;
+  margin-bottom: 50rpx;
+}
+
+.foot_text {
+  text-align: center;
+}
+
+.diy_btn {
+  width: 100%;
+  height: 100rpx;
+    margin-top: 50rpx;
 }
 
 .tab_view {
-    height: 1000rpx;
-    padding-left: 30rpx;
-    padding-right: 30rpx;
+  height: 1000rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
 
 .goal_icon {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    margin-right: 20rpx;
-    margin-left: 20rpx;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
 }
+
 .goal_title {
-    /* font-weight: bold; */
-    font-size: 30rpx;
+  /* font-weight: bold; */
+  font-size: 30rpx;
 }
+
 .goal_right_icon {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    margin-right: 20rpx;
-    margin-left: 20rpx;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
 }
