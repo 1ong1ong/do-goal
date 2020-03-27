@@ -6,11 +6,11 @@ Page({
     backgroundImageUrl: "https://imgs.cxlsky.com/zaoqi.png"
   },
 
-  onLoad: function () {
+  onLoad: function() {
     let that = this;
     // 获取屏幕宽度
     wx.getSystemInfo({
-      success: function (res) {
+      success: function(res) {
         that.setData({
           screenWidth: res.screenWidth,
           screenHeight: res.screenHeight / (res.screenWidth / 750)
@@ -23,7 +23,9 @@ Page({
    * 打卡确认
    */
   goalConfirm() {
-    console.log("confirm")
+    wx.redirectTo({
+      url: '/pages/clock-in-detail/index'
+    })
   },
 
   /**

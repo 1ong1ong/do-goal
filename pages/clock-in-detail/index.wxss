@@ -1,0 +1,67 @@
+/* pages/clock-in-detail/index.wxss */
+
+page {
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  background-color: black;
+}
+
+.nav_bar_left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  font-size: 38rpx;
+}
+
+.blue_card {
+  height: 600rpx;
+  width: 100%;
+  background-color: #1989fa;
+}
+
+.card {
+  position: absolute;
+  top: 220rpx;
+  padding: 30rpx;
+}
+
+.time {
+  font-size: 80rpx;
+  color: white;
+}
+
+.status {
+  color: white;
+  font-size: 24rpx;
+}
+
+.card_content {
+  margin-top: 40rpx;
+  height: 320rpx;
+  background-color: white;
+  padding: 30rpx;
+}
+
+.top {
+  height: 140rpx;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.item {
+  width: 33%;
+}
+
+.item .title {
+  font-size: 50rpx;
+}
+
+.item .des {
+  font-size: 24rpx;
+}

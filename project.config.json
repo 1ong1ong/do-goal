@@ -90,36 +90,48 @@
 					"id": -1,
 					"name": "pages/goal-list/index",
 					"pathName": "pages/goal-list/index",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/goal-list/index",
 					"pathName": "pages/goal-list/index",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/goal-list/index",
 					"pathName": "pages/goal-list/index",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/goal-list/index",
 					"pathName": "pages/goal-list/index",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/goal-list/index",
 					"pathName": "pages/goal-list/index",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/goal-list/index",
 					"pathName": "pages/goal-list/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/clock-in-detail/index",
+					"pathName": "pages/clock-in-detail/index",
 					"scene": null
 				}
 			]

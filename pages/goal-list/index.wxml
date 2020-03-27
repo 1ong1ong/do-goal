@@ -7,7 +7,7 @@
         </view>
     </van-nav-bar>
 
-    <van-tabs active="1" swipeable animated border="{{false}}" color="#1989fa" titleActiveColor="#1989fa" custom-class="tabs_custom" sticky swipeThreshold="5">
+    <van-tabs active="1" swipeable animated border="{{false}}" color="#1989fa" titleActiveColor="#1989fa" custom-class="tabs_custom" sticky swipeThreshold="4.5">
         <van-tab title="自定义" name="0" custom-class="tabs_custom">
             <view class="diy_tab_view">
                 <van-image width="100%" height="{{width}}px" fit="fill" src="https://imgs.cxlsky.com/diy_background.png" />

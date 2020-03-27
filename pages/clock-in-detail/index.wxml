@@ -1,0 +1,39 @@
+<!--pages/clock-in-detail/index.wxml-->
+<view class="container">
+
+    <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
+        <view slot="left" class="nav_bar_left">
+            <van-icon slot="left" name="arrow-left" color="white" size="40rpx"/>
+            <view class="top_text">早起</view>
+        </view>
+    </van-nav-bar>
+
+    <view class="blue_card"/>
+
+    <view class="card" style="width:{{width-60}}rpx">
+        <view class="time">22:10</view>
+        <view class="status">今日打卡时间</view>
+
+        <view class="card_content">
+            <view class="top">
+                <view class="item">
+                    <view class="title">5</view>
+                    <view class="des">打卡天数</view>
+                </view>
+                <view class="item">
+                    <view class="title">
+                        <van-icon name="star" color="#fbcd5b"/>
+                    </view>
+                    <view class="des">目标等级</view>
+                </view>
+                <view class="item">
+                    <view class="title">1/7</view>
+                    <view class="des">距离升级</view>
+                </view>
+            </view>
+            <van-divider customStyle="margin-top:6rpx;"/>
+            <view class="down"></view>
+        </view>
+    </view>
+
+</view>

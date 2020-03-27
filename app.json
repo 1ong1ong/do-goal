@@ -5,7 +5,8 @@
     "pages/history-week-report/index",
     "pages/clock-in/index",
     "pages/history-week-report-detail/index",
-    "pages/goal-list/index"
+    "pages/goal-list/index",
+    "pages/clock-in-detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
