@@ -57,7 +57,6 @@ page {
 }
 
 .goal_title {
-  /* font-weight: bold; */
   font-size: 30rpx;
 }
 
@@ -70,4 +69,8 @@ page {
   align-items: center;
   margin-right: 20rpx;
   margin-left: 20rpx;
+}
+
+.van-tab--active {
+  font-size: 38rpx !important;
 }

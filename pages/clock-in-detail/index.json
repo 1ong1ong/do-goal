@@ -2,8 +2,13 @@
   "usingComponents": {
     "van-nav-bar": "../../components/vant/nav-bar",
     "van-icon": "../../components/vant/icon",
-    "van-divider": "../../components/vant/divider"
+    "van-divider": "../../components/vant/divider",
+    "van-tab": "../../components/vant/tab",
+    "van-tabs": "../../components/vant/tabs",
+    "van-cell": "../../components/vant/cell",
+    "van-image": "../../components/vant/image"
   },
-  "navigationStyle": "custom",
-  "backgroundColor": "#1989fa"
+  "backgroundColorTop": "#1989fa",
+  "navigationBarBackgroundColor": "#1989fa",
+  "enablePullDownRefresh": false
 }

@@ -19,32 +19,36 @@ page {
 }
 
 .blue_card {
-  height: 600rpx;
+  height: 420rpx;
   width: 100%;
   background-color: #1989fa;
 }
 
 .card {
   position: absolute;
-  top: 220rpx;
-  padding: 30rpx;
+  top: 50rpx;
 }
 
 .time {
-  font-size: 80rpx;
+  font-size: 90rpx;
   color: white;
+  padding-left: 30rpx;
 }
 
 .status {
   color: white;
-  font-size: 24rpx;
+  font-size: 26rpx;
+  padding-left: 30rpx;
 }
 
 .card_content {
-  margin-top: 40rpx;
+  margin-top: 30rpx;
   height: 320rpx;
   background-color: white;
   padding: 30rpx;
+  border-radius: 6rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
 }
 
 .top {
@@ -64,4 +68,182 @@ page {
 
 .item .des {
   font-size: 24rpx;
+  color: #818181;
+}
+
+.down {
+  font-size: 18rpx;
+  color: #a1a1a1;
+}
+
+.down .left {
+  float: left;
+  display: flex;
+  width: 90%;
+  justify-items: start;
+}
+
+.down .left .day {
+  width: 200rpx;
+  text-align: center;
+  position: relative;
+}
+
+.percent {
+  height: 110rpx;
+  width: 15rpx;
+  margin: 0 auto;
+  margin-bottom: 10rpx;
+  border-radius: 20rpx;
+  position: relative;
+}
+
+.inner {
+  width: 100%;
+  background-color: #1989fa;
+  border-radius: 20rpx;
+  position: absolute;
+  bottom: 0;
+}
+
+.line {
+  width: 2rpx;
+  height: 100%;
+  background-color: #e5e5e5;
+  margin: 0 auto;
+  padding-top: -10rpx;
+}
+
+.tooltip {
+  width: 60rpx;
+  height: 30rpx;
+  background-color: #1989fa;
+  margin: 0 auto;
+  margin-top: -30rpx;
+  margin-bottom: 8rpx;
+  border-radius: 4rpx;
+  position: relative;
+  display: flex;
+  justify-items: center;
+  z-index: 10;
+}
+
+.tooltip .text {
+  line-height: 30rpx;
+  width: 100%;
+  height: 100%;
+  font-size: 20rpx;
+  color: white;
+}
+
+.tooltip .bottom {
+  position: absolute;
+  bottom: -2rpx;
+  width: 100%;
+  z-index: -1;
+}
+
+.tooltip .triangle {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #1989fa;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+
+.down .right {
+  float: right;
+  height: 120rpx;
+  width: 10%;
+  position: relative;
+  text-align: center;
+}
+
+.down .right .up {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.down .right .down {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.post {
+  margin-top: 20rpx;
+  height: 60rpx;
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 6rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.post_input {
+  float: left;
+  width: 86%;
+  height: 60rpx;
+  background-color: #f5f5f5;
+  border-radius: 60rpx;
+  line-height: 60rpx;
+}
+
+.post_input text {
+  margin-left: 30rpx;
+  color: #a1a1a1;
+  font-size: 26rpx;
+}
+
+.post_photo_icon {
+  float: right;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom_tabs {
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.tab_view {
+  background-color: white;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.view_icon_start {
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+
+.view_icon_end {
+  display: flex;
+  align-items: center;
+}
+
+.view_label {
+  display: flex;
+  align-items: center;
+}
+
+.invite_btn {
+  height: 50rpx;
+  width: 150rpx;
+  border-radius: 40rpx;
+  background-color: #cee2fa;
+  color: #1989fa;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+.no_talking_tip {
+  width: 100%;
+  text-align: center;
+  margin-top: 50rpx;
+  font-size: 24rpx;
+  color: #999;
 }
