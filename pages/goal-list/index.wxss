@@ -21,23 +21,41 @@ page {
 .diy_tab_view {
   height: 100%;
   margin-bottom: 48rpx;
+  position: relative;
 }
 
 .foot_text {
   text-align: center;
   font-size: 28rpx;
   margin-top: 10rpx;
+  position: absolute;
+  bottom: 230rpx;
+  width: 100%;
+}
+
+.foot_text_des {
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  position: absolute;
+  bottom: 190rpx;
+  width: 100%;
 }
 
 .diy_btn {
-  height: 100rpx;
+  height: 120rpx;
   margin-top: 50rpx;
+  position: absolute;
+  bottom: 50rpx;
+}
+.diy_btn .btn {
   padding: 30rpx;
 }
 
-.diy_btn button {
+.diy_btn .btn button {
   font-size: 36rpx;
   font-weight: bold;
+  width: 100%;
 }
 
 .tab_view {
@@ -69,6 +87,18 @@ page {
   align-items: center;
   margin-right: 20rpx;
   margin-left: 20rpx;
+}
+
+.add_goal {
+  height: 50rpx;
+  width: 120rpx;
+  line-height: 50rpx;
+  background-color: #cee2fa;
+  color: #1989fa;
+  text-align: center;
+  border-radius: 50rpx;
+  font-size: 24rpx;
+  font-weight: bold;
 }
 
 .van-tab--active {

@@ -10,5 +10,7 @@
   },
   "backgroundColorTop": "#1989fa",
   "navigationBarBackgroundColor": "#1989fa",
-  "enablePullDownRefresh": false
+  "enablePullDownRefresh": false,
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "打卡详情"
 }

@@ -35,6 +35,8 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -60,8 +62,8 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/clock-in-detail/index",
-					"pathName": "pages/clock-in-detail/index",
+					"name": "pages/goal-list/index",
+					"pathName": "pages/goal-list/index",
 					"query": "",
 					"scene": null
 				}
