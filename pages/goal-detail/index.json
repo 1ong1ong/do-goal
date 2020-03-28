@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-image": "../../components/vant/image",
+    "van-icon": "../../components/vant/icon",
+    "van-nav-bar": "../../components/vant/nav-bar",
+    "van-tag": "../../components/vant/tag",
+    "van-button": "../../components/vant/button"
+  },
+  "disableScroll": true,
+  "navigationStyle": "custom"
+}

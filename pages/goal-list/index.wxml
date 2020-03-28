@@ -45,7 +45,7 @@
                         </view>
                         <view slot="right-icon">
                             <view class="goal_right_icon">
-                                <view class="add_goal">
+                                <view class="add_goal" bindtap="routeGoalDetail">
                                     去添加
                                 </view>
                             </view>

@@ -10,5 +10,6 @@
     name="cross"
     custom-class="van-tag__close"
     bind:click="onClose"
+    size="20rpx"
   />
 </view>

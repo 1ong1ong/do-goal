@@ -1,0 +1,73 @@
+<!--pages/goal-detail/index.wxml-->
+<view class="container" style="height:{{height}}px;">
+
+  <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
+    <view slot="left" class="nav_bar_left">
+      <van-icon slot="left" name="arrow-left" color="white" size="40rpx" />
+      <view class="nav_text">返回</view>
+    </view>
+  </van-nav-bar>
+
+  <view class="top_text">
+    <text class="title">早起</text>
+    <view class="num">123123人正在坚持</view>
+    <text class="des">一日之计在于晨，快来一起坚持打卡吧! \n相信你一定是最棒的！</text>
+  </view>
+
+  <view class="bottom_card">
+      <view class="card_top">
+          <view class="top_left">
+              <view style="font-weight: bold;height: 50rpx;line-height: 50rpx">设置打卡提醒</view>
+              <view style="font-size:28rpx;height: 50rpx;line-height: 50rpx">指定时间前完成目标，我们回提醒你哦</view>
+          </view>
+          <view class="top_right">
+              <view class="add_btn" style="background-color: #cee2fa;">
+                  <van-icon name="plus" color="#1989fa"/>
+              </view>
+          </view>
+      </view>
+      <scroll-view scroll-x style="height: 100rpx;margin-top: 30rpx">
+          <view class="scroll_tags">
+              <view class="tag">
+                  <van-tag size="large" plain round closeable color="#1989fa">
+                      <view style="padding-left: 10rpx;">22:26</view>
+                  </van-tag>
+              </view>
+              <view class="tag">
+                  <van-tag size="large" plain round closeable color="#1989fa">
+                      <view style="padding-left: 10rpx;">22:26</view>
+                  </van-tag>
+              </view>
+              <view class="tag">
+                  <van-tag size="large" plain round closeable color="#1989fa">
+                      <view style="padding-left: 10rpx;">22:26</view>
+                  </van-tag>
+              </view>
+              <view class="tag">
+                  <van-tag size="large" plain round closeable color="#1989fa">
+                      <view style="padding-left: 10rpx;">22:26</view>
+                  </van-tag>
+              </view>
+              <view class="tag">
+                  <van-tag size="large" plain round closeable color="#1989fa">
+                      <view style="padding-left: 10rpx;">22:26</view>
+                  </van-tag>
+              </view>
+              <view class="tag">
+                  <van-tag size="large" plain round closeable color="#1989fa">
+                      <view style="padding-left: 10rpx;">22:26</view>
+                  </van-tag>
+              </view>
+          </view>
+      </scroll-view>
+
+      <view class="card_bottom">
+          <view class="bottom_content">
+            <van-button size="normal" color="#1989fa" round block customStyle="font-size:36rpx">添加目标</van-button>
+            <view style="font-size: 26rpx;color: #999999;text-align: center;margin-top: 10rpx">排行榜中将展示所有添加过目标的小伙伴的打卡信息</view>
+          </view>
+      </view>
+  </view>
+
+  <van-image width="100%" height="{{height}}px" fit="fill" src="{{backgroundImageUrl}}" />
+</view>
