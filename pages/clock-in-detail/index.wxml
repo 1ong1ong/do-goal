@@ -47,7 +47,7 @@
       </view>
     </view>
 
-    <view class="post">
+    <view class="post" bindtap="routePostTalking">
       <view class="post_input">
         <text>记录一下</text>
       </view>
@@ -309,6 +309,4 @@
       </van-tabs>
     </view>
   </view>
-
-
 </view>

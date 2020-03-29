@@ -3,7 +3,7 @@
 
   <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
     <view slot="left" class="nav_bar_left">
-      <van-icon slot="left" name="arrow-left" color="white" size="40rpx"/>
+      <do-icon name="left" size="40rpx" color="white" custom-class="nav_icon"/>
       <view class="top_text">早起</view>
     </view>
   </van-nav-bar>

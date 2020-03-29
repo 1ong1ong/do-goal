@@ -5,6 +5,10 @@ page {
   width: 100%;
 }
 
+.nav_icon {
+  margin-left: -10rpx;
+}
+
 .container {
   height: 100%;
   width: 100%;
@@ -48,6 +52,7 @@ page {
   position: absolute;
   bottom: 50rpx;
 }
+
 .diy_btn .btn {
   padding: 30rpx;
 }

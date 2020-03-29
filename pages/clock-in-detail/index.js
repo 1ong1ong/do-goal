@@ -49,22 +49,40 @@ Page({
     })
   },
 
+  /**
+   * 返回
+   */
   goBackPage() {
     wx.navigateBack();
   },
 
+  /**
+   * 开始按压
+   * @param e
+   */
   touchPercent(e) {
     this.setData({
       current: e.currentTarget.dataset.index
     })
   },
 
+  /**
+   * 结束按压
+   */
   touchPercentEnd() {
     setTimeout(() => {
       this.setData({
         current: null
       })
     }, 500)
+  },
 
+  /**
+   * 发票动态
+   */
+  routePostTalking() {
+    wx.navigateTo({
+      url: "/pages/post-talking/index"
+    })
   }
-})
+});

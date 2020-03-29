@@ -16,6 +16,14 @@ Page({
    */
   goBackPage() {
     wx.navigateBack();
-  }
+  },
 
+  /**
+   * 添加目标
+   */
+  addGoal() {
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
+  }
 })

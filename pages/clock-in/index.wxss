@@ -6,6 +6,10 @@
   background-size: 100% 100%;
 }
 
+.nav_icon {
+  margin-left: -10rpx;
+}
+
 .nav_bar_left {
   display: flex;
   align-items: center;

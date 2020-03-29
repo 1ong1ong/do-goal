@@ -7,7 +7,8 @@
     "pages/history-week-report-detail/index",
     "pages/goal-list/index",
     "pages/clock-in-detail/index",
-    "pages/goal-detail/index"
+    "pages/goal-detail/index",
+    "pages/post-talking/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

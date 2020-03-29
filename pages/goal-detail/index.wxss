@@ -1,95 +1,98 @@
 /* pages/goal-detail/index.wxss */
 
 .nav_bar_left {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    color: white;
-    font-size: 38rpx;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  font-size: 38rpx;
 }
 
-
+.nav_icon {
+  margin-left: -10rpx;
+}
 
 .title {
-    padding-bottom: 10rpx;
-    font-size: 50rpx;
-    border-bottom: white 5rpx solid;
-    font-weight: bold;
+  padding-bottom: 10rpx;
+  font-size: 50rpx;
+  border-bottom: white 5rpx solid;
+  font-weight: bold;
 }
 
 .top_text {
-    position: fixed;
-    top: 270rpx;
-    z-index: 10;
-    margin-left: 30rpx;
-    color: white;
+  position: fixed;
+  top: 270rpx;
+  z-index: 10;
+  margin-left: 30rpx;
+  color: white;
 }
 
 .num {
-    font-size: 26rpx;
-    font-weight: bold;
-    margin-top: 20rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
 }
 
 .des {
-    font-size: 26rpx;
-    margin-top: 10rpx;
+  font-size: 26rpx;
+  margin-top: 10rpx;
 }
 
 .bottom_card {
-    height: 500rpx;
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    bottom: 0;
-    z-index: 10;
-    border-top-left-radius: 40rpx;
+  height: 500rpx;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  border-top-left-radius: 40rpx;
 }
 
 .card_top {
-    height: 100rpx;
-    margin: 30rpx;
+  height: 100rpx;
+  margin: 30rpx;
 }
 
 .top_left {
-    height: 100%;
-    float: left;
-    width: 80%;
+  height: 100%;
+  float: left;
+  width: 80%;
 }
+
 .top_right {
-    height: 100%;
-    float: right;
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  height: 100%;
+  float: right;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
+
 .add_btn {
-    height: 80rpx;
-    width: 80rpx;
-    border-radius: 50rpx;
-    background-color: #1989fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50rpx;
+  background-color: #1989fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .scroll_tags {
-    display: flex;
-    flex-direction:row;
+  display: flex;
+  flex-direction: row;
 }
 
 .tag {
-    margin-left: 30rpx;
+  margin-left: 30rpx;
 }
 
 .card_bottom {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-
 .bottom_content {
-    padding: 30rpx;
+  padding: 30rpx;
 }
