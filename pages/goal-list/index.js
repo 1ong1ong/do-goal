@@ -24,5 +24,14 @@ Page({
     wx.navigateTo({
       url: "/pages/goal-detail/index"
     })
+  },
+
+  /**
+   * 去目标自定义添加页面
+   */
+  routeGoalAdd() {
+    wx.navigateTo({
+      url: "/pages/goal-add/index"
+    })
   }
 })

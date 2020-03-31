@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-field": "../../components/vant/field",
+    "do-icon": "../../components/my/icon",
+    "van-icon": "../../components/vant/icon",
+    "van-button": "../../components/vant/button"
+  },
+  "navigationBarTitleText": ""
+}

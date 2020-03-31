@@ -1,0 +1,103 @@
+<!--pages/goal-add/index.wxml-->
+<view class="container">
+  <view class="content">
+    <view class="title">
+      目标名称
+    </view>
+    <view class="input_content">
+      <input class="input_class"
+             placeholder="点击输入目标名称"
+             placeholder-class="input_placeholder"
+             maxlength="12"
+      />
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="title">
+      挑选图标和颜色
+    </view>
+    <view class="input_content">
+      <view class="icon_list">
+        <view class="icons">
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+        </view>
+        <view class="icons">
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+        </view>
+        <view class="icons">
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+        </view>
+        <view class="icons">
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+          <do-icon name="sun" size="70rpx" color="#1989fa" />
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="title">
+      打卡时间
+    </view>
+    <view class="input_content">
+      <view class="times">
+        <view class="time">周一</view>
+        <view class="time">周二</view>
+        <view class="time">周三</view>
+        <view class="time">周四</view>
+        <view class="time">周五</view>
+        <view class="time">周六</view>
+        <view class="time">周日</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="title1">
+      打卡提醒
+      <view class="des">
+        指定时间前未完成目标，回提醒你哦
+      </view>
+    </view>
+    <view class="input_content">
+      <view class="tags">
+        <view class="btn">
+          <van-icon name="plus" size="24rpx" color="#1989fa"/>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="title">
+      鼓励自己的话
+    </view>
+    <view class="input_content">
+      <input class="input_class2"
+             placeholder="写一句话来鼓励自己，开始行动！"
+             placeholder-class="input_placeholder2"
+             maxlength="12"
+      />
+    </view>
+  </view>
+
+
+   <van-button size="normal" color="#1989fa" disabled block>确认添加目标</van-button>
+</view>

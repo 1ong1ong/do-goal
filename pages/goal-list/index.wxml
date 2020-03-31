@@ -20,7 +20,7 @@
         </view>
         <view class="diy_btn" style="width:{{width}}px">
           <view class="btn">
-            <van-button size="large" color="#1989fa" round block>添加自定义目标</van-button>
+            <van-button size="large" color="#1989fa" round block bind:click="routeGoalAdd">添加自定义目标</van-button>
           </view>
         </view>
       </view>
