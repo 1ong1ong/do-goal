@@ -8,7 +8,8 @@
     "pages/goal-list/index",
     "pages/clock-in-detail/index",
     "pages/goal-detail/index",
-    "pages/post-talking/index"
+    "pages/post-talking/index",
+    "pages/goal-add/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

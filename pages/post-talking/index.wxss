@@ -6,6 +6,7 @@
 .top {
   height: 100rpx;
   display: inline-flex;
+  justify-content: flex-start;
 }
 
 .right {
@@ -84,7 +85,6 @@
 
 .bottom_btn {
   height: 90rpx;
-  width: 100%;
   display: inline-flex;
   align-items: center;
   padding-left: 30rpx;

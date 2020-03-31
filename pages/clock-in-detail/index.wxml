@@ -1,6 +1,6 @@
 <!--pages/clock-in-detail/index.wxml-->
 <view class="container" bindtap="pageTap">
-  <view class="blue_card" />
+  <view class="blue_card"/>
 
   <view class="card" style="width:{{width}}rpx">
     <view class="time">22:10</view>
@@ -14,7 +14,7 @@
         </view>
         <view class="item">
           <view class="title">
-            <van-icon name="star" color="#fbcd5b" />
+            <van-icon name="star" color="#fbcd5b"/>
           </view>
           <view class="des">目标等级</view>
         </view>
@@ -23,19 +23,22 @@
           <view class="des">距离升级</view>
         </view>
       </view>
-      <van-divider customStyle="margin-top:6rpx;" />
+      <van-divider customStyle="margin-top:6rpx;"/>
       <view class="down">
         <view class="left">
-          <view class="day" wx:for="{{charts}}" wx:for-item="chart" wx:key="index" bindtouchstart="touchPercent" data-index="{{index}}" bindtouchend="touchPercentEnd">
-            <view class="tooltip" style="background-color: {{current === index && chart.percent !==0 ?'#1989fa':'white'}}">
+          <view class="day" wx:for="{{charts}}" wx:for-item="chart" wx:key="index" bindtouchstart="touchPercent"
+                data-index="{{index}}" bindtouchend="touchPercentEnd">
+            <view class="tooltip"
+                  style="background-color: {{current === index && chart.percent !==0 ?'#1989fa':'white'}}">
               <view class="text">{{chart.time}}</view>
               <div class="bottom">
-                <view class="triangle" style="background-color: {{current === index&& chart.percent !==0?'#1989fa':'white'}}" />
+                <view class="triangle"
+                      style="background-color: {{current === index&& chart.percent !==0?'#1989fa':'white'}}"/>
               </div>
             </view>
             <view class="percent">
-              <view class="inner" style="height:{{chart.percent}}%;" />
-              <view class="line" wx:if="{{current === index && chart.percent !==0}}" />
+              <view class="inner" style="height:{{chart.percent}}%;"/>
+              <view class="line" wx:if="{{current === index && chart.percent !==0}}"/>
             </view>
             {{chart.date}}
           </view>
@@ -52,12 +55,13 @@
         <text>记录一下</text>
       </view>
       <view class="post_photo_icon">
-        <van-icon name="photograph" size="60rpx" color="#92C6FA" />
+        <van-icon name="photograph" size="60rpx" color="#92C6FA"/>
       </view>
     </view>
 
     <view class="bottom_tabs">
-      <van-tabs swipeable animated active="0" color="#1989fa" titleActiveColor="#1989fa" custom-class="tabs_custom" sticky>
+      <van-tabs swipeable animated active="0" color="#1989fa" titleActiveColor="#1989fa" custom-class="tabs_custom"
+                sticky>
         <van-tab title="排名" name="0" custom-class="tabs_custom">
           <view class="tab_view">
             <view class="tab_view_head">
@@ -69,12 +73,11 @@
                 </view>
                 <view slot="label">
                   <view class="view_label">
-                    完成
-                    <text style="color:rgb(25,137,250)">3</text>天
-                    <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text> 第
-                    <text style="color:rgb(25,137,250)">2</text>名
+                    完成<text style="color:rgb(25,137,250)">3</text>天
                     <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text>
-                    <van-icon name="like" size="30rpx" color="#d5d5d5" />
+                    第<text style="color:rgb(25,137,250)">2</text>名
+                    <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text>
+                    <van-icon name="like" size="30rpx" color="#d5d5d5"/>
                   </view>
                 </view>
                 <view slot="right-icon">
@@ -90,7 +93,7 @@
               <view slot="icon">
                 <view class="view_icon_start">
                   <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -102,15 +105,15 @@
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
 
-                  <van-icon name="like" size="40rpx" color="red" />
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
             <van-cell use-label-slot="true" center>
               <view slot="icon">
                 <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">2</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -121,15 +124,16 @@
               <view slot="right-icon">
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
+
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
             <van-cell use-label-slot="true" center>
               <view slot="icon">
                 <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">3</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -140,15 +144,16 @@
               <view slot="right-icon">
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
+
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
             <van-cell use-label-slot="true" center>
               <view slot="icon">
                 <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">4</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -159,15 +164,16 @@
               <view slot="right-icon">
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
+
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
             <van-cell use-label-slot="true" center>
               <view slot="icon">
                 <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">5</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -178,15 +184,16 @@
               <view slot="right-icon">
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
+
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
             <van-cell use-label-slot="true" center>
               <view slot="icon">
                 <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">6</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -197,15 +204,16 @@
               <view slot="right-icon">
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
+
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
             <van-cell use-label-slot="true" center>
               <view slot="icon">
                 <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">7</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -216,15 +224,16 @@
               <view slot="right-icon">
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
+
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
             <van-cell use-label-slot="true" center>
               <view slot="icon">
                 <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">8</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -235,15 +244,16 @@
               <view slot="right-icon">
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
+
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
             <van-cell use-label-slot="true" center>
               <view slot="icon">
                 <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">9</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">1</text>
+                  <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" style="height: 90rpx;width: 90rpx;"/>
                 </view>
               </view>
               <view slot="title">
@@ -254,45 +264,8 @@
               <view slot="right-icon">
                 <view class="view_icon_end">
                   <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
-                </view>
-              </view>
-            </van-cell>
-            <van-cell use-label-slot="true" center>
-              <view slot="icon">
-                <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">10</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-                </view>
-              </view>
-              <view slot="title">
-                <view class="view_title">
-                  CXL
-                </view>
-              </view>
-              <view slot="right-icon">
-                <view class="view_icon_end">
-                  <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
-                </view>
-              </view>
-            </van-cell>
-            <van-cell use-label-slot="true" center>
-              <view slot="icon">
-                <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">11</text>
-                  <van-image width="47" height="47" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-                </view>
-              </view>
-              <view slot="title">
-                <view class="view_title">
-                  CXL
-                </view>
-              </view>
-              <view slot="right-icon">
-                <view class="view_icon_end">
-                  <text style="color: red;margin-right: 50rpx;">2天</text>
-                  <van-icon name="like" size="40rpx" color="#d5d5d5" info="{{null}}" />
+
+                  <van-icon name="like" size="40rpx" color="red"/>
                 </view>
               </view>
             </van-cell>
