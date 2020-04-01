@@ -1,0 +1,8 @@
+/* pages/discovry/index.wxss */
+.container {
+  /*background-color: #1989fa;*/
+}
+
+.swiper {
+  background-color: #1989fa;
+}

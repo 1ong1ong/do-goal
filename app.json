@@ -9,7 +9,8 @@
     "pages/clock-in-detail/index",
     "pages/goal-detail/index",
     "pages/post-talking/index",
-    "pages/goal-add/index"
+    "pages/goal-add/index",
+    "pages/discovry/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,7 +33,7 @@
       {
         "selectedIconPath": "assets/imgs/discovery-select.png",
         "iconPath": "assets/imgs/discovery-unselect.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/discovry/index",
         "text": "发现"
       },
       {

@@ -1,0 +1,28 @@
+<!--pages/discovry/index.wxml-->
+<view class="container">
+    <view class="swiper">
+      <swiper indicator-dots autoplay interval="2000" duration="500">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="tabs">
+      <van-tabs swipeable animated active="1" color="#1989fa" titleActiveColor="#1989fa"
+                sticky>
+        <van-tab title="关注" name="0">
+          关注
+        </van-tab>
+        <van-tab title="热点" name="1">
+          热点
+        </van-tab>
+        <van-tab title="最新" name="1">
+          最新
+        </van-tab>
+      </van-tabs>
+
+    </view>
+</view>
