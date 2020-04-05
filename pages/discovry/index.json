@@ -1,7 +1,11 @@
 {
   "usingComponents": {
     "van-tab": "../../components/vant/tab",
-    "van-tabs": "../../components/vant/tabs"
+    "van-tabs": "../../components/vant/tabs",
+    "van-icon": "../../components/vant/icon",
+    "van-cell": "../../components/vant/cell",
+    "van-image": "../../components/vant/image",
+    "do-icon": "../../components/my/icon"
   },
   "navigationBarTitleText": ""
 }

@@ -6,3 +6,127 @@
 .swiper {
   background-color: #1989fa;
 }
+
+.tab_view {
+  /*padding-left: 30rpx;*/
+  /*padding-right: 30rpx;*/
+}
+
+.tab_padding {
+  /*height: 400rpx;*/
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.goal_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120rpx;
+}
+
+.text {
+  height: 50rpx;
+  padding-right: 20rpx;
+  border-radius: 100rpx;
+  text-align: left;
+  line-height: 50rpx;
+  font-weight: 600;
+  font-size: 40rpx;
+}
+
+.goal_head_right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-items: center;
+}
+
+.hot_goal_list {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: flex-start;*/
+  /*justify-items: start;*/
+  /*justify-content: stretch;*/
+  /*height: 260rpx;*/
+}
+
+.list {
+  min-width: 240rpx;
+  height: 100%;
+  margin-right: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item {
+  width: 100%;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  border: #f5f5f5 solid 2rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.post_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120rpx;
+}
+
+.post_list_item {
+  padding-bottom: 20rpx;
+  padding-top: 70rpx;
+  border-bottom: #f3f3f3 2rpx solid;
+}
+
+.top {
+  height: 100rpx;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+.post_author {
+  height: 100%;
+  padding-left: 30rpx;
+}
+
+.name {
+  font-weight: bold;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.time {
+  height: 50rpx;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+
+.time .text{
+  font-size: 26rpx;
+  padding-right: 10rpx;
+  line-height: 50rpx;
+}
+
+.talking {
+  min-height: 100rpx;
+  color: #3f3f3f;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+
+.goal_des {
+  height: 50rpx;
+  display: inline-flex;
+  line-height: 50rpx;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}

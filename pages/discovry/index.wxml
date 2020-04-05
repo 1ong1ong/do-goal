@@ -1,28 +1,1182 @@
 <!--pages/discovry/index.wxml-->
 <view class="container">
-    <view class="swiper">
-      <swiper indicator-dots autoplay interval="2000" duration="500">
-        <block wx:for="{{background}}" wx:key="*this">
-          <swiper-item>
-            <view class="swiper-item {{item}}"></view>
-          </swiper-item>
-        </block>
-      </swiper>
-    </view>
+  <view class="swiper">
+    <swiper indicator-dots autoplay interval="2000" duration="500">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 
-    <view class="tabs">
-      <van-tabs swipeable animated active="1" color="#1989fa" titleActiveColor="#1989fa"
-                sticky>
-        <van-tab title="关注" name="0">
-          关注
-        </van-tab>
-        <van-tab title="热点" name="1">
-          热点
-        </van-tab>
-        <van-tab title="最新" name="1">
-          最新
-        </van-tab>
-      </van-tabs>
+  <view class="tabs">
+    <van-tabs swipeable animated active="1" color="#1989fa" titleActiveColor="#1989fa"
+              sticky>
+      <van-tab title="关注" name="0">
+        <view class="tab_padding">
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="热点" name="1">
+        <view class="tab_view">
+          <view class="tab_padding">
+            <view class="goal_head">
+              <view class="text">
+                目标热榜
+              </view>
+              <view class="goal_head_right">
+                <text style="margin-right: 10rpx;font-size: 28rpx;color: #999999">查看更多</text>
+                <van-icon name="arrow" size="24rpx" color="#999999"/>
+              </view>
+            </view>
+            <scroll-view scroll-x>
+              <view class="hot_goal_list">
+                <view class="list">
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                </view>
+                <view class="list">
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                </view>
+                <view class="list">
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                </view>
+                <view class="list">
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                </view>
+                <view class="list">
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                </view>
+                <view class="list">
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                </view>
+                <view class="list">
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                </view>
+                <view class="list">
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                  <view class="item">
+                    <van-cell use-label-slot="true" border="{{ false }}" center>
+                      <view slot="title">
+                        <view class="view_title">
+                          早起
+                        </view>
+                      </view>
+                      <view slot="label">
+                        <view class="view_label">
+                          <text style="color:rgb(230, 175, 56)">1231233</text>
+                          人正在坚持
+                        </view>
+                      </view>
+                      <!--                      <view slot="right-icon">-->
+                      <!--                        <view class="view_icon_end">-->
+                      <!--                          <view class="invite_btn">-->
+                      <!--                            邀请好友-->
+                      <!--                          </view>-->
+                      <!--                        </view>-->
+                      <!--                      </view>-->
+                    </van-cell>
+                  </view>
+                </view>
+              </view>
+            </scroll-view>
 
-    </view>
+            <view class="post_list">
+              <view class="post_head" style="margin-top: -20rpx">
+                <view class="text">
+                  热门动态
+                </view>
+              </view>
+
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top" style="margin-top: -40rpx">
+                  <view class="avatar">
+                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                  </view>
+                  <view class="post_author">
+                    <view class="name">CXL</view>
+                    <view class="time">
+                      <view class="text">
+                        2019-02-21 12:32:43
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="最新" name="1">
+        <view class="tab_padding">
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top" style="margin-top: -40rpx">
+              <view class="avatar">
+                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+              </view>
+              <view class="post_author">
+                <view class="name">CXL</view>
+                <view class="time">
+                  <view class="text">
+                    2019-02-21 12:32:43
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+
+  </view>
 </view>
