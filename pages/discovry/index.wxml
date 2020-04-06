@@ -16,19 +16,25 @@
       <van-tab title="关注" name="0">
         <view class="tab_padding">
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -39,19 +45,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -62,19 +74,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -85,19 +103,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -108,19 +132,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -131,19 +161,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -154,19 +190,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -177,19 +219,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -200,19 +248,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -223,19 +277,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -246,19 +306,170 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="left">
+                关注
+              </view>
+            </view>
+
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="left">
+                关注
+              </view>
+            </view>
+
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="left">
+                关注
+              </view>
+            </view>
+
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="left">
+                关注
+              </view>
+            </view>
+
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="left">
+                关注
+              </view>
+            </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -662,20 +873,26 @@
                 </view>
               </view>
 
-              <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+              <view class="post_list_item" >
+                <view class="top" style="margin-top: -30rpx">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -686,19 +903,25 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -709,19 +932,25 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -732,7 +961,8 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
+              <view class="top">
+                <view class="right" >
                   <view class="avatar">
                     <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
                   </view>
@@ -745,6 +975,40 @@
                     </view>
                   </view>
                 </view>
+                <view class="left">
+                  关注
+                </view>
+              </view>
+
+              <view class="talking" bindtap="inputAreaClick">
+                啊手動閥手動閥客家話客家話客家話
+              </view>
+              <view class="goal_des">
+                <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+              </view>
+            </view>
+              <view class="post_list_item">
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="left">
+                    关注
+                  </view>
+                </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -755,19 +1019,25 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -778,19 +1048,25 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -801,19 +1077,25 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -824,19 +1106,25 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -847,19 +1135,25 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -870,19 +1164,25 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -893,19 +1193,83 @@
                 </view>
               </view>
               <view class="post_list_item">
-                <view class="top" style="margin-top: -40rpx">
-                  <view class="avatar">
-                    <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-                  </view>
-                  <view class="post_author">
-                    <view class="name">CXL</view>
-                    <view class="time">
-                      <view class="text">
-                        2019-02-21 12:32:43
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
                       </view>
                     </view>
                   </view>
+                  <view class="left">
+                    关注
+                  </view>
                 </view>
+
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="left">
+                    关注
+                  </view>
+                </view>
+
+                <view class="talking" bindtap="inputAreaClick">
+                  啊手動閥手動閥客家話客家話客家話
+                </view>
+                <view class="goal_des">
+                  <do-icon name="sun" size="40rpx" color="#1989fa"/>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+                  <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+                </view>
+              </view>
+              <view class="post_list_item">
+                <view class="top">
+                  <view class="right" >
+                    <view class="avatar">
+                      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                    </view>
+                    <view class="post_author">
+                      <view class="name">CXL</view>
+                      <view class="time">
+                        <view class="text">
+                          2019-02-21 12:32:43
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="left">
+                    关注
+                  </view>
+                </view>
+
                 <view class="talking" bindtap="inputAreaClick">
                   啊手動閥手動閥客家話客家話客家話
                 </view>
@@ -922,19 +1286,25 @@
       <van-tab title="最新" name="1">
         <view class="tab_padding">
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -945,19 +1315,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -968,19 +1344,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -991,19 +1373,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -1014,19 +1402,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -1037,19 +1431,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -1060,19 +1460,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -1083,19 +1489,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -1106,19 +1518,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -1129,19 +1547,25 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>
@@ -1152,19 +1576,83 @@
             </view>
           </view>
           <view class="post_list_item">
-            <view class="top" style="margin-top: -40rpx">
-              <view class="avatar">
-                <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
-              </view>
-              <view class="post_author">
-                <view class="name">CXL</view>
-                <view class="time">
-                  <view class="text">
-                    2019-02-21 12:32:43
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
                   </view>
                 </view>
               </view>
+              <view class="left">
+                关注
+              </view>
             </view>
+
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="left">
+                关注
+              </view>
+            </view>
+
+            <view class="talking" bindtap="inputAreaClick">
+              啊手動閥手動閥客家話客家話客家話
+            </view>
+            <view class="goal_des">
+              <do-icon name="sun" size="40rpx" color="#1989fa"/>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">喝水</text>
+              <text style="padding-left: 10rpx;color:#1989fa;font-size: 28rpx">第1天</text>
+            </view>
+          </view>
+          <view class="post_list_item">
+            <view class="top">
+              <view class="right" >
+                <view class="avatar">
+                  <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+                </view>
+                <view class="post_author">
+                  <view class="name">CXL</view>
+                  <view class="time">
+                    <view class="text">
+                      2019-02-21 12:32:43
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="left">
+                关注
+              </view>
+            </view>
+
             <view class="talking" bindtap="inputAreaClick">
               啊手動閥手動閥客家話客家話客家話
             </view>

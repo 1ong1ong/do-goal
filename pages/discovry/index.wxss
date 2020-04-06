@@ -81,14 +81,21 @@
 
 .post_list_item {
   padding-bottom: 20rpx;
-  padding-top: 70rpx;
+  padding-top: 40rpx;
   border-bottom: #f3f3f3 2rpx solid;
 }
 
 .top {
   height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right {
+  height: 100rpx;
   display: inline-flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .post_author {
@@ -113,6 +120,17 @@
   font-size: 26rpx;
   padding-right: 10rpx;
   line-height: 50rpx;
+}
+
+.left {
+  width: 100rpx;
+  background-color: #1989fa;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 100rpx;
+  font-size: 26rpx;
+  color: #cee2fa;
 }
 
 .talking {
