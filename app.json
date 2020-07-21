@@ -10,7 +10,8 @@
     "pages/goal-detail/index",
     "pages/post-talking/index",
     "pages/goal-add/index",
-    "pages/discovry/index"
+    "pages/discovery/index",
+    "pages/my/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,13 +34,13 @@
       {
         "selectedIconPath": "assets/imgs/discovery-select.png",
         "iconPath": "assets/imgs/discovery-unselect.png",
-        "pagePath": "pages/discovry/index",
+        "pagePath": "pages/discovery/index",
         "text": "发现"
       },
       {
         "selectedIconPath": "assets/imgs/my-select.png",
         "iconPath": "assets/imgs/my-unselect.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/my/index",
         "text": "我的"
       }
     ]
