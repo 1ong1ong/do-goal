@@ -1,2 +1,19 @@
 <!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<view class="container">
+  <view class="top-profile">
+    <view class="avator">
+      <view class="left">
+        <van-image width="100%" height="100%" round src="https://img.yzcdn.cn/vant/cat.jpeg" />
+      </view>
+      <view class="right">
+        <view class="username">
+          <view class="up">呜啦啦</view>
+          <view class="down">ID: 12312323</view>
+        </view>
+        <view class="more">
+          <van-icon name="arrow" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

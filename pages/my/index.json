@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-image": "../../components/vant/image",
+    "van-icon": "../../components/vant/icon"
+  },
+  "navigationBarTitleText": ""
 }

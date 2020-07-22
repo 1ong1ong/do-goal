@@ -1,1 +1,58 @@
 /* pages/my/index.wxss */
+
+.container {
+  height: 100%;
+  padding: 0 20rpx;
+
+}
+
+.top-profile {
+
+  height: 240rpx;
+  padding-top: 60rpx;
+}
+
+.avator {
+  height:160rpx;
+  padding-left: 20rpx; 
+  padding-right: 20rpx;
+
+  display: flex;
+}
+
+.left {
+  height: 160rpx;
+  width: 160rpx;
+
+  flex:1
+}
+
+.right {
+  height: 160rpx;
+  width: 160rpx;
+
+  flex:3;
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  flex:9;
+  margin-left: 20rpx;
+}
+
+.up {
+  font-weight: bold;
+  height: 60rpx;
+}
+.down {
+  color: #333333;
+  font-size: 26rpx;
+}
+
+.more{
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
