@@ -1,19 +1,51 @@
 <!--pages/my/index.wxml-->
 <view class="container">
-  <view class="top-profile">
-    <view class="avator">
-      <view class="left">
-        <van-image width="100%" height="100%" round src="https://img.yzcdn.cn/vant/cat.jpeg" />
-      </view>
-      <view class="right">
-        <view class="username">
-          <view class="up">呜啦啦</view>
-          <view class="down">ID: 12312323</view>
+  <view class="content-top">
+    <view class="top-profile">
+      <view class="avator">
+        <view class="left">
+          <van-image width="100%" height="100%" round src="https://img.yzcdn.cn/vant/cat.jpeg" />
         </view>
-        <view class="more">
-          <van-icon name="arrow" />
+        <view class="right">
+          <view class="username">
+            <view class="up">呜啦啦</view>
+            <view class="down">ID: 12312323</view>
+          </view>
+          <view class="more">
+            <van-icon name="arrow" />
+          </view>
         </view>
       </view>
     </view>
+  </view>
+
+  <view class="content-down">
+    <van-cell icon="todo-list" title="蜕变记录" size="large" center>
+      <view slot="right-icon">
+        <van-icon name="arrow" />
+      </view>
+    </van-cell>
+    <van-cell icon="award" title="目标管理" size="large" center>
+      <view slot="right-icon">
+        <van-icon name="arrow" />
+      </view>
+    </van-cell>
+    <van-cell icon="invition" title="打卡周报" size="large" center>
+      <view slot="right-icon">
+        <van-icon name="arrow" />
+      </view>
+    </van-cell>
+    <van-cell icon="friends" title="邀请好友" size="large" center>
+      <view slot="right-icon">
+        <van-icon name="arrow" />
+      </view>
+    </van-cell>
+  </view>
+  <view class="content-down">
+    <van-cell icon="phone" title="联系我们" size="large" center>
+      <view slot="right-icon">
+        <van-icon name="arrow" />
+      </view>
+    </van-cell>
   </view>
 </view>

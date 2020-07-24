@@ -1,7 +1,10 @@
 {
   "usingComponents": {
     "van-image": "../../components/vant/image",
-    "van-icon": "../../components/vant/icon"
+    "van-icon": "../../components/vant/icon",
+    "van-cell": "../../components/vant/cell",
+    "do-icon": "../../components/my/icon"
   },
-  "navigationBarTitleText": ""
+  "navigationBarTitleText": "",
+  "disableScroll": true
 }
