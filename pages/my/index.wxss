@@ -41,6 +41,17 @@ page {
   align-items: center;
 }
 
+.user-info-btn {
+ background-color: white;
+ border-radius: 0;
+ font-weight: bold;
+}
+
+.user-info-btn::after {
+  border: none;
+  border-radius: 0;
+}
+
 .username {
   flex: 9;
   margin-left: 20rpx;
@@ -68,5 +79,5 @@ page {
   padding: 0 40rpx;
   border-bottom: 1px solid #efefef;
   border-top: 1px solid #efefef;
-  margin-top: 16rpx;
+  margin-top: 14rpx;
 }

@@ -1,19 +1,20 @@
+var http = require('./utils/httpUtils.js')
+
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     let that = this;
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        http.login(res.code);
       }
     });
 
     wx.getSystemInfo({
       success(res) {
-        console.log(res);
-        that.globalData.screenWidth= res.screenWidth;
-        that.globalData.screenHeight= res.screenHeight
+        that.globalData.screenWidth = res.screenWidth;
+        that.globalData.screenHeight = res.screenHeight
       }
     })
 

@@ -4,12 +4,13 @@
     <view class="top-profile">
       <view class="avator">
         <view class="left">
-          <van-image width="100%" height="100%" round src="https://img.yzcdn.cn/vant/cat.jpeg" />
+          <van-image width="100%" height="100%" round src="{{avatarUrl}}" />
         </view>
         <view class="right">
-          <view class="username">
-            <view class="up">呜啦啦</view>
-            <view class="down">ID: 12312323</view>
+         <button class="user-info-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{authorize == false}}">点击显示微信头像</button>
+          <view class="username" wx:if="{{authorize == true}}">
+            <view class="up">{{nickName}}</view>
+            <view class="down"> {{country}} {{province}} {{city}}</view>
           </view>
           <view class="more">
             <van-icon name="arrow" />
@@ -20,29 +21,44 @@
   </view>
 
   <view class="content-down">
-    <van-cell icon="todo-list" title="蜕变记录" size="large" center>
+    <van-cell icon="todo-list" size="large" center>
+      <view slot="title">
+        <view style="padding-left:20rpx;">蜕变记录</view>
+      </view>
+      <view slot="right-icon">
+        <van-icon name="arrow"/>
+      </view>
+    </van-cell>
+    <van-cell icon="award" size="large" center>
+     <view slot="title">
+        <view style="padding-left:20rpx;">目标管理</view>
+      </view>
       <view slot="right-icon">
         <van-icon name="arrow" />
       </view>
     </van-cell>
-    <van-cell icon="award" title="目标管理" size="large" center>
+    <van-cell icon="invition" size="large" center>
+     <view slot="title">
+        <view style="padding-left:20rpx;">打卡周报</view>
+      </view>
       <view slot="right-icon">
         <van-icon name="arrow" />
       </view>
     </van-cell>
-    <van-cell icon="invition" title="打卡周报" size="large" center>
-      <view slot="right-icon">
-        <van-icon name="arrow" />
+    <van-cell icon="friends" size="large" center>
+     <view slot="title">
+        <view style="padding-left:20rpx;">邀请好友</view>
       </view>
-    </van-cell>
-    <van-cell icon="friends" title="邀请好友" size="large" center>
       <view slot="right-icon">
         <van-icon name="arrow" />
       </view>
     </van-cell>
   </view>
   <view class="content-down">
-    <van-cell icon="phone" title="联系我们" size="large" center>
+    <van-cell icon="phone" size="large" center>
+     <view slot="title">
+        <view style="padding-left:20rpx;">联系我们</view>
+      </view>
       <view slot="right-icon">
         <van-icon name="arrow" />
       </view>
