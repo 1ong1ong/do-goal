@@ -1,5 +1,6 @@
 // pages/my/index.js
-var http = require('../../utils/httpUtils.js')
+import {updateUserInfo} from '../../api/user';
+
 Page({
 
   /**
@@ -23,12 +24,12 @@ Page({
     let _this = this;
     let authorize = false;
     let userInfo = wx.getStorageSync("userInfo");
-    if (userInfo != null && userInfo != '') {
+    if (userInfo !== null && userInfo !== '') {
       authorize = userInfo.authorize;
     }
 
     // 如果之前已经授权了，直接显示
-    if (authorize) {
+    if (authorize && userInfo !== null) {
       this.setData({
         nickName: userInfo.nickName,
         avatarUrl: userInfo.avatarUrl,
@@ -86,7 +87,7 @@ Page({
       success: function(res) {
         let userInfo = res.userInfo;
         // 授权成功，更新用户资料
-        http.put('/user/' + userInfoTmp.userId, userInfo, null)
+        updateUserInfo(userInfoTmp.userId, userInfo);
         _this.setData({
           nickName: userInfo.nickName,
           avatarUrl: userInfo.avatarUrl,
@@ -96,7 +97,7 @@ Page({
           city: userInfo.city,
           authorize: true
         })
-        
+
       }
     })
   },

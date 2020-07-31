@@ -1,6 +1,7 @@
-var host = 'http://192.168.3.4:9000';
+// var host = 'http://192.168.3.4:9000';
+var host = 'http://127.0.0.1:9000';
 var clientBasicAuthorization = "Basic ZG8tZ29hbDpkby1nb2Fs";
-import Notify from '../components/vant/notify/notify.js';
+
 /**
  * 登录请求，
  * code：微信登录授权码
@@ -42,89 +43,127 @@ function login(code) {
     fail: function() {
       wx.showModal({
         title: '提示',
-        content: '网络不稳定，请稍后再试' 
+        content: '网络不稳定，请稍后再试'
       })
     },
   })
 }
 
-
-
 /**
  * POST请求，
  * URL：接口
  * data：参数，json类型
- * doSuccess：成功的回调函数
  */
-function post(url, data, doSuccess) {
+function post(url, data) {
   let accessToken = wx.getStorageSync("accessToken");
   if (accessToken === null || accessToken === '') {
-    // 如果tokne不存在，token存放有延迟，等待重试
+    // 如果token不存在，token存放有延迟，等待重试
     setTimeout(function () {
       //要延时执行的代码
-      post(url, data, doSuccess);
+      post(url, data);
     }, 100) //延迟时间 这里是100毫秒
     return;
   }
-  wx.request({
-    url: host + url,
-    header: {
-      "content-type": "application/json;charset=UTF-8",
-      "Authorization": "Bearer " + accessToken
-    },
-    data: data,
-    method: 'POST',
-    success: function(res) {
-      checkSuccessRes(res, doSuccess)
-    },
-    fail: function(res) {
-      wx.showModal({
-        title: '提示',
-        content: '网络不稳定，请稍后再试'
-      })
-    },
-  })
+
+  return new Promise((resolved, rejected) => {
+    wx.request({
+      url: host + url,
+      header: {
+        "content-type": "application/json;charset=UTF-8",
+        "Authorization": "Bearer " + accessToken
+      },
+      data: data,
+      method: 'POST',
+      success: (res) => {
+        checkSuccessRes(res, resolved, rejected)
+      },
+      fail: (res)  => {
+        wx.showModal({
+          title: '提示',
+          content: '网络不稳定，请稍后再试'
+        })
+      },
+    })
+  });
 }
 
 /**
  * PUT请求，
  * URL：接口
  * data：参数，json类型
- * doSuccess：成功的回调函数
  */
-function put(url, data, doSuccess) {
+function put(url, data) {
   let accessToken = wx.getStorageSync("accessToken");
   if (accessToken === null || accessToken === '') {
-    // 如果tokne不存在，token存放有延迟，等待重试
+    // 如果token不存在，token存放有延迟，等待重试
     setTimeout(function () {
       //要延时执行的代码
-      put(url, data, doSuccess);
+      put(url, data);
     }, 100) //延迟时间 这里是100毫秒
     return;
   }
-  wx.request({
-    url: host + url,
-    header: {
-      "content-type": "application/json;charset=UTF-8",
-      "Authorization": "Bearer " + accessToken
-    },
-    data: data,
-    method: 'PUT',
-    success: function (res) {
-      checkSuccessRes(res, doSuccess)
-    },
-    fail: function (res) {
-      wx.showModal({
-        title: '提示',
-        content: '网络不稳定，请稍后再试'
-      })
-    },
-  })
+  return new Promise((resolved, rejected) => {
+    wx.request({
+      url: host + url,
+      header: {
+        "content-type": "application/json;charset=UTF-8",
+        "Authorization": "Bearer " + accessToken
+      },
+      data: data,
+      method: 'PUT',
+      success: (res) => {
+        checkSuccessRes(res, resolved, rejected)
+      },
+      fail: (res)  => {
+        wx.showModal({
+          title: '提示',
+          content: '网络不稳定，请稍后再试'
+        })
+      },
+    })
+  });
 }
 
-function checkSuccessRes(res, doSuccess) {
+/**
+ * GET请求，
+ * URL：接口
+ * data：参数，json类型
+ */
+function get(url, data) {
+  let accessToken = wx.getStorageSync("accessToken");
+  if (accessToken === null || accessToken === '') {
+    // 如果token不存在，token存放有延迟，等待重试
+    setTimeout(function () {
+      //要延时执行的代码
+      get(url, data);
+    }, 100) //延迟时间 这里是100毫秒
+    return;
+  }
+  return new Promise((resolved, rejected) => {
+    wx.request({
+      url: host + url,
+      header: {
+        "content-type": "application/json;charset=UTF-8",
+        "Authorization": "Bearer " + accessToken
+      },
+      data: data,
+      method: 'GET',
+      success: (res) => {
+        checkSuccessRes(res, resolved, rejected)
+      },
+      fail: (res)  => {
+        wx.showModal({
+          title: '提示',
+          content: '网络不稳定，请稍后再试'
+        })
+      },
+    })
+  });
+}
+
+function checkSuccessRes(res, resolved, rejected) {
   if (res.statusCode === 200 || res.statusCode === 204) {
-    doSuccess(res.data);
+    resolved(res.data);
   } else if (res.statusCode === 400) {
     wx.showModal({
       title: '提示',
@@ -138,9 +177,9 @@ function checkSuccessRes(res, doSuccess) {
   }
 }
 
-
 module.exports = {
   login: login,
   post: post,
-  put: put
+  put: put,
+  get: get
 }

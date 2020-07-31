@@ -12,7 +12,8 @@ Page({
     current: null
   },
 
-  onLoad() {
+  onLoad(options) {
+    console.log(options);
     let charts = [{
         date: '3月22日',
         time: '07:23',

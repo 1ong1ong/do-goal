@@ -1,18 +1,18 @@
 <!--pages/clock-in/index.wxml-->
-<view class="container" style="height:{{screenHeight}}rpx;">
+<view class="content" style="height:{{screenHeight}}rpx;">
 
   <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
     <view slot="left" class="nav_bar_left">
       <do-icon name="left" size="40rpx" color="white" custom-class="nav_icon"/>
-      <view class="top_text">早起</view>
+      <view class="top_text">{{goalName}}</view>
     </view>
   </van-nav-bar>
 
   <view class="slide_btn">
-    <slide-btn screen-width="{{screenWidth}}" move-btn-color="#F5CB5B" bind:confirm="goalConfirm" />
+    <slide-btn screen-width="{{screenWidth}}" move-btn-color="#F5CB5B" bind:confirm="goalConfirm" data-goalId="{{goalId}}"/>
     <view class="text">
       查看更多
     </view>
   </view>
-  <van-image width="100%" height="{{screenHeight}}rpx" fit="fill" src="{{backgroundImageUrl}}" />
+<!--  <van-image width="100%" height="{{screenHeight}}rpx" fit="fill" src="{{backgroundImageUrl}}" />-->
 </view>

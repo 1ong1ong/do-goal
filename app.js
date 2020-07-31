@@ -1,4 +1,4 @@
-var http = require('./utils/httpUtils.js')
+import http from './utils/httpUtils.js';
 
 //app.js
 App({

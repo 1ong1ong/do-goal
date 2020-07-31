@@ -1,13 +1,47 @@
 // pages/index/index.js
-var http = require('../../utils/httpUtils.js')
+import {
+  userGoalList
+} from '../../api/goals';
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    currentDay: 6
+    currentDay: 6,
+    goalList: []
   },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function(options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function() {
+    this.getUserGoalList();
+  },
+
+  /**
+   *  用户目标列表
+   */
+  getUserGoalList() {
+    let userInfo = wx.getStorageSync("userInfo");
+    if (userInfo) {
+      let userId = userInfo.userId;
+      userGoalList(userId).then(data => {
+        this.setData({
+          goalList: data
+        });
+      });
+    }
+  },
+
   /**
    * 路由到周报页面
    */
@@ -20,9 +54,12 @@ Page({
   /**
    * 路由到打卡详情页面
    */
-  goGoalDetail() {
+  goGoalDetail(e) {
+    let goal = e.currentTarget.dataset.goal;
+    console.log(goal);
+
     wx.navigateTo({
-      url: '/pages/clock-in/index'
+      url: `/pages/clock-in/index?goalId=${goal.id}&goalName=${goal.name}`
     });
   },
 
@@ -31,27 +68,13 @@ Page({
       url: '/pages/goal-list/index'
     });
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-    http.post("/goals/test", null, function (res) {
-      console.log(res);
-    })
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-   
-  },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    
+
   },
 
   /**
