@@ -11,7 +11,8 @@
     "pages/post-talking/index",
     "pages/goal-add/index",
     "pages/discovery/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/login/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

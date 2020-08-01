@@ -25,7 +25,7 @@
   font-size: 28rpx;
   font-family: Microsoft YaHei;
   font-weight: bold;
-  color: rgb(145, 145, 145);
+  color: rgba(145, 145, 145);
 }
 
 .circle_box_inner {

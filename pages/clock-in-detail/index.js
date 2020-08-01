@@ -9,10 +9,15 @@ Page({
     height: app.globalData.screenHeight,
     width: app.globalData.screenWidth / (app.globalData.screenWidth / 750),
     charts: [],
-    current: null
+    current: null,
+    goalName: '',
+    goalId: 0
   },
 
   onLoad(options) {
+    wx.setNavigationBarTitle({
+      title: options.goalName
+    })
     console.log(options);
     let charts = [{
         date: '3月22日',

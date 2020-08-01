@@ -1,6 +1,6 @@
-// var host = 'http://192.168.3.4:9000';
-var host = 'http://127.0.0.1:9000';
-var clientBasicAuthorization = "Basic ZG8tZ29hbDpkby1nb2Fs";
+const host = 'http://192.168.3.4:9000';
+// var host = 'http://127.0.0.1:9000';
+const clientBasicAuthorization = "Basic ZG8tZ29hbDpkby1nb2Fs";
 
 /**
  * 登录请求，
@@ -41,10 +41,7 @@ function login(code) {
       }
     },
     fail: function() {
-      wx.showModal({
-        title: '提示',
-        content: '网络不稳定，请稍后再试'
-      })
+      console.error("login error, api server is not avalible!")
     },
   })
 }
@@ -55,16 +52,10 @@ function login(code) {
  * data：参数，json类型
  */
 function post(url, data) {
+  wx.showLoading({
+    title: '加载中'
+  })
   let accessToken = wx.getStorageSync("accessToken");
-  if (accessToken === null || accessToken === '') {
-    // 如果token不存在，token存放有延迟，等待重试
-    setTimeout(function () {
-      //要延时执行的代码
-      post(url, data);
-    }, 100) //延迟时间 这里是100毫秒
-    return;
-  }
-
   return new Promise((resolved, rejected) => {
     wx.request({
       url: host + url,
@@ -75,12 +66,14 @@ function post(url, data) {
       data: data,
       method: 'POST',
       success: (res) => {
+        wx.hideLoading();
         checkSuccessRes(res, resolved, rejected)
       },
-      fail: (res)  => {
+      fail: (res) => {
+        wx.hideLoading();
         wx.showModal({
           title: '提示',
-          content: '网络不稳定，请稍后再试'
+          content: '请检查您的网络设置'
         })
       },
     })
@@ -93,15 +86,10 @@ function post(url, data) {
  * data：参数，json类型
  */
 function put(url, data) {
+  wx.showLoading({
+    title: '加载中'
+  })
   let accessToken = wx.getStorageSync("accessToken");
-  if (accessToken === null || accessToken === '') {
-    // 如果token不存在，token存放有延迟，等待重试
-    setTimeout(function () {
-      //要延时执行的代码
-      put(url, data);
-    }, 100) //延迟时间 这里是100毫秒
-    return;
-  }
   return new Promise((resolved, rejected) => {
     wx.request({
       url: host + url,
@@ -112,12 +100,14 @@ function put(url, data) {
       data: data,
       method: 'PUT',
       success: (res) => {
+        wx.hideLoading();
         checkSuccessRes(res, resolved, rejected)
       },
-      fail: (res)  => {
+      fail: (res) => {
+        wx.hideLoading();
         wx.showModal({
           title: '提示',
-          content: '网络不稳定，请稍后再试'
+          content: '请检查您的网络设置'
         })
       },
     })
@@ -130,15 +120,10 @@ function put(url, data) {
  * data：参数，json类型
  */
 function get(url, data) {
+  // wx.showLoading({
+  //   title: '加载中'
+  // })
   let accessToken = wx.getStorageSync("accessToken");
-  if (accessToken === null || accessToken === '') {
-    // 如果token不存在，token存放有延迟，等待重试
-    setTimeout(function () {
-      //要延时执行的代码
-      get(url, data);
-    }, 100) //延迟时间 这里是100毫秒
-    return;
-  }
   return new Promise((resolved, rejected) => {
     wx.request({
       url: host + url,
@@ -149,12 +134,22 @@ function get(url, data) {
       data: data,
       method: 'GET',
       success: (res) => {
+        // wx.hideLoading();
         checkSuccessRes(res, resolved, rejected)
       },
-      fail: (res)  => {
+      fail: (res) => {
+        // wx.hideLoading();
         wx.showModal({
           title: '提示',
-          content: '网络不稳定，请稍后再试'
+          content: '请检查您的网络设置',
+          showCancel: false,
+          success: function(res) {
+            console.log(res)
+            wx.reLaunch({
+              url: '/pages/index/index',
+            })
+          },
+          confirmText: "重新加载",
         })
       },
     })
@@ -169,10 +164,23 @@ function checkSuccessRes(res, resolved, rejected) {
       title: '提示',
       content: res.msg
     })
+  } else if (res.statusCode === 401) {
+    console.log(res)
+    wx.navigateTo({
+      url: "/pages/login/index",
+    })
   } else {
     wx.showModal({
       title: '提示',
-      content: '网络不稳定，请稍后再试'
+      content: '网络不稳定，请稍后再试',
+      showCancel: false,
+      success: function (res) {
+        console.log(res)
+        wx.reLaunch({
+          url: '/pages/index/index',
+        })
+      },
+      confirmText: "重新加载",
     })
   }
 }

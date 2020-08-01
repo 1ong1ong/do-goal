@@ -1,0 +1,10 @@
+<!--pages/login/index.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="title-text">你好 ^ _ ^,</view>
+    <view class="title-text">欢迎回到 Do目标,</view>
+    <view class="title-text">成为更好的自己，立刻出发!</view>
+  </view>
+
+  <view class="begin-tural" bindtap="beginTural">开启蜕变之旅</view>
+</view>

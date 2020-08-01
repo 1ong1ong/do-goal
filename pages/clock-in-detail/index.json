@@ -12,6 +12,5 @@
   "backgroundColorBottom": "#ffffff",
   "navigationBarBackgroundColor": "#1989fa",
   "enablePullDownRefresh": false,
-  "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "打卡详情"
+  "navigationBarTextStyle": "white"
 }

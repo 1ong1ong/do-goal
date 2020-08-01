@@ -32,7 +32,7 @@ Page({
     if (authorize && userInfo !== null) {
       this.setData({
         nickName: userInfo.nickName,
-        avatarUrl: userInfo.avatarUrl,
+        avatarUrl: userInfo.avatar,
         location: userInfo.country + " " + userInfo.province + " " + userInfo.city,
         country: userInfo.country,
         province: userInfo.province,

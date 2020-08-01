@@ -1,4 +1,5 @@
 // components/my/day-circle/index.js
+let app = getApp();
 Component({
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
@@ -17,7 +18,7 @@ Component({
     },
     size: { // 大小 width/height
       type: Number,
-      value: 60
+      value: 120 / (750 / app.globalData.screenWidth)
     },
     text: { // 显示文本
       type: String,
@@ -25,7 +26,7 @@ Component({
     },
     circleWidth: { //圆形的宽度
       type: Number,
-      value: 2.5
+      value: 5 / (750 / app.globalData.screenWidth)
     },
     circleColor: {
       type: String,

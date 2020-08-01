@@ -5,7 +5,10 @@
     "van-nav-bar": "../../components/vant/nav-bar",
     "van-tag": "../../components/vant/tag",
     "van-button": "../../components/vant/button",
-    "do-icon": "../../components/my/icon"
+    "do-icon": "../../components/my/icon",
+    "van-popup": "../../components/vant/popup",
+    "van-toast": "../../components/vant/toast",
+    "van-datetime-picker": "../../components/vant/datetime-picker"
   },
   "disableScroll": true,
   "navigationStyle": "custom"

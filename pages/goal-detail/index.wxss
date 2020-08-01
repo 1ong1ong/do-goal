@@ -1,4 +1,7 @@
 /* pages/goal-detail/index.wxss */
+.container {
+  background-color: #1989FA;
+}
 
 .nav_bar_left {
   display: flex;

@@ -14,10 +14,11 @@ App({
     wx.getSystemInfo({
       success(res) {
         that.globalData.screenWidth = res.screenWidth;
-        that.globalData.screenHeight = res.screenHeight
+        that.globalData.screenHeight = res.screenHeight;
       }
     })
 
+   
   },
   globalData: {
     userInfo: null,

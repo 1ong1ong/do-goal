@@ -1,4 +1,6 @@
 // pages/clock-in/index.js
+import {userMakeGoal} from '../../api/goals';
+
 Page({
   data: {
     screenWidth: 0, //屏幕宽度
@@ -35,9 +37,15 @@ Page({
    * 打卡确认
    */
   goalConfirm() {
-    wx.redirectTo({
-      url: `/pages/clock-in-detail/index?goalId=${this.data.goalId}`
-    })
+    let userInfo = wx.getStorageSync("userInfo");
+    let userId = userInfo.userId;
+    userMakeGoal(this.data.goalId, userId).then(res => {
+      if (res) {
+        wx.redirectTo({
+          url: `/pages/clock-in-detail/index?goalId=${this.data.goalId}&goalName=${this.data.goalName}`
+        })
+      }
+    });
   },
 
   /**

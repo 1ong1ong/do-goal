@@ -1,0 +1,28 @@
+/* pages/login/index.wxss */
+
+.container {
+  padding: 60rpx;
+}
+
+.title {
+  width: 100%;
+  margin-top: 300rpx;
+}
+
+.title-text {
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #333;
+  margin-top: 18rpx;
+}
+
+.begin-tural {
+  margin-top: 200rpx;
+  height: 100rpx;
+  background-color: #00b26a;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  font-size: 38rpx;
+}
