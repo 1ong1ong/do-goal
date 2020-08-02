@@ -48,6 +48,10 @@
   margin-top: 10rpx;
 }
 
+.text-container {
+  width: 60rpx;
+  height: 60rpx;
+}
 .circle-img {
   background-color: #1989fa;
   border-radius: 200rpx;
@@ -55,12 +59,26 @@
   width: 60rpx;
   line-height: 70rpx;
 }
+
 .circle-text {
   font-size: 28rpx;
   font-family: Microsoft YaHei;
   font-weight: bold;
+   width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
   color: rgba(145, 145, 145);
 }
+
+.point {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 8rpx;
+  background-color: #1989fa;
+}
+
 .perfect_day {
   flex: 1;
   width: 90rpx;

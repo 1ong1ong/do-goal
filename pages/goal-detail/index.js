@@ -1,14 +1,17 @@
 // pages/goal-detail/index.js
 let app = getApp();
+import { addSystemGoal } from '../../api/goals.js';
 import { remove, indexOf } from '../../utils/listUtil.js';
 import Toast from '../../components/vant/toast/toast.js';
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    backgroundImageUrl: "https://imgs.cxlsky.com/zaoqi.png",
+    // backgroundImageUrl: "https://imgs.cxlsky.com/zaoqi.png",
     height: app.globalData.screenHeight,
     width: app.globalData.screenWidth,
     goalInfo: null,
@@ -17,13 +20,13 @@ Page({
   },
 
   onLoad(options) {
+    console.log(options);
     let notifyTimeList = this.data.notifyTimeList;
     notifyTimeList.push(options.notifyTime);
     this.setData({
       goalInfo: options,
       notifyTimeList: notifyTimeList
     })
-    console.log(options);
   },
 
   delNotifyTime(e) {
@@ -75,8 +78,23 @@ Page({
    * 添加目标
    */
   addGoal() {
-    wx.switchTab({
-      url: '/pages/index/index'
+    let data = {
+      goalId: this.data.goalInfo.goalId,
+      notifyTimeList: this.data.notifyTimeList
+    }
+    addSystemGoal(this.data.goalInfo.goalId, data).then(data => {
+      if(data) {
+        wx.switchTab({
+          url: '/pages/index/index'
+        })
+      } else {
+        Toast.fail('任务添加失败');
+      }
     })
+    
+  },
+
+  addSystemGoal() {
+    
   }
 })

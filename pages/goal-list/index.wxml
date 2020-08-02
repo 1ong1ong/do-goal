@@ -48,8 +48,11 @@
             </view>
             <view slot="right-icon">
               <view class="goal_right_icon">
-                <view class="add_goal">
+                <view class="add_goal" wx:if="{{ !subItem.isAdded }}">
                   去添加
+                </view>
+                <view class="is_added_goal" wx:if="{{ subItem.isAdded }}">
+                  已添加
                 </view>
               </view>
             </view>

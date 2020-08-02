@@ -8,13 +8,17 @@
     </view>
     <view class="week_info" bindtap='goWeekReport' wx:if="{{topShow}}">
       <view class="week_days">
-        <van-circle wx:for="{{reportList}}" wx:for-index="index" wx:key="recordDate" wx:for-item="item" value="{{ item.finishedRate }}"  size="{{size}}" stroke-width="3" layer-color="rgba(145, 145, 145, 0.3)">
-          <view class="circle-img" wx:if="{{ item.finishedRate === 100 }}">
-            <van-icon name="success" color="white" size="{{size*3/5}}" />
+        <van-circle wx:for="{{reportList}}" wx:for-index="index" wx:key="recordDate" wx:for-item="item" value="{{ item.finishedRate }}" size="{{size}}" stroke-width="3" layer-color="rgba(145, 145, 145, 0.3)">
+          <view class="text-container">
+            <view class="circle-img" wx:if="{{ item.finishedRate === 100 }}">
+              <van-icon name="success" color="white" size="{{size*3/5}}" />
+            </view>
+            <view class="circle-text" wx:if="{{ item.finishedRate !== 100 }}">
+              {{ item.dayDesc }}
+            </view>
+            <view class="point" wx:if="{{ currentDay === (index+1) }}"></view>
           </view>
-          <view class="circle-text" wx:if="{{ item.finishedRate !== 100 }}">
-            {{ item.dayDesc }}
-          </view>
+
         </van-circle>
       </view>
       <view class="perfect_day">
@@ -26,213 +30,6 @@
 
   <view class="content" style="width:{{width-40}}rpx; height:{{height-590}}rpx">
     <view class="goal_list">
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
-        <view slot="icon">
-          <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
-          </view>
-        </view>
-        <view slot="title">
-          <view class="goal_title">
-            {{item.name}}
-          </view>
-        </view>
-        <view slot="label">
-          <view class="goal_label">
-            已经完成目标
-            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
-          </view>
-        </view>
-        <view slot="right-icon">
-          <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
-          </view>
-        </view>
-      </van-cell>
       <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
         <view slot="icon">
           <view class="goal_icon">
