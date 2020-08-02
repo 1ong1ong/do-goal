@@ -1,15 +1,15 @@
 <!--pages/clock-in-detail/index.wxml-->
-<view class="container" bindtap="pageTap">
+<view class="container">
   <view class="blue_card"/>
 
   <view class="card" style="width:{{width}}rpx">
-    <view class="time">22:10</view>
+    <view class="time">{{ finishTime }}</view>
     <view class="status">今日打卡时间</view>
 
     <view class="card_content">
       <view class="top">
         <view class="item">
-          <view class="title">5</view>
+          <view class="title">{{ finishNum }}</view>
           <view class="des">打卡天数</view>
         </view>
         <view class="item">
@@ -19,7 +19,7 @@
           <view class="des">目标等级</view>
         </view>
         <view class="item">
-          <view class="title">1/7</view>
+          <view class="title">{{ finishNum }}/ {{ nextLevelNum }}</view>
           <view class="des">距离升级</view>
         </view>
       </view>
@@ -44,8 +44,8 @@
           </view>
         </view>
         <view class="right">
-          <view class="up">09:32</view>
-          <view class="down">05:32</view>
+          <view class="up">{{ latestTime }}</view>
+          <view class="down">{{ earliestTime }}</view>
         </view>
       </view>
     </view>

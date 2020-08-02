@@ -15,3 +15,7 @@ export function getGoalList() {
 export function addSystemGoal(goalId, data) {
   return http.post(`/goals/${goalId}/system`, data);
 }
+
+export function getGoalMakeDetail(goalId) {
+  return http.get(`/goals/make/detail/${goalId}`);
+}

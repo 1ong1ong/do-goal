@@ -1,5 +1,8 @@
 // pages/clock-in-detail/index.js
 let app = getApp();
+import {
+  getGoalMakeDetail
+} from '../../api/goals.js';
 Page({
 
   /**
@@ -8,53 +11,47 @@ Page({
   data: {
     height: app.globalData.screenHeight,
     width: app.globalData.screenWidth / (app.globalData.screenWidth / 750),
-    charts: [],
     current: null,
     goalName: '',
-    goalId: 0
+    goalId: 0,
+    charts: [],
+    earliestTime: '',
+    finishNum: 0,
+    finishTime: '',
+    latestTime: '',
+    level: 0,
+    nextLevelNum: 0,
   },
 
   onLoad(options) {
+    this.setData({
+      goalId: options.goalId,
+      goalName: options.goalName
+    })
     wx.setNavigationBarTitle({
       title: options.goalName
     })
-    console.log(options);
-    let charts = [{
-        date: '3月22日',
-        time: '07:23',
-        percent: 90
-      }, {
-        date: '23',
-        time: '07:23',
-        percent: 40
-      }, {
-        date: '24',
-        time: '07:23',
-        percent: 50
-      }, {
-        date: '25',
-        time: '07:23',
-        percent: 70
-      }, {
-        date: '26',
-        time: '',
-        percent: 0
-      }, {
-        date: '27',
-        time: '07:23',
-        percent: 10
-      }, {
-        date: '28',
-        time: '07:23',
-        percent: 80
-      }
+    
+  },
 
-    ];
-    this.setData({
-      charts: charts
+  getGoalMakeDetail() {
+    getGoalMakeDetail(this.data.goalId).then(data => {
+      this.setData({
+        charts: data.charts,
+        earliestTime: data.earliestTime,
+        finishNum: data.finishNum,
+        finishTime: data.finishTime,
+        goalId: data.goalId,
+        latestTime: data.latestTime,
+        level: data.level,
+        nextLevelNum: data.nextLevelNum,
+      })
     })
   },
 
+  onShow() {
+    this.getGoalMakeDetail();
+  },
   /**
    * 返回
    */
