@@ -71,6 +71,11 @@ page {
   color: #818181;
 }
 
+.level {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+}
 .down {
   font-size: 18rpx;
   color: #a1a1a1;

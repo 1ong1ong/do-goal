@@ -1,7 +1,7 @@
 // pages/clock-in-detail/index.js
 let app = getApp();
 import {
-  getGoalMakeDetail
+  getGoalMakeDetail, getGoalRankList
 } from '../../api/goals.js';
 Page({
 
@@ -21,6 +21,9 @@ Page({
     latestTime: '',
     level: 0,
     nextLevelNum: 0,
+    levelShowList: [],
+    goalRankList: [],
+    selfRankInfo: {}
   },
 
   onLoad(options) {
@@ -31,11 +34,27 @@ Page({
     wx.setNavigationBarTitle({
       title: options.goalName
     })
-    
+
   },
+
+  onShow() {
+    this.getGoalMakeDetail();
+    this.getGoalRankList();
+  },
+
+  getGoalRankList() {
+    getGoalRankList(this.data.goalId).then(data => {
+      this.setData({
+        goalRankList: data.rankList,
+        selfRankInfo: data.self
+      })
+    })
+  },
+
 
   getGoalMakeDetail() {
     getGoalMakeDetail(this.data.goalId).then(data => {
+      let levelShowList = this.getLevelShowList(data.level);
       this.setData({
         charts: data.charts,
         earliestTime: data.earliestTime,
@@ -45,13 +64,33 @@ Page({
         latestTime: data.latestTime,
         level: data.level,
         nextLevelNum: data.nextLevelNum,
+        levelShowList: levelShowList
       })
     })
   },
 
-  onShow() {
-    this.getGoalMakeDetail();
+  getLevelShowList(level) {
+    let levelShowList = [];
+    if (level <= 3) {
+      for (let i = 0; i < level; i++) {
+        levelShowList.push("star");
+      }
+    } else if (level <= 6) {
+      for (let i = 0; i < level - 3; i++) {
+        levelShowList.push("moon");
+      }
+    } else if (level <= 8) {
+      for (let i = 0; i < level - 6; i++) {
+        levelShowList.push("taiyang");
+      }
+    } else {
+      for (let i = 0; i < level - 8; i++) {
+        levelShowList.push("huangguan");
+      }
+    }
+    return levelShowList;
   },
+
   /**
    * 返回
    */

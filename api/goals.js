@@ -19,3 +19,7 @@ export function addSystemGoal(goalId, data) {
 export function getGoalMakeDetail(goalId) {
   return http.get(`/goals/make/detail/${goalId}`);
 }
+
+export function getGoalRankList(goalId) {
+  return http.get(`/goals/rank/${goalId}`);
+}

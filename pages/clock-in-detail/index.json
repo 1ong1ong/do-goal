@@ -6,7 +6,8 @@
     "van-tab": "../../components/vant/tab",
     "van-tabs": "../../components/vant/tabs",
     "van-cell": "../../components/vant/cell",
-    "van-image": "../../components/vant/image"
+    "van-image": "../../components/vant/image",
+    "do-icon": "../../components/my/icon"
   },
   "backgroundColorTop": "#1989fa",
   "backgroundColorBottom": "#ffffff",
