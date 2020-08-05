@@ -230,9 +230,27 @@ page {
   align-items: center;
 }
 
+.like-icon {
+  /* background-color: black; */
+  display: flex;
+  align-items: center;
+}
+.like-num1 {
+  font-size: 18rpx;
+  padding-top: 24rpx;
+  color: red;
+  width: 10rpx;
+}
+.like-num {
+  font-size: 18rpx;
+  padding-top: 30rpx;
+  color: red;
+  width: 10rpx;
+}
 .view_label {
   display: flex;
   align-items: center;
+  align-content: center;
 }
 
 .invite_btn {
