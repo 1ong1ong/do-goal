@@ -69,13 +69,13 @@
                 </view>
                 <view slot="label">
                   <view class="view_label">
-                    完成
+                    已经坚持了
                     <text style="color:rgb(25,137,250)">{{ selfRankInfo.finishDays }}</text>天
                     <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text> 第
                     <text style="color:rgb(25,137,250)">{{ selfRankInfo.rankNum }}</text>名
-                    <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text>
+                    <!-- <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text>
                     <van-icon name="like" size="30rpx" color="{{ selfRankInfo.likeNum===0?'#d5d5d5':'red' }}" />
-                    <view class="like-num1" >{{ selfRankInfo.likeNum===0 ? ' ' : selfRankInfo.likeNum }}</view>
+                    <view class="like-num1" >{{ selfRankInfo.likeNum===0 ? ' ' : selfRankInfo.likeNum }}</view> -->
                   </view>
                 </view>
                 <view slot="right-icon">
@@ -101,11 +101,11 @@
               </view>
               <view slot="right-icon">
                 <view class="view_icon_end">
-                  <text style="color: red;margin-right: 50rpx;">{{ item.finishDays }}天</text>
-                  <view class="like-icon">
+                  <text style="color: red;margin-right: 10rpx;">{{ item.finishDays }}天</text>
+                  <!-- <view class="like-icon">
                     <van-icon name="like" size="40rpx" color="{{item.likeNum===0?'#d5d5d5':'red'}}" />
                     <view class="like-num" >{{ item.likeNum===0 ? ' ' : item.likeNum }}</view>
-                  </view>
+                  </view> -->
                 </view>
               </view>
             </van-cell>

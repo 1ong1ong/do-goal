@@ -71,20 +71,20 @@ Page({
 
   getLevelShowList(level) {
     let levelShowList = [];
-    if (level <= 3) {
+    if (level <= 2) {
       for (let i = 0; i < level; i++) {
         levelShowList.push("star");
       }
-    } else if (level <= 6) {
-      for (let i = 0; i < level - 3; i++) {
+    } else if (level <= 4) {
+      for (let i = 0; i < level - 2; i++) {
         levelShowList.push("moon");
       }
-    } else if (level <= 8) {
-      for (let i = 0; i < level - 6; i++) {
+    } else if (level <= 6) {
+      for (let i = 0; i < level - 4; i++) {
         levelShowList.push("taiyang");
       }
     } else {
-      for (let i = 0; i < level - 8; i++) {
+      for (let i = 0; i < level - 6; i++) {
         levelShowList.push("huangguan");
       }
     }
