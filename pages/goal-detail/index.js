@@ -78,19 +78,32 @@ Page({
    * 添加目标
    */
   addGoal() {
-    let data = {
-      goalId: this.data.goalInfo.goalId,
-      notifyTimeList: this.data.notifyTimeList
-    }
-    addSystemGoal(this.data.goalInfo.goalId, data).then(data => {
-      if(data) {
-        wx.switchTab({
-          url: '/pages/index/index'
+    let that = this;
+    wx.requestSubscribeMessage({
+      tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'],
+      success(res) {
+        
+      },
+      fail(res) {
+        Toast.fail('您没有授权打卡提醒，将无法提醒！');
+      },
+      complete(res) {
+        let data = {
+          goalId: that.data.goalInfo.goalId,
+          notifyTimeList: that.data.notifyTimeList
+        }
+        addSystemGoal(that.data.goalInfo.goalId, data).then(data => {
+          if (data) {
+            wx.switchTab({
+              url: '/pages/index/index'
+            })
+          } else {
+            Toast.fail('任务添加失败');
+          }
         })
-      } else {
-        Toast.fail('任务添加失败');
       }
     })
+    
     
   },
 

@@ -1,5 +1,6 @@
 // pages/clock-in/index.js
 import {userMakeGoal} from '../../api/goals';
+import Toast from '../../components/vant/toast/toast.js';
 
 Page({
   data: {
@@ -39,15 +40,26 @@ Page({
    * 打卡确认
    */
   goalConfirm() {
-    let userInfo = wx.getStorageSync("userInfo");
-    let userId = userInfo.userId;
-    userMakeGoal(this.data.goalId, userId).then(res => {
-      if (res) {
-        wx.redirectTo({
-          url: `/pages/clock-in-detail/index?goalId=${this.data.goalId}&goalName=${this.data.goalName}&icon=${this.data.icon}`
-        })
+    let that = this;
+    wx.requestSubscribeMessage({
+      tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'],
+      success(res) {},
+      fail(res) {
+        Toast.fail('您没有授权打卡提醒，将无法提醒！');
+      },
+      complete(res) {
+        let userInfo = wx.getStorageSync("userInfo");
+        let userId = userInfo.userId;
+        userMakeGoal(that.data.goalId, userId).then(res => {
+          if (res) {
+            wx.redirectTo({
+              url: `/pages/clock-in-detail/index?goalId=${that.data.goalId}&goalName=${that.data.goalName}&icon=${that.data.icon}`
+            })
+          }
+        });
       }
     });
+    
   },
 
   /**

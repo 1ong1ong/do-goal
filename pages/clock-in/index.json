@@ -4,7 +4,8 @@
     "van-image": "../../components/vant/image",
     "van-icon": "../../components/vant/icon",
     "van-nav-bar": "../../components/vant/nav-bar",
-    "do-icon": "../../components/my/icon"
+    "do-icon": "../../components/my/icon",
+    "van-toast": "../../components/vant/toast"
   },
   "disableScroll": true,
   "navigationStyle": "custom"

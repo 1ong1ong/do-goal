@@ -15,4 +15,5 @@
     </view>
   </view>
 <!--  <van-image width="100%" height="{{screenHeight}}rpx" fit="fill" src="{{backgroundImageUrl}}" />-->
+  <van-toast id="van-toast" />
 </view>
