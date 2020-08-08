@@ -7,7 +7,8 @@ Page({
     screenHeight: 0, // 屏幕高度
     backgroundImageUrl: "https://imgs.cxlsky.com/zaoqi.png",
     goalName: '',
-    goalId: 0
+    goalId: 0,
+    icon:''
   },
 
   onLoad: function (options) {
@@ -15,7 +16,8 @@ Page({
     console.log(options);
     this.setData({
       goalId: options.goalId,
-      goalName: options.goalName
+      goalName: options.goalName,
+      icon: options.icon
     })
   },
 
@@ -42,7 +44,7 @@ Page({
     userMakeGoal(this.data.goalId, userId).then(res => {
       if (res) {
         wx.redirectTo({
-          url: `/pages/clock-in-detail/index?goalId=${this.data.goalId}&goalName=${this.data.goalName}`
+          url: `/pages/clock-in-detail/index?goalId=${this.data.goalId}&goalName=${this.data.goalName}&icon=${this.data.icon}`
         })
       }
     });

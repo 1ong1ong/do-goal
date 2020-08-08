@@ -2,15 +2,16 @@
 <view class="container">
   <view class="top">
     <view class="avatar">
-      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx"/>
+      <van-image width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" radius="6rpx" />
     </view>
     <view class="right">
       <view class="name">CXL</view>
       <view class="auth">
-        <view class="btn">
-<!--          <van-icon name="friends" />-->
-          <van-icon name="lock"/>
-          <text>仅自己可见</text>
+        <view class="btn" bindtap="openPopup">
+          <van-icon name="friends" wx:if="{{ allowWatch }}" color="#1989fa" />
+          <text wx:if="{{ allowWatch }}" style="color:#1989fa">所有人可见</text>
+          <van-icon name="lock" wx:if="{{ !allowWatch }}" />
+          <text wx:if="{{ !allowWatch }}">仅自己可见</text>
           <van-icon name="arrow-down" />
         </view>
       </view>
@@ -18,41 +19,29 @@
   </view>
 
   <view class="talking" bindtap="inputAreaClick">
-    <van-field
-        type="textarea"
-        focus = "{{ focused }}"
-        clickable
-        hold-keyboard
-        show-confirm-bar="{{ false }}"
-        autosize=" { minHeight: 200rpx }"
-        value="{{ value }}"
-        placeholder="记录一下..."
-        border="{{ false }}"
-        bind:change="onChange"
-        custom-style="font-size:30rpx;min-height:200rpx"
-        bind:focus="talkingFocus"
-        bind:blur="talkingBlur"
-    />
+    <van-field type="textarea" focus="{{ focused }}" clickable hold-keyboard show-confirm-bar="{{ false }}" autosize=" { minHeight: 200rpx }" value="{{ value }}" placeholder="记录一下..." border="{{ false }}" bind:change="onChange" custom-style="font-size:30rpx;min-height:200rpx"
+      bind:focus="talkingFocus" bind:blur="talkingBlur" />
   </view>
 
   <view class="goal_des">
-    <do-icon name="sun" size="50rpx" color="#1989fa" />
-    <text style="padding-left: 30rpx;color:#1989fa">喝水</text>
-    <text style="padding-left: 30rpx;color:#1989fa">第1天</text>
+    <do-icon name="{{ icon }}" size="50rpx" color="#1989fa" />
+    <text style="padding-left: 30rpx;color:#1989fa">{{ goalName }}</text>
+    <text style="padding-left: 30rpx;color:#1989fa">完成第{{finishNum}}天</text>
     <view class="publish" bindtap="publishConfirm">发布</view>
   </view>
 
 
-  <van-action-sheet
-      show="{{ false }}"
-      actions="{{ authProps }}"
-      cancel-text="取消"
-  />
+  <van-action-sheet show="{{ showPopup }}" actions="{{ authProps }}" cancel-text="取消" bind:select="confirmAuth" bind:cancel="closePopup" />
 </view>
-<view class="bottom" style="bottom:{{inputHeight}}px;height: {{inputHeight === 0 ? 150 : 90}}rpx">
+
+<van-popup show="{{ false }}" position="bottom" custom-style="height: 20%;" bind:close="closePopup">
+  <van-picker columns="{{ columns }}" show-toolbar="{{ true }}" default-index="{{ allowWatch?1:0 }}" bind:confirm="confirmAuth" bind:cancel="closePopup" />
+</van-popup>
+
+<!-- <view class="bottom" style="bottom:{{inputHeight}}px;height: {{inputHeight === 0 ? 150 : 90}}rpx">
   <view class="bottom_btn">
     <do-icon name="icon_camera" size="50rpx" color="#666666" custom-class="bottom_nav_icon"/>
     <do-icon name="icon_photo" size="50rpx" color="#666666" custom-class="bottom_nav_icon"/>
     <do-icon name="icon_GPS" size="50rpx" color="#666666" custom-class="bottom_nav_icon"/>
   </view>
-</view>
+</view> -->

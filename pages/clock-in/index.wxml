@@ -4,12 +4,12 @@
   <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
     <view slot="left" class="nav_bar_left">
       <do-icon name="left" size="40rpx" color="white" custom-class="nav_icon"/>
-      <view class="top_text">{{goalName}}</view>
+      <view class="top_text">{{ goal.goalName }}</view>
     </view>
   </van-nav-bar>
 
   <view class="slide_btn">
-    <slide-btn screen-width="{{screenWidth}}" move-btn-color="#F5CB5B" bind:confirm="goalConfirm" data-goalId="{{goalId}}"/>
+    <slide-btn screen-width="{{screenWidth}}" move-btn-color="#F5CB5B" bind:confirm="goalConfirm"/>
     <view class="text">
       查看更多
     </view>

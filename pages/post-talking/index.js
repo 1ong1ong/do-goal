@@ -1,22 +1,62 @@
 // pages/post-talking/index.js
+import { addGoalPost } from '../../api/goalPost.js'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    authProps: [
-      {
-        name: '所有人可见'
+    authProps: [{
+        name: '所有人可见',
+        allowWatch: true
       },
       {
-        name: '仅自己可见'
+        name: '仅自己可见',
+        allowWatch: false
       }
     ],
     inputHeight: 0,
-    focused: true
+    focused: true,
+    content: '',
+    allowWatch: true,
+    showPopup: false,
+    goalId: 0,
+    goalName: '',
+    icon: '',
+    finishNum: 0
+  },
+  onLoad(options) {
+    console.log(options)
+    this.setData({
+      goalId: options.goalId,
+      goalName: options.goalName,
+      icon: options.icon,
+      finishNum: options.finishNum
+    })
   },
 
+  onChange(e) {
+    this.setData({
+      content: e.detail
+    })
+  },
+  confirmAuth(e) {
+    this.setData({
+      allowWatch: e.detail.allowWatch
+    })
+    this.closePopup();
+  },
+  openPopup() {
+    this.setData({
+      showPopup: true
+    })
+  },
+  closePopup() {
+    this.setData({
+      showPopup: false
+    })
+  },
   talkingFocus(e) {
     let inputHeight = 0;
     if (e.detail.height) {
@@ -37,6 +77,14 @@ Page({
     })
   },
   publishConfirm() {
-    wx.navigateBack()
-  }
+    let data = {
+      goalId: this.data.goalId,
+      content: this.data.content,
+      currentFinishTimes: this.data.finishNum,
+      allowWatch: this.data.allowWatch
+    }
+    addGoalPost(data).then(res => {
+      wx.navigateBack()
+    })
+  },
 })

@@ -1,4 +1,5 @@
-const host = 'http://192.168.3.4:9000';
+// const host = 'http://192.168.3.4:9000';
+const host = 'https://a.cxlsky.com';
 // var host = 'http://127.0.0.1:9000';
 const clientBasicAuthorization = "Basic ZG8tZ29hbDpkby1nb2Fs";
 

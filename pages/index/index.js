@@ -72,13 +72,13 @@ Page({
     // 今天打过打卡
     if(goal.finishedToday) {
       wx.navigateTo({
-        url: `/pages/clock-in-detail/index?goalId=${goal.id}&goalName=${goal.name}`
+        url: `/pages/clock-in-detail/index?goalId=${goal.id}&goalName=${goal.name}&icon=${goal.icon}`
       });
     } 
     // 今天没有打卡了
     else {
       wx.navigateTo({
-        url: `/pages/clock-in/index?goalId=${goal.id}&goalName=${goal.name}`
+        url: `/pages/clock-in/index?goalId=${goal.id}&goalName=${goal.name}&icon=${goal.icon}`
       });
     }
 

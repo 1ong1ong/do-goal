@@ -47,7 +47,7 @@
       </view>
     </view>
 
-    <view class="post" bindtap="routePostTalking">
+    <view class="post-add" bindtap="routePostTalking">
       <view class="post_input">
         <text>记录一下</text>
       </view>
@@ -109,14 +109,36 @@
                 </view>
               </view>
             </van-cell>
-      
+
           </view>
         </van-tab>
         <van-tab title="动态" name="1">
-          <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">
-            <view class="no_talking_tip">还没有动态哦</view>
-            <view class="tab_view">
+          <scroll-view scroll-y enable-back-to-top >
+            <view class="no_talking_tip" wx:if="{{ postList.length===0 }}">还没有动态哦</view>
+            <view class="tab_view" >
               <!--todo:-->
+              <view class="post_card" wx:if="{{ postList.length>0 }}" wx:for="{{ postList }}" wx:for-item="item" wx:key="id">
+                <view class="post_card_avatar">
+                  <van-image width="100rpx" height="100rpx" src="{{ item.avatar }}" radius="6rpx" />
+                </view>
+                <view class="post_card_right">
+                  <view class="post_card_right_name">
+                    <text>{{item.nickName}}</text>
+                    <view class="post_card_right_gender_info">
+                      <do-icon name="nan" size="30rpx" color="#1989fa" wx:if="{{ item.gender===1 }}" />
+                      <do-icon name="nv" size="30rpx" color="#d4237a" wx:if="{{ item.gender===0 }}" />
+                    </view>
+                  </view>
+                  <view class="post_card_right_text_info">
+                    <text>{{item.content}}</text>
+                  </view>
+                  <view class="post_card_right_goal_info">
+                    <do-icon name="{{item.icon}}" size="30rpx" color="#1989fa" />
+                    <text class="post_card_right_goal_info_goal_name">{{item.goalName}}</text>
+                    <text class="post_card_right_goal_info_finish_num">坚持第{{item.currentFinishTimes}}天</text>
+                  </view>
+                </view>
+              </view>
             </view>
           </scroll-view>
         </van-tab>

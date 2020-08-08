@@ -1,8 +1,12 @@
 // pages/clock-in-detail/index.js
 let app = getApp();
 import {
-  getGoalMakeDetail, getGoalRankList
+  getGoalMakeDetail,
+  getGoalRankList
 } from '../../api/goals.js';
+import {
+  getGoalPostsByGoalId
+} from '../../api/goalPost.js'
 Page({
 
   /**
@@ -14,6 +18,7 @@ Page({
     current: null,
     goalName: '',
     goalId: 0,
+    icon: '',
     charts: [],
     earliestTime: '',
     finishNum: 0,
@@ -23,13 +28,15 @@ Page({
     nextLevelNum: 0,
     levelShowList: [],
     goalRankList: [],
-    selfRankInfo: {}
+    selfRankInfo: {},
+    postList: []
   },
 
   onLoad(options) {
     this.setData({
       goalId: options.goalId,
-      goalName: options.goalName
+      goalName: options.goalName,
+      icon: options.icon
     })
     wx.setNavigationBarTitle({
       title: options.goalName
@@ -40,6 +47,16 @@ Page({
   onShow() {
     this.getGoalMakeDetail();
     this.getGoalRankList();
+    this.getGoalPostsByGoalId();
+  },
+
+  getGoalPostsByGoalId() {
+    getGoalPostsByGoalId(this.data.goalId).then(data=> {
+      console.log(data)
+      this.setData({
+        postList: data
+      })
+    })
   },
 
   getGoalRankList() {
@@ -124,7 +141,7 @@ Page({
    */
   routePostTalking() {
     wx.navigateTo({
-      url: "/pages/post-talking/index"
+      url: `/pages/post-talking/index?goalId=${this.data.goalId}&goalName=${this.data.goalName}&icon=${this.data.icon}&finishNum=${this.data.finishNum}`
     })
   }
 });
