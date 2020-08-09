@@ -20,7 +20,6 @@ Page({
   },
 
   onLoad(options) {
-    console.log(options);
     let notifyTimeList = this.data.notifyTimeList;
     notifyTimeList.push(options.notifyTime);
     this.setData({

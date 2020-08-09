@@ -67,8 +67,6 @@ Page({
    */
   goGoalDetail(e) {
     let goal = e.currentTarget.dataset.goal;
-    console.log(goal);
-
     // 今天打过打卡
     if(goal.finishedToday) {
       wx.navigateTo({

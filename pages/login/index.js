@@ -28,18 +28,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // 登录
-    wx.login({
-      success: res => {
-        http.login(res.code);
-      }
-    });
+    // // 登录
+    // wx.login({
+    //   success: res => {
+    //     http.login(res.code);
+    //   }
+    // });
   },
 
   beginTural() {
-    wx.reLaunch({
-      url: '/pages/index/index',
+    // 登录
+    wx.showLoading({
+      title: '加载中'
     })
+    wx.login({
+      success: res => {
+        http.login(res.code).then(()=> {
+          wx.hideLoading();
+          wx.reLaunch({
+            url: '/pages/index/index',
+          })
+        });
+      }
+    });
+    
   },
   /**
    * 生命周期函数--监听页面隐藏

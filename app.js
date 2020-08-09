@@ -5,11 +5,17 @@ App({
   onLaunch: function() {
     let that = this;
     // 登录
+    wx.showLoading({
+      title: '加载中'
+    })
     wx.login({
       success: res => {
-        http.login(res.code);
+        http.login(res.code).then(() => {
+          wx.hideLoading();
+        });
       }
     });
+    
 
     wx.getSystemInfo({
       success(res) {

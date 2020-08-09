@@ -52,7 +52,6 @@ Page({
 
   getGoalPostsByGoalId() {
     getGoalPostsByGoalId(this.data.goalId).then(data=> {
-      console.log(data)
       this.setData({
         postList: data
       })

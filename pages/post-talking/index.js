@@ -27,7 +27,6 @@ Page({
     finishNum: 0
   },
   onLoad(options) {
-    console.log(options)
     this.setData({
       goalId: options.goalId,
       goalName: options.goalName,

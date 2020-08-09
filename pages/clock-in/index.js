@@ -14,7 +14,6 @@ Page({
 
   onLoad: function (options) {
     this.initScreenWidthAndHeight();
-    console.log(options);
     this.setData({
       goalId: options.goalId,
       goalName: options.goalName,
@@ -45,7 +44,7 @@ Page({
       tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'],
       success(res) {},
       fail(res) {
-        Toast.fail('您没有授权打卡提醒，将无法提醒！');
+        
       },
       complete(res) {
         let userInfo = wx.getStorageSync("userInfo");
