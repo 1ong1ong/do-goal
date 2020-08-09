@@ -281,6 +281,7 @@ page {
   padding-top: 20rpx;
   padding-bottom: 20rpx;
   border-bottom: #e5e5e5 1rpx solid;
+  width: 100%;
 }
 
 .post_card_right {
@@ -293,6 +294,11 @@ page {
   line-height: 50rpx;
   display: flex;
   align-items: center;
+  font-size: 28rpx;
+}
+
+.post_card_right_name text {
+  color: #4a6b8f
 }
 
 .post_card_right_gender_info {
@@ -305,6 +311,7 @@ page {
   width: 100%;
   padding-bottom: 20rpx;
   overflow: hidden;
+  font-size: 28rpx;
 }
 
 .post_card_right_goal_info {
@@ -319,5 +326,6 @@ page {
 }
 
 .post_card_right_goal_info_finish_num {
-  margin-left: 10rpx;
+  /* margin-left: 10rpx; */
+  font-size: 24rpx;
 }  

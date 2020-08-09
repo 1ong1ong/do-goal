@@ -133,8 +133,8 @@
                     <text>{{item.content}}</text>
                   </view>
                   <view class="post_card_right_goal_info">
-                    <do-icon name="{{item.icon}}" size="30rpx" color="#1989fa" />
-                    <text class="post_card_right_goal_info_goal_name">{{item.goalName}}</text>
+                    <!-- <do-icon name="{{item.icon}}" size="30rpx" color="#1989fa" />
+                    <text class="post_card_right_goal_info_goal_name">{{item.goalName}}</text> -->
                     <text class="post_card_right_goal_info_finish_num">坚持第{{item.currentFinishTimes}}天</text>
                   </view>
                 </view>
