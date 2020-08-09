@@ -48,11 +48,55 @@ function login(code) {
 }
 
 /**
+ * 登录请求，
+ * code：微信登录授权码
+ */
+function refreshToken() {
+  wx.request({
+    url: host + "/oauth/token",
+    header: {
+      "content-type": "application/x-www-form-urlencoded",
+      "Authorization": clientBasicAuthorization
+    },
+    data: {
+      grant_type: "refresh_token",
+      refresh_token: wx.getStorageSync("refreshToken")
+    },
+    method: 'POST',
+    success: function (res) {
+      if (res.statusCode === 200) {
+        wx.setStorage({
+          key: "accessToken",
+          data: res.data.access_token
+        });
+        // wx.setStorage({
+        //   key: "refreshToken",
+        //   data: res.data.refresh_token
+        // });
+        // wx.setStorage({
+        //   key: "userInfo",
+        //   data: res.data.userInfo
+        // });
+      } else if (res.statusCode === 401) {
+        // 过期了，后续操作会跳往登录页面
+        // wx.navigateTo({
+        //   url: "/pages/login/index",
+        // })
+      }
+    },
+    fail: function () {
+      console.error("login error, api server is not avalible!")
+    },
+  })
+}
+
+/**
  * POST请求，
  * URL：接口
  * data：参数，json类型
  */
 function post(url, data) {
+  refreshToken();
   wx.showLoading({
     title: '加载中'
   })
@@ -87,6 +131,7 @@ function post(url, data) {
  * data：参数，json类型
  */
 function put(url, data) {
+  refreshToken();
   wx.showLoading({
     title: '加载中'
   })
@@ -124,6 +169,7 @@ function get(url, data) {
   // wx.showLoading({
   //   title: '加载中'
   // })
+  refreshToken();
   let accessToken = wx.getStorageSync("accessToken");
   return new Promise((resolved, rejected) => {
     wx.request({
