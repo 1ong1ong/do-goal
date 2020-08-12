@@ -1,11 +1,11 @@
 {
   "usingComponents": {
-    "slide-btn": "../../components/my/slide-btn",
+    "click-btn": "../../components/my/click-btn",
     "van-image": "../../components/vant/image",
     "van-icon": "../../components/vant/icon",
     "van-nav-bar": "../../components/vant/nav-bar",
     "do-icon": "../../components/my/icon",
-    "van-toast": "../../components/vant/toast"
+    "van-dialog": "../../components/vant/dialog"
   },
   "disableScroll": true,
   "navigationStyle": "custom"

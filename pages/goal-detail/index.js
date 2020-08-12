@@ -2,7 +2,7 @@
 let app = getApp();
 import { addSystemGoal } from '../../api/goals.js';
 import { remove, indexOf } from '../../utils/listUtil.js';
-import Toast from '../../components/vant/toast/toast.js';
+import Dialog from '../../components/vant/dialog/dialog.js';
 
 
 Page({
@@ -62,7 +62,7 @@ Page({
         popupShow: false
       })
     } else {
-      Toast.fail('此时间已添加');
+      Dialog.fail('此时间已添加');
     }
   },
 
@@ -73,6 +73,22 @@ Page({
     wx.navigateBack();
   },
 
+  addGoalReq() {
+    let that = this;
+    let data = {
+      goalId: that.data.goalInfo.goalId,
+      notifyTimeList: that.data.notifyTimeList
+    }
+    addSystemGoal(that.data.goalInfo.goalId, data).then(data => {
+      if (data) {
+        wx.switchTab({
+          url: '/pages/index/index'
+        })
+      } else {
+        Dialog.fail('任务添加失败');
+      }
+    })
+  },
   /**
    * 添加目标
    */
@@ -81,25 +97,20 @@ Page({
     wx.requestSubscribeMessage({
       tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'],
       success(res) {
-        
+        console.log("requestSubscribeMessage success result:", res);
+        if (res['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'] === "accept") {
+          that.addGoalReq();
+        } else {
+          Dialog.alert({
+            title: '打卡提示',
+            message: '>.< 您狠心拒绝了消息提醒，下次将不会收到提醒消息！',
+          }).then(() => {
+            that.addGoalReq();
+          });
+        }
       },
       fail(res) {
-        Toast.fail('您没有授权打卡提醒，将无法提醒！');
-      },
-      complete(res) {
-        let data = {
-          goalId: that.data.goalInfo.goalId,
-          notifyTimeList: that.data.notifyTimeList
-        }
-        addSystemGoal(that.data.goalInfo.goalId, data).then(data => {
-          if (data) {
-            wx.switchTab({
-              url: '/pages/index/index'
-            })
-          } else {
-            Toast.fail('任务添加失败');
-          }
-        })
+        console.log("requestSubscribeMessage fail result:", res);
       }
     })
     

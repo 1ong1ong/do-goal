@@ -1,6 +1,6 @@
 // pages/clock-in/index.js
 import {userMakeGoal} from '../../api/goals';
-import Toast from '../../components/vant/toast/toast.js';
+import Dialog from '../../components/vant/dialog/dialog';
 
 Page({
   data: {
@@ -35,6 +35,19 @@ Page({
     })
   },
 
+  makeGoal() {
+    let that = this;
+    let userInfo = wx.getStorageSync("userInfo");
+    let userId = userInfo.userId;
+    userMakeGoal(that.data.goalId, userId).then(res => {
+      if (res) {
+        wx.redirectTo({
+          url: `/pages/clock-in-detail/index?goalId=${that.data.goalId}&goalName=${that.data.goalName}&icon=${that.data.icon}`
+        })
+      }
+    });
+  },
+
   /**
    * 打卡确认
    */
@@ -42,20 +55,24 @@ Page({
     let that = this;
     wx.requestSubscribeMessage({
       tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'],
-      success(res) {},
+      success(res) {
+        console.log("requestSubscribeMessage success result:",res);
+        if (res['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'] === "accept") {
+          that.makeGoal();
+        } else {
+          Dialog.alert({
+            title: '打卡提示',
+            message: '>.< 您狠心拒绝了消息提醒，下次将不会收到提醒消息！',
+          }).then(() => {
+            that.makeGoal();
+          });
+        }
+      },
       fail(res) {
-        
+        console.log("requestSubscribeMessage fail result:", res);
       },
       complete(res) {
-        let userInfo = wx.getStorageSync("userInfo");
-        let userId = userInfo.userId;
-        userMakeGoal(that.data.goalId, userId).then(res => {
-          if (res) {
-            wx.redirectTo({
-              url: `/pages/clock-in-detail/index?goalId=${that.data.goalId}&goalName=${that.data.goalName}&icon=${that.data.icon}`
-            })
-          }
-        });
+        
       }
     });
     

@@ -1,0 +1,26 @@
+/* components/my/slide-btn/index.wxss */
+.container {
+    position: relative;
+}
+
+.slider_content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #2e4eff;
+    opacity: 0.5;
+}
+
+.slider {
+    position: absolute;
+    bottom: 10rpx;
+    left: 10rpx;
+    text-align: center;
+    background-color: #7f7f7f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

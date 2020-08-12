@@ -7,7 +7,7 @@
     "van-button": "../../components/vant/button",
     "do-icon": "../../components/my/icon",
     "van-popup": "../../components/vant/popup",
-    "van-toast": "../../components/vant/toast",
+    "van-dialog": "../../components/vant/dialog",
     "van-datetime-picker": "../../components/vant/datetime-picker"
   },
   "disableScroll": true,

@@ -48,7 +48,8 @@
 
   <!-- <van-image width="100%" height="{{height}}px" fit="fill" src="{{backgroundImageUrl}}"/> -->
   <van-popup show="{{ popupShow }}" position="bottom" custom-style="height: 35%;" bind:close="closePopup">
-    <van-datetime-picker type="time" value="12:00" bind:confirm="addNotifyTime" bind:cancel="closePopup"/>
+    <van-datetime-picker type="time" value="12:00" bind:confirm="addNotifyTime" bind:cancel="closePopup" />
   </van-popup>
-  <van-toast id="van-toast" />
+
+  <van-dialog id="van-dialog" />
 </view>
