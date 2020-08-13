@@ -20,7 +20,7 @@ function login(code) {
         code: code
       },
       method: 'POST',
-      success: function(res) {
+      success: function (res) {
         if (res.statusCode === 200) {
           wx.setStorage({
             key: "accessToken",
@@ -44,13 +44,47 @@ function login(code) {
           rejected();
         }
       },
-      fail: function() {
+      fail: function () {
         console.error("login error, api server is not avalible!");
         rejected();
       },
     })
   })
 
+}
+
+function refreshToken() {
+  wx.request({
+    url: host + "/oauth/token",
+    header: {
+      "content-type": "application/x-www-form-urlencoded",
+      "Authorization": clientBasicAuthorization
+    },
+    data: {
+      grant_type: "refresh_token",
+      refresh_token: wx.getStorageSync("refreshToken")
+    },
+    method: 'POST',
+    success: function (res) {
+      if (res.statusCode === 200) {
+        wx.setStorage({
+          key: "accessToken",
+          data: res.data.access_token
+        });
+        wx.setStorage({
+          key: "refreshToken",
+          data: res.data.refresh_token
+        });
+        wx.setStorage({
+          key: "userInfo",
+          data: res.data.userInfo
+        });
+      }
+    },
+    fail: function () {
+      console.error("refreshToken error, api server is not avalible!")
+    },
+  })
 }
 
 /**
@@ -101,10 +135,10 @@ function getWithTokenCheck(url, data) {
 /**
  * 带有token检查的基本请求
  */
-function requestWithTokenCheck(method,url, data) {
+function requestWithTokenCheck(method, url, data) {
   wx.showLoading({
     title: '加载中'
-  })
+  });
   return new Promise((resolved, rejected) => {
     checkoutToken().then(res => {
       console.log("check token ok");
@@ -155,7 +189,8 @@ function request(method, url, data, resolved, rejected) {
  */
 function checkoutToken() {
   let accessToken = wx.getStorageSync("accessToken");
-  let url = `/oauth/check_token?token=${accessToken}`
+  accessToken = accessToken ? accessToken : 'needLogin';
+  let url = `/oauth/check_token?token=${accessToken}`;
   return new Promise((resolved, rejected) => {
     wx.request({
       url: host + url,
@@ -193,12 +228,7 @@ function checkoutToken() {
 function checkSuccessRes(res, resolved, rejected) {
   if (res.statusCode === 200 || res.statusCode === 204) {
     return resolved(res.data);
-  } else if (res.statusCode === 400) {
-    wx.showModal({
-      title: '提示',
-      content: res.msg
-    })
-  } else if (res.statusCode === 401) {
+  } else if (res.statusCode === 400 || res.statusCode === 401) {
     wx.navigateTo({
       url: "/pages/login/index",
     })
@@ -207,7 +237,7 @@ function checkSuccessRes(res, resolved, rejected) {
       title: '提示',
       content: '网络不稳定，请稍后再试',
       showCancel: false,
-      success: function(res) {
+      success: function (res) {
         wx.reLaunch({
           url: '/pages/index/index',
         })
@@ -222,5 +252,7 @@ module.exports = {
   login: login,
   post: postWithTokenCheck,
   put: putWithTokenCheck,
-  get: getWithTokenCheck
+  get: getWithTokenCheck,
+  refreshToken: refreshToken,
+  checkoutToken: checkoutToken
 }

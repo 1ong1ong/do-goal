@@ -1,7 +1,7 @@
 import http from '../utils/httpUtils.js';
 
-export function userGoalList(userId) {
-  return http.get(`/goals/${userId}`);
+export function userGoalList() {
+  return http.get(`/goals/user`);
 }
 
 export function userMakeGoal(goalId, userId) {
