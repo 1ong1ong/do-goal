@@ -197,6 +197,13 @@
 					"id": -1,
 					"name": "pages/goal-manage/index",
 					"pathName": "pages/goal-manage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goal-manage-setting/index",
+					"pathName": "pages/goal-manage-setting/index",
 					"scene": null
 				}
 			]

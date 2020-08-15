@@ -4,19 +4,19 @@
 <view class="container">
   <view class="header" style="width:{{width-40}}rpx">
     <view class="top-img">
-      <image src="../../assets/imgs/top.png" mode="scaleToFill" />
+      <image src="../../assets/imgs/top-spring.png" mode="scaleToFill" />
     </view>
     <view class="week_info" bindtap='goWeekReport' wx:if="{{topShow}}">
       <view class="week_days">
-        <van-circle wx:for="{{reportList}}" wx:for-index="index" wx:key="recordDate" wx:for-item="item" value="{{ item.finishedRate }}" size="{{size}}" stroke-width="3" layer-color="rgba(145, 145, 145, 0.3)">
+        <van-circle wx:for="{{reportList}}" wx:for-index="index" wx:key="recordDate" wx:for-item="item" value="{{ item.finishedRate }}" size="{{size}}" stroke-width="3" layer-color="rgba(145, 145, 145, 0.3)" color="{{globalColor}}">
           <view class="text-container">
-            <view class="circle-img" wx:if="{{ item.finishedRate === 100 }}">
+            <view class="circle-img" wx:if="{{ item.finishedRate === 100 }}" style="background-color:{{globalColor}}">
               <van-icon name="success" color="white" size="{{size*3/5}}" />
             </view>
             <view class="circle-text" wx:if="{{ item.finishedRate !== 100 }}">
               {{ item.dayDesc }}
             </view>
-            <view class="point" wx:if="{{ currentDay === (index+1) }}"></view>
+            <view class="point" wx:if="{{ currentDay === (index+1) }}" style="background-color:{{globalColor}}"></view>
           </view>
 
         </van-circle>
@@ -29,11 +29,12 @@
   </view>
 
   <view class="content" style="width:{{width-40}}rpx; height:{{height-590}}rpx">
+    <view class="no_goal_tip" wx:if="{{ goalList.length===0 }}">还没有添加任何目标哦，点击下方按钮添加吧！</view>
     <view class="goal_list">
       <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
         <view slot="icon">
           <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="#1989fa" />
+            <do-icon name="{{item.icon}}" size="76rpx" color="{{globalColor}}" />
           </view>
         </view>
         <view slot="title">
@@ -49,15 +50,16 @@
         </view>
         <view slot="right-icon">
           <view class="goal_right_icon">
-            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="#1989fa" />
+            <do-icon name="{{item.finishedToday ? 'wancheng' : 'next'}}" size="36rpx" color="{{globalColor}}" />
           </view>
         </view>
       </van-cell>
     </view>
   </view>
   <view class="goal_add_btn">
-    <van-button bind:click="routeGoalList" round size="small" icon="plus" wx:if="{{authorize != false}}" type="info" plain custom-style="box-shadow: 0rpx 4rpx 10rpx #e1e7ec;border:none;width:200rpx;font-size:30rpx;font-weight:bold;line-height:60rpx">添加目标</van-button>
-    <van-button bindgetuserinfo="bindGetUserInfo" open-type="getUserInfo" wx:if="{{authorize == false}}" round size="small" icon="plus" type="info" plain custom-style="box-shadow: 0rpx 4rpx 10rpx #e1e7ec;border:none;width:200rpx;font-size:30rpx;font-weight:bold;line-height:60rpx">添加目标</van-button>
+    <van-button bind:click="routeGoalList" round size="small" icon="plus" wx:if="{{authorize != false}}" plain custom-style="box-shadow: 0rpx 4rpx 10rpx #e1e7ec;border:none;width:200rpx;font-size:30rpx;font-weight:bold;line-height:60rpx" color="{{globalColor}}">添加目标</van-button>
+    <van-button bindgetuserinfo="bindGetUserInfo" open-type="getUserInfo" wx:if="{{authorize == false}}" round size="small" icon="plus" plain custom-style="box-shadow: 0rpx 4rpx 10rpx #e1e7ec;border:none;width:200rpx;font-size:30rpx;font-weight:bold;line-height:60rpx"
+      color="{{globalColor}}">添加目标</van-button>
   </view>
 
 </view>

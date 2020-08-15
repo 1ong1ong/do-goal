@@ -1,7 +1,12 @@
 // pages/goal-detail/index.js
 let app = getApp();
-import { addSystemGoal } from '../../api/goals.js';
-import { remove, indexOf } from '../../utils/listUtil.js';
+import {
+  addSystemGoal, modifySystemGoal
+} from '../../api/goals.js';
+import {
+  remove,
+  indexOf
+} from '../../utils/listUtil.js';
 import Dialog from '../../components/vant/dialog/dialog.js';
 
 
@@ -16,16 +21,16 @@ Page({
     width: app.globalData.screenWidth,
     goalInfo: null,
     popupShow: false,
-    notifyTimeList: []
+    notifyTimeList: [],
+    edit: false
   },
 
   onLoad(options) {
-    let notifyTimeList = this.data.notifyTimeList;
-    notifyTimeList.push(options.notifyTime);
     this.setData({
       goalInfo: options,
-      notifyTimeList: notifyTimeList
+      notifyTimeList: options.notifyTime.split(",")
     })
+    console.log(this.data);
   },
 
   delNotifyTime(e) {
@@ -35,7 +40,7 @@ Page({
     this.setData({
       notifyTimeList: tempList
     })
-    
+
   },
 
   openPopup() {
@@ -55,14 +60,14 @@ Page({
     let notifyTimeList = this.data.notifyTimeList;
     let index = notifyTimeList.indexOf(notifyTime);
     // 不存在则添加
-    if(index === -1) {
+    if (index === -1) {
       notifyTimeList.push(event.detail);
       this.setData({
         notifyTimeList: notifyTimeList,
         popupShow: false
       })
     } else {
-      Dialog.fail('此时间已添加');
+      Dialog.alert({ message:'此时间已添加'});
     }
   },
 
@@ -79,15 +84,28 @@ Page({
       goalId: that.data.goalInfo.goalId,
       notifyTimeList: that.data.notifyTimeList
     }
-    addSystemGoal(that.data.goalInfo.goalId, data).then(data => {
-      if (data) {
-        wx.switchTab({
-          url: '/pages/index/index'
-        })
-      } else {
-        Dialog.fail('任务添加失败');
-      }
-    })
+    // 修改目标
+    if (that.data.goalInfo.edit) {
+      modifySystemGoal(that.data.goalInfo.goalId, data).then(data => {
+        if (data) {
+          wx.navigateBack();
+        } else {
+          Dialog.alert({ message:'目标添加失败'});
+        }
+      })
+    } else { // 添加目标
+      
+      addSystemGoal(that.data.goalInfo.goalId, data).then(data => {
+        if (data) {
+          wx.switchTab({
+            url: '/pages/index/index'
+          })
+        } else {
+          Dialog.alert({ message: '目标添加失败' });
+        }
+      })
+    }
+    
   },
   /**
    * 添加目标
@@ -113,11 +131,5 @@ Page({
         console.log("requestSubscribeMessage fail result:", res);
       }
     })
-    
-    
   },
-
-  addSystemGoal() {
-    
-  }
 })

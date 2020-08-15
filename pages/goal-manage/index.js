@@ -1,4 +1,5 @@
 // pages/goal-manage/index.js
+let app = getApp();
 import Dialog from "../../components/vant/dialog/dialog.js"
 import {
   userGoalList,
@@ -12,7 +13,8 @@ Page({
   data: {
     screenWidth: 0, //屏幕宽度
     screenHeight: 0, // 屏幕高度
-    goalList: []
+    goalList: [],
+    globalColor: app.globalData.globalColor
   },
 
   /**
@@ -72,10 +74,8 @@ Page({
         })
       }).catch(() => Dialog.close())
     } else { // 点击编辑
-      Dialog.confirm({
-        message: '非常抱歉，体验版本完善中，编辑功能正在开发，目前可以通过向左滑动，删除目标后再次添加',
-        confirmButtonText: '知道了',
-        cancelButtonText: '取消'
+      wx.navigateTo({
+        url: `/pages/goal-manage-setting/index?goalId=${goal.id}&goalName=${goal.name}`,
       })
     }
   },
@@ -84,11 +84,7 @@ Page({
    *  用户目标列表
    */
   getUserGoalList() {
-    wx.showLoading({
-      title: '加载中'
-    });
     userGoalList().then(data => {
-      wx.hideLoading();
       this.setData({
         goalList: data.goals
       });

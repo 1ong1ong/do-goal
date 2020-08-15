@@ -18,6 +18,7 @@ Page({
     reportList: [],
     topShow: false,
     authorize: false,
+    globalColor: app.globalData.globalColor
   },
 
   /**

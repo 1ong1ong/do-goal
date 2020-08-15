@@ -1,0 +1,25 @@
+<!--pages/goal-manage-setting/index.wxml-->
+<view class="container">
+
+  <view class="title">
+    {{goalName}}-设置
+  </view>
+  <view class="settings">
+    <view class="setting-item">
+      <view class="text">
+        加入排行
+      </view>
+      <view class="switch-btn">
+        <van-switch checked="{{ showRank }}" size="50rpx;" bind:change="showRankChange" active-color="{{globalColor}}" inactive-color="#ee0a24"/>
+      </view>
+    </view>
+    <view class="setting-item" bindtap="editUserGoal">
+      编辑目标
+    </view>
+    <view class="setting-item" bindtap="deleteUserGoal">
+      删除这个目标
+    </view>
+  </view>
+  
+  <van-dialog id="van-dialog" confirmButtonColor="red" />
+</view>

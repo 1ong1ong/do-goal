@@ -11,6 +11,7 @@ Page({
   data: {
     height: app.globalData.screenHeight - 132,
     width: app.globalData.screenWidth,
+    globalColor: app.globalData.globalColor,
     goalList: []
   },
 
@@ -43,7 +44,7 @@ Page({
     // 没有添加过，跳转添加页面
     if (!goal.isAdded) {
       wx.navigateTo({
-        url: `/pages/goal-detail/index?goalId=${goal.id}&goalName=${goal.name}&goalDesc=${goal.description}&doingNum=${goal.doingNum}&notifyTime=${goal.notifyTime}`
+        url: `/pages/goal-detail/index?goalId=${goal.id}&goalName=${goal.name}&goalDesc=${goal.description}&doingNum=${goal.doingNum}&notifyTime=${goal.notifyTime}&edit=false`
       })
     } 
     // 已经添加过，且今日打过卡

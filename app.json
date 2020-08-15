@@ -13,7 +13,8 @@
     "pages/discovery/index",
     "pages/my/index",
     "pages/login/index",
-    "pages/goal-manage/index"
+    "pages/goal-manage/index",
+    "pages/goal-manage-setting/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,17 +25,17 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#a9b7b7",
-    "selectedColor": "#1989fa",
+    "selectedColor": "#00a85d",
     "borderStyle": "black",
     "list": [
       {
-        "selectedIconPath": "assets/imgs/up-select.png",
+        "selectedIconPath": "assets/imgs/up-select-spring.png",
         "iconPath": "assets/imgs/up-unselect.png",
         "pagePath": "pages/index/index",
         "text": "目标"
       },
       {
-        "selectedIconPath": "assets/imgs/my-select.png",
+        "selectedIconPath": "assets/imgs/my-select-spring.png",
         "iconPath": "assets/imgs/my-unselect.png",
         "pagePath": "pages/my/index",
         "text": "我的"

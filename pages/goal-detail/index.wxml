@@ -38,7 +38,7 @@
 
     <view class="card_bottom">
       <view class="bottom_content">
-        <van-button size="normal" color="#1989fa" round block customStyle="font-size:36rpx" bind:click="addGoal">添加目标
+        <van-button size="normal" color="#1989fa" round block customStyle="font-size:36rpx" bind:click="addGoal">{{goalInfo.edit?'确认修改':'添加目标'}}
         </van-button>
         <view style="font-size: 26rpx;color: #999999;text-align: center;margin-top: 10rpx">排行榜中将展示所有添加过目标的小伙伴的打卡信息
         </view>

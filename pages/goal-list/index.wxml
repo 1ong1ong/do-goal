@@ -7,7 +7,7 @@
       <do-icon name="left" size="40rpx" color="black" custom-class="nav_icon"/>
     </view>
   </van-nav-bar>
-  <van-tabs active="{{1}}" swipeable animated border="{{false}}" color="#1989fa" titleActiveColor="#1989fa"
+  <van-tabs active="{{1}}" swipeable animated border="{{false}}" color="{{globalColor}}" titleActiveColor="{{globalColor}}"
             custom-class="tabs_custom" sticky swipeThreshold="4.5">
     <van-tab title="自定义" custom-class="tabs_custom">
       <view class="diy_tab_view" style="height:{{height}}px">
@@ -20,7 +20,7 @@
         </view>
         <view class="diy_btn" style="width:{{width}}px">
           <view class="btn">
-            <van-button size="large" color="#1989fa" round block bind:click="routeGoalAdd">添加自定义目标</van-button>
+            <van-button size="large" color="{{globalColor}}" round block bind:click="routeGoalAdd">添加自定义目标</van-button>
           </view>
         </view>
       </view>
@@ -32,7 +32,7 @@
           <van-cell wx:for="{{item.goalList}}" wx:for-item="subItem" wx:key="id" use-label-slot="true" center bind:click="routeGoalDetail" data-goal="{{ subItem }}">
             <view slot="icon">
               <view class="goal_icon">
-                <do-icon name="sun" size="76rpx" color="#1989fa"/>
+                <do-icon name="sun" size="76rpx" color="{{globalColor}}"/>
               </view>
             </view>
             <view slot="title">
@@ -48,7 +48,7 @@
             </view>
             <view slot="right-icon">
               <view class="goal_right_icon">
-                <view class="add_goal" wx:if="{{ !subItem.added }}">
+                <view class="add_goal" wx:if="{{ !subItem.added }}" style="background-color:{{globalColor}};opacity:0.9;color:white">
                   去添加
                 </view>
                 <view class="is_added_goal" wx:if="{{ subItem.added }}">

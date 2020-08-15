@@ -28,6 +28,10 @@ App({
   },
   globalData: {
     screenWidth: 0,
-    screenHeight: 0
+    screenHeight: 0,
+    // 春天
+    globalColor: '#00a85d'
+    // 冬天
+    // globalColor: '#1989fa'
   }
 })

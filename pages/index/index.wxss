@@ -52,6 +52,7 @@
   width: 60rpx;
   height: 60rpx;
 }
+
 .circle-img {
   background-color: #1989fa;
   border-radius: 200rpx;
@@ -64,7 +65,7 @@
   font-size: 28rpx;
   font-family: Microsoft YaHei;
   font-weight: bold;
-   width: 60rpx;
+  width: 60rpx;
   height: 60rpx;
   line-height: 60rpx;
   color: rgba(145, 145, 145);
@@ -143,4 +144,12 @@
   left: 30%;
   display: flex;
   justify-content: center;
+}
+
+.no_goal_tip {
+  width: 100%;
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #999;
 }

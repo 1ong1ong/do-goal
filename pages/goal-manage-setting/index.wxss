@@ -1,0 +1,30 @@
+/* pages/goal-manage-setting/index.wxss */
+
+.container {
+  padding: 20rpx;
+}
+
+.title {
+  margin-top: 30rpx;
+  font-size: 42rpx;
+}
+
+.settings {
+  margin-top: 80rpx;
+}
+
+.setting-item {
+  height: 120rpx;
+  border-bottom: 1px solid #ebedf0;
+  line-height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120rpx;
+}

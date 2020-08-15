@@ -2,7 +2,7 @@
 
 <view
   class="custom-class {{ utils.bem('switch', { on: value === activeValue, disabled }) }}"
-  style="font-size: {{ size }}; {{ (checked ? activeColor : inactiveColor) ? 'background-color: ' + (checked ? activeColor : inactiveColor ) : '' }}"
+  style="font-size: {{ size }}; {{ (checked ? activeColor : inactiveColor) ? 'background-color: ' + (checked ? activeColor : inactiveColor ) : '' }}; display:flex; justify-content: center;align-items: center;"
   bind:tap="onClick"
 >
   <view class="van-switch__node node-class">

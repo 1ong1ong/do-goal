@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-cell": "../../components/vant/cell",
+    "van-switch": "../../components/vant/switch",
+    "van-dialog": "../../components/vant/dialog"
+  },
+  "navigationBarTitleText": ""
+}

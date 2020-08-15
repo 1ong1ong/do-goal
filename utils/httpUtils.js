@@ -36,11 +36,11 @@ function login(code) {
           });
           resolved();
         } else {
-          // 登录失败
-          wx.showModal({
-            title: '提示',
-            content: '服务器开小差了，登录失败'
-          });
+          // // 登录失败
+          // wx.showModal({
+          //   title: '提示',
+          //   content: '服务器开小差了，登录失败'
+          // });
           rejected();
         }
       },
