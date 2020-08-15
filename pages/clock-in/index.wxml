@@ -1,12 +1,12 @@
 <!--pages/clock-in/index.wxml-->
-<view class="content" style="height:{{screenHeight}}rpx;">
+<view class="content" style="height:{{screenHeight}}rpx;background-color: {{globalColor}}">
 
-  <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
+  <!-- <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
     <view slot="left" class="nav_bar_left">
       <do-icon name="left" size="40rpx" color="white" custom-class="nav_icon" />
       <view class="top_text">{{ goalName }}</view>
     </view>
-  </van-nav-bar>
+  </van-nav-bar> -->
 
   <view class="slide_btn">
     <click-btn screen-width="{{screenWidth}}" move-btn-color="#F5CB5B" bind:confirm="goalConfirm" bindtap="goalConfirm"/>

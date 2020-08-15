@@ -29,7 +29,8 @@ Page({
     levelShowList: [],
     goalRankList: [],
     selfRankInfo: {},
-    postList: []
+    postList: [],
+    globalColor: app.globalData.globalColor
   },
 
   onLoad(options) {
@@ -45,9 +46,24 @@ Page({
   },
 
   onShow() {
+    this.initNavigationBar();
     this.getGoalMakeDetail();
     this.getGoalRankList();
     this.getGoalPostsByGoalId();
+  },
+
+  // 设置顶部导航栏
+  initNavigationBar() {
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: this.data.globalColor,
+    });
+    wx.setNavigationBarTitle({
+      title: this.data.goalName,
+    })
+    this.setData({
+      globalColor: app.globalData.globalColor
+    })
   },
 
   getGoalPostsByGoalId() {

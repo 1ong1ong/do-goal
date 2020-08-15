@@ -139,7 +139,6 @@
 
 .goal_add_btn {
   position: fixed;
-  bottom: 30rpx;
   width: 40%;
   left: 30%;
   display: flex;

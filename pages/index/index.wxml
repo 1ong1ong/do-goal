@@ -4,7 +4,7 @@
 <view class="container">
   <view class="header" style="width:{{width-40}}rpx">
     <view class="top-img">
-      <image src="../../assets/imgs/top-spring.png" mode="scaleToFill" />
+      <image src="{{homeTopBackgroundImgSrc}}" mode="scaleToFill" />
     </view>
     <view class="week_info" bindtap='goWeekReport' wx:if="{{topShow}}">
       <view class="week_days">
@@ -56,7 +56,7 @@
       </van-cell>
     </view>
   </view>
-  <view class="goal_add_btn">
+  <view class="goal_add_btn" style="bottom:{{bottom}}rpx">
     <van-button bind:click="routeGoalList" round size="small" icon="plus" wx:if="{{authorize != false}}" plain custom-style="box-shadow: 0rpx 4rpx 10rpx #e1e7ec;border:none;width:200rpx;font-size:30rpx;font-weight:bold;line-height:60rpx" color="{{globalColor}}">添加目标</van-button>
     <van-button bindgetuserinfo="bindGetUserInfo" open-type="getUserInfo" wx:if="{{authorize == false}}" round size="small" icon="plus" plain custom-style="box-shadow: 0rpx 4rpx 10rpx #e1e7ec;border:none;width:200rpx;font-size:30rpx;font-weight:bold;line-height:60rpx"
       color="{{globalColor}}">添加目标</van-button>

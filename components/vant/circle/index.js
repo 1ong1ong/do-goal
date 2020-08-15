@@ -56,17 +56,17 @@ VantComponent({
             }
             return this.ctx;
         },
-        setHoverColor() {
+        setHoverColor(newVal, oldVal, changedPath) {
             const context = this.getContext();
             const { color, size } = this.data;
-            let hoverColor = color;
-            if (isObj(color)) {
-                const LinearColor = context.createLinearGradient(size, 0, 0, 0);
-                Object.keys(color)
-                    .sort((a, b) => parseFloat(a) - parseFloat(b))
-                    .map(key => LinearColor.addColorStop(parseFloat(key) / 100, color[key]));
-                hoverColor = LinearColor;
-            }
+          let hoverColor = newVal;
+            // if (isObj(color)) {
+            //     const LinearColor = context.createLinearGradient(size, 0, 0, 0);
+            //     Object.keys(color)
+            //         .sort((a, b) => parseFloat(a) - parseFloat(b))
+            //         .map(key => LinearColor.addColorStop(parseFloat(key) / 100, color[key]));
+            //     hoverColor = LinearColor;
+            // }
             this.setData({ hoverColor });
         },
         presetCanvas(context, strokeStyle, beginAngle, endAngle, fill) {

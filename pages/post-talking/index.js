@@ -1,6 +1,6 @@
 // pages/post-talking/index.js
 import { addGoalPost } from '../../api/goalPost.js'
-
+let app = getApp();
 Page({
 
   /**
@@ -25,12 +25,12 @@ Page({
     goalName: '',
     icon: '',
     finishNum: 0,
-    userInfo: null
+    userInfo: null,
+    globalColor: app.globalData.globalColor,
   },
+
   onLoad(options) {
-    console.log("enter======================")
     let userInfo = wx.getStorageSync("userInfo");
-    console.log("enter======================", userInfo)
     this.setData({
       goalId: options.goalId,
       goalName: options.goalName,
@@ -40,6 +40,13 @@ Page({
     })
   },
 
+  onShow() {
+    this.setData({
+      globalColor: app.globalData.globalColor  
+    })
+  },
+
+  
   onChange(e) {
     this.setData({
       content: e.detail

@@ -1,0 +1,14 @@
+/* pages/theme-manage/index.wxss */
+.container {
+  padding: 20rpx;
+}
+
+.title {
+  margin-top: 30rpx;
+  font-size: 42rpx;
+}
+
+.content {
+  margin-top: 80rpx;
+}
+

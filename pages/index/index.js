@@ -1,8 +1,9 @@
 // pages/index/index.js
 let app = getApp();
-import {userGoalList} from '../../api/goals';
-import {getUserInfo} from '../../utils/userInfoUtil';
-
+import { userGoalList } from '../../api/goals';
+import { getUserInfo } from '../../utils/userInfoUtil';
+import { getCurrentUserInfo } from '../../api/user.js'
+import { getTheme } from '../../utils/themeData.js'
 Page({
 
   /**
@@ -11,6 +12,7 @@ Page({
   data: {
     height: app.globalData.screenHeight / (app.globalData.screenWidth / 750),
     width: app.globalData.screenWidth / (app.globalData.screenWidth / 750),
+    bottom: 130,
     size: 60 / (750 / app.globalData.screenWidth),
     currentDay: 0,
     goalList: [],
@@ -18,26 +20,56 @@ Page({
     reportList: [],
     topShow: false,
     authorize: false,
-    globalColor: app.globalData.globalColor
+    globalColor: app.globalData.globalColor,
+    tempColor: app.globalData.globalColor,
+    homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
+    let model = app.globalData.mobileModel;
+    let bottom = 130;
+    console.log("model", model)
+    if (model === 'iPhone X' || model === 'iPhone XR' || model === 'iPhone XS Msx') {
+      console.log("bottom",bottom)
+      bottom = 200;
+    }
+    getCurrentUserInfo().then((user) => {
+      let theme = getTheme(user.theme);
+      app.globalData.globalColor = theme.backgroundColor;
+      app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
+    });
     let authorize = false;
     let userInfo = wx.getStorageSync("userInfo");
     if (userInfo !== null && userInfo !== '') {
       authorize = userInfo.authorize;
     }
     this.setData({
-      authorize: authorize
+      authorize: authorize,
+      bottom: bottom
     })
   },
 
   onShow() {
+    this.checkThemeColorChange();
+    this.getTabBar().init();
     this.getUserGoalList();
   },
+
+  checkThemeColorChange() {
+    if (this.data.tempColor !== app.globalData.globalColor) {
+      this.setData({
+        globalColor: app.globalData.globalColor,
+        tempColor: app.globalData.globalColor,
+        homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc,
+        reportList: []
+      })
+    }
+  },
+
+
 
 
   /**

@@ -29,7 +29,7 @@
 
 .btn{
   height: 40rpx;
-  border: #999999 2rpx solid;
+  border: #d6d6d6 2rpx solid;
   line-height: 40rpx;
   padding-left: 20rpx;
   padding-right: 20rpx;

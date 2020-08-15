@@ -30,8 +30,10 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
-
+  onShow: function() {
+    this.setData({
+      globalColor: app.globalData.globalColor
+    })
   },
 
   // 获取屏幕宽度

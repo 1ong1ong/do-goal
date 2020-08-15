@@ -1,0 +1,21 @@
+<!--pages/theme-manage/index.wxml-->
+<view class="container">
+
+  <view class="title">
+    可选主题列表
+  </view>
+  <view class="content">
+    <van-radio-group value="{{ radio }}">
+      <van-cell-group>
+        <van-cell wx:for="{{themeList}}" wx:for-item="item" wx:key="id"  size="large" clickable data-theme="{{item}}" bind:click="onClick" >
+          <view slot="title" style="color:{{item.backgroundColor}}">
+          {{item.name}}
+          </view>
+          <van-radio slot="right-icon" name="{{item.id}}" checked-color="{{item.backgroundColor}}"/>
+        </van-cell>
+      </van-cell-group>
+    </van-radio-group>
+  </view>
+
+  <van-dialog id="van-dialog" confirmButtonColor="red" />
+</view>

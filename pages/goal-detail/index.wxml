@@ -1,5 +1,5 @@
 <!--pages/goal-detail/index.wxml-->
-<view class="container" style="height:{{height}}px;">
+<view class="container" style="height:{{height}}px;background-color:{{globalColor}}">
 
   <van-nav-bar fixed bind:click-left="goBackPage" border="{{false}}">
     <view slot="left" class="nav_bar_left">
@@ -21,15 +21,15 @@
         <view style="font-size:28rpx;height: 50rpx;line-height: 50rpx">指定时间前完成目标，我们会提醒你哦</view>
       </view>
       <view class="top_right">
-        <view class="add_btn" style="background-color: #cee2fa;" bindtap="openPopup">
-          <van-icon name="plus" color="#1989fa" />
+        <view class="add_btn" style="background-color:{{globalColor}};opacity:0.7;" bindtap="openPopup">
+          <van-icon name="plus" color="{{globalColor}}" />
         </view>
       </view>
     </view>
     <scroll-view scroll-x style="height: 100rpx;margin-top: 30rpx">
       <view class="scroll_tags">
         <view class="tag" wx:for="{{ notifyTimeList }}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
-          <van-tag size="large" plain round closeable color="#1989fa" bind:close="delNotifyTime" data-time="{{ item }}">
+          <van-tag size="large" plain round closeable color="{{globalColor}}" bind:close="delNotifyTime" data-time="{{ item }}">
             <view style="padding-left: 10rpx;">{{ item }}</view>
           </van-tag>
         </view>
@@ -38,7 +38,7 @@
 
     <view class="card_bottom">
       <view class="bottom_content">
-        <van-button size="normal" color="#1989fa" round block customStyle="font-size:36rpx" bind:click="addGoal">{{goalInfo.edit?'确认修改':'添加目标'}}
+        <van-button size="normal" color="{{globalColor}}" round block customStyle="font-size:36rpx" bind:click="addGoal">{{goalInfo.edit?'确认修改':'添加目标'}}
         </van-button>
         <view style="font-size: 26rpx;color: #999999;text-align: center;margin-top: 10rpx">排行榜中将展示所有添加过目标的小伙伴的打卡信息
         </view>

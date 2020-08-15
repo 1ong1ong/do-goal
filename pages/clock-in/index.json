@@ -7,6 +7,5 @@
     "do-icon": "../../components/my/icon",
     "van-dialog": "../../components/vant/dialog"
   },
-  "disableScroll": true,
-  "navigationStyle": "custom"
+  "disableScroll": true
 }

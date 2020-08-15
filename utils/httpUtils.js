@@ -8,6 +8,7 @@ const clientBasicAuthorization = "Basic ZG8tZ29hbDpkby1nb2Fs";
  * code：微信登录授权码
  */
 function login(code) {
+  console.log(code);
   return new Promise((resolved, rejected) => {
     wx.request({
       url: host + "/oauth/token",
@@ -34,7 +35,7 @@ function login(code) {
             key: "userInfo",
             data: res.data.userInfo
           });
-          resolved();
+          resolved(res.data.userInfo);
         } else {
           // // 登录失败
           // wx.showModal({

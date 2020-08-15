@@ -16,6 +16,9 @@ Page({
   },
 
   onShow() {
+    this.setData({
+      globalColor: app.globalData.globalColor
+    })
     if(this.data.goalList.length === 0) {
       this.getGoalList();
     }

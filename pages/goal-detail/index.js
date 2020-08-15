@@ -19,6 +19,7 @@ Page({
     // backgroundImageUrl: "https://imgs.cxlsky.com/zaoqi.png",
     height: app.globalData.screenHeight,
     width: app.globalData.screenWidth,
+    globalColor: app.globalData.globalColor,
     goalInfo: null,
     popupShow: false,
     notifyTimeList: [],
@@ -31,6 +32,12 @@ Page({
       notifyTimeList: options.notifyTime.split(",")
     })
     console.log(this.data);
+  },
+
+  onShow() {
+    this.setData({
+      globalColor: app.globalData.globalColor
+    })
   },
 
   delNotifyTime(e) {

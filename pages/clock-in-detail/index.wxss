@@ -261,8 +261,8 @@ page {
   height: 50rpx;
   width: 150rpx;
   border-radius: 40rpx;
-  background-color: #cee2fa;
-  color: #1989fa;
+  opacity: 0.9;
+  color: white;
   line-height: 50rpx;
   text-align: center;
 }
@@ -298,7 +298,7 @@ page {
 }
 
 .post_card_right_name text {
-  color: #4a6b8f
+  color: #3d3d3d
 }
 
 .post_card_right_gender_info {

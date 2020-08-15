@@ -8,8 +8,8 @@
       <view class="name">{{userInfo.nickName}}</view>
       <view class="auth">
         <view class="btn" bindtap="openPopup">
-          <van-icon name="friends" wx:if="{{ allowWatch }}" color="#1989fa" />
-          <text wx:if="{{ allowWatch }}" style="color:#1989fa">所有人可见</text>
+          <van-icon name="friends" wx:if="{{ allowWatch }}" color="{{globalColor}}" />
+          <text wx:if="{{ allowWatch }}" style="color:{{globalColor}}">所有人可见</text>
           <van-icon name="lock" wx:if="{{ !allowWatch }}" />
           <text wx:if="{{ !allowWatch }}">仅自己可见</text>
           <van-icon name="arrow-down" />
@@ -19,24 +19,24 @@
   </view>
 
   <view class="talking" bindtap="inputAreaClick">
-    <van-field type="textarea" focus="{{ focused }}" clickable hold-keyboard show-confirm-bar="{{ false }}" autosize=" { minHeight: 200rpx }" value="{{ value }}" placeholder="记录一下..." border="{{ false }}" bind:change="onChange" custom-style="font-size:30rpx;min-height:200rpx"
+    <van-field type="textarea" focus="{{ focused }}" clickable hold-keyboard show-confirm-bar="{{ false }}" autosize=" { minHeight: 400rpx }" value="{{ value }}" placeholder="记录一下..." border="{{ false }}" bind:change="onChange" custom-style="font-size:30rpx;min-height:400rpx"
       bind:focus="talkingFocus" bind:blur="talkingBlur" />
   </view>
 
   <view class="goal_des">
-    <do-icon name="{{ icon }}" size="50rpx" color="#1989fa" />
-    <text style="padding-left: 30rpx;color:#1989fa">{{ goalName }}</text>
-    <text style="padding-left: 30rpx;color:#1989fa">完成第{{finishNum}}天</text>
-    <view class="publish" bindtap="publishConfirm">发布</view>
+    <do-icon name="{{ icon }}" size="50rpx" color="{{globalColor}}" />
+    <text style="padding-left: 30rpx;color:{{globalColor}}">{{ goalName }}</text>
+    <text style="padding-left: 30rpx;color:{{globalColor}}">完成第{{finishNum}}天</text>
+    <view class="publish" bindtap="publishConfirm" style="background-color:{{globalColor}}">发布</view>
   </view>
 
 
   <van-action-sheet show="{{ showPopup }}" actions="{{ authProps }}" cancel-text="取消" bind:select="confirmAuth" bind:cancel="closePopup" />
 </view>
 
-<van-popup show="{{ false }}" position="bottom" custom-style="height: 20%;" bind:close="closePopup">
+<!-- <van-popup show="{{ false }}" position="bottom" custom-style="height: 20%;" bind:close="closePopup">
   <van-picker columns="{{ columns }}" show-toolbar="{{ true }}" default-index="{{ allowWatch?1:0 }}" bind:confirm="confirmAuth" bind:cancel="closePopup" />
-</van-popup>
+</van-popup> -->
 
 <!-- <view class="bottom" style="bottom:{{inputHeight}}px;height: {{inputHeight === 0 ? 150 : 90}}rpx">
   <view class="bottom_btn">

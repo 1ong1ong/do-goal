@@ -1,7 +1,7 @@
 // pages/clock-in/index.js
 import {userMakeGoal} from '../../api/goals';
 import Dialog from '../../components/vant/dialog/dialog';
-
+let app = getApp();
 Page({
   data: {
     screenWidth: 0, //屏幕宽度
@@ -9,7 +9,8 @@ Page({
     backgroundImageUrl: "https://imgs.cxlsky.com/zaoqi.png",
     goalName: '',
     goalId: 0,
-    icon:''
+    icon:'',
+    globalColor: app.globalData.globalColor
   },
 
   onLoad: function (options) {
@@ -18,6 +19,24 @@ Page({
       goalId: options.goalId,
       goalName: options.goalName,
       icon: options.icon
+    });
+  },
+
+  onShow() {
+    this.initNavigationBar();
+  },
+
+  // 设置顶部导航栏
+  initNavigationBar() {
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: this.data.globalColor,
+    });
+    wx.setNavigationBarTitle({
+      title: this.data.goalName,
+    });
+    this.setData({
+      globalColor: app.globalData.globalColor
     })
   },
 

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-cell": "../../components/vant/cell",
+    "van-cell-group": "../../components/vant/cell-group",
+    "van-radio": "../../components/vant/radio",
+    "van-radio-group": "../../components/vant/radio-group"
+  }
+}

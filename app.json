@@ -14,7 +14,8 @@
     "pages/my/index",
     "pages/login/index",
     "pages/goal-manage/index",
-    "pages/goal-manage-setting/index"
+    "pages/goal-manage-setting/index",
+    "pages/theme-manage/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,21 +25,19 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "custom": true,
     "color": "#a9b7b7",
     "selectedColor": "#00a85d",
     "borderStyle": "black",
     "list": [
       {
-        "selectedIconPath": "assets/imgs/up-select-spring.png",
-        "iconPath": "assets/imgs/up-unselect.png",
-        "pagePath": "pages/index/index",
-        "text": "目标"
+        "pagePath": "pages/index/index"
       },
       {
-        "selectedIconPath": "assets/imgs/my-select-spring.png",
-        "iconPath": "assets/imgs/my-unselect.png",
-        "pagePath": "pages/my/index",
-        "text": "我的"
+        "pagePath": "pages/discovery/index"
+      },
+      {
+        "pagePath": "pages/my/index"
       }
     ]
   }

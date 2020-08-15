@@ -1,6 +1,6 @@
 <!--pages/clock-in-detail/index.wxml-->
 <view class="container">
-  <view class="blue_card" />
+  <view class="blue_card" style="background-color:{{globalColor}}"/>
 
   <view class="card" style="width:{{width}}rpx">
     <view class="time">{{ finishTime }}</view>
@@ -27,14 +27,14 @@
       <view class="down">
         <view class="left">
           <view class="day" wx:for="{{charts}}" wx:for-item="chart" wx:key="index" bindtouchstart="touchPercent" data-index="{{index}}" bindtouchend="touchPercentEnd">
-            <view class="tooltip" style="background-color: {{current === index && chart.percent !==0 ?'#1989fa':'white'}}">
+            <view class="tooltip" style="background-color: {{current === index && chart.percent !==0 ?globalColor:'white'}}">
               <view class="text">{{chart.time}}</view>
               <div class="bottom">
-                <view class="triangle" style="background-color: {{current === index&& chart.percent !==0?'#1989fa':'white'}}" />
+                <view class="triangle" style="background-color: {{current === index&& chart.percent !==0?globalColor:'white'}}" />
               </div>
             </view>
             <view class="percent">
-              <view class="inner" style="height:{{chart.percent}}%;" />
+              <view class="inner" style="height:{{chart.percent}}%;background-color:{{globalColor}}" />
               <view class="line" wx:if="{{current === index && chart.percent !==0}}" />
             </view>
             {{chart.date}}
@@ -52,12 +52,12 @@
         <text>记录一下</text>
       </view>
       <view class="post_photo_icon">
-        <van-icon name="photograph" size="60rpx" color="#92C6FA" />
+        <van-icon name="photograph" size="60rpx" color="{{globalColor}}" style="opacity:0.8"/>
       </view>
     </view>
 
     <view class="bottom_tabs">
-      <van-tabs swipeable animated active="0" color="#1989fa" titleActiveColor="#1989fa" custom-class="tabs_custom" sticky>
+      <van-tabs swipeable animated active="0" color="{{globalColor}}" titleActiveColor="{{globalColor}}" custom-class="tabs_custom" sticky>
         <van-tab title="排名" name="0" custom-class="tabs_custom">
           <view class="tab_view">
             <view class="tab_view_head">
@@ -70,9 +70,9 @@
                 <view slot="label">
                   <view class="view_label">
                     已经坚持了
-                    <text style="color:rgb(25,137,250)">{{ selfRankInfo.finishDays }}</text>天
+                    <text style="color:{{globalColor}}">{{ selfRankInfo.finishDays }}</text>天
                     <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text> 第
-                    <text style="color:rgb(25,137,250)">{{ selfRankInfo.rankNum }}</text>名
+                    <text style="color:{{globalColor}}">{{ selfRankInfo.rankNum }}</text>名
                     <!-- <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text>
                     <van-icon name="like" size="30rpx" color="{{ selfRankInfo.likeNum===0?'#d5d5d5':'red' }}" />
                     <view class="like-num1" >{{ selfRankInfo.likeNum===0 ? ' ' : selfRankInfo.likeNum }}</view> -->
@@ -80,7 +80,7 @@
                 </view>
                 <view slot="right-icon">
                   <view class="view_icon_end">
-                    <view class="invite_btn">
+                    <view class="invite_btn" style="background-color:{{globalColor}}">
                       邀请好友
                     </view>
                   </view>
@@ -125,7 +125,7 @@
                   <view class="post_card_right_name">
                     <text>{{item.nickName}}</text>
                     <view class="post_card_right_gender_info">
-                      <do-icon name="nan" size="30rpx" color="#1989fa" wx:if="{{ item.gender===1 }}" />
+                      <do-icon name="nan" size="30rpx" color="{{globalColor}}" wx:if="{{ item.gender===1 }}" />
                       <do-icon name="nv" size="30rpx" color="#d4237a" wx:if="{{ item.gender===0 }}" />
                     </view>
                   </view>
@@ -135,7 +135,7 @@
                   <view class="post_card_right_goal_info">
                     <!-- <do-icon name="{{item.icon}}" size="30rpx" color="#1989fa" />
                     <text class="post_card_right_goal_info_goal_name">{{item.goalName}}</text> -->
-                    <text class="post_card_right_goal_info_finish_num">坚持第{{item.currentFinishTimes}}天</text>
+                    <text class="post_card_right_goal_info_finish_num" style="color:{{globalColor}}">坚持第{{item.currentFinishTimes}}天</text>
                   </view>
                 </view>
               </view>
