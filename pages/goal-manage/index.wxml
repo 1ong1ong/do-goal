@@ -1,0 +1,33 @@
+<!--pages/goal-manage/index.wxml-->
+<view class="container" style="height:{{screenHeight}}rpx;">
+  <view class="content_title">
+    已添加的目标
+  </view>
+  <scroll-view scroll-y enable-back-to-top style="height:{{screenHeight-300}}rpx;">
+    <van-swipe-cell left-width="{{ 65 }}" wx:for="{{goalList}}" wx:for-item="item" wx:key="id" bind:click="goGoalManage" data-goal="{{item}}">
+      <view class="content">
+        <van-cell-group>
+          <van-cell is-link size="large">
+            <view slot="icon">
+              <view class="goal_icon">
+                <do-icon name="{{item.icon}}" size="46rpx" color="#1989fa" />
+              </view>
+            </view>
+            <view slot="title">
+              <view class="goal_title">
+                {{item.name}}
+              </view>
+            </view>
+          </van-cell>
+        </van-cell-group>
+      </view>
+      <view slot="left" class="van-swipe-cell_right">
+        <view class="van-swipe-cell_right_text">
+          删除
+        </view>
+      </view>
+    </van-swipe-cell>
+  </scroll-view>
+
+  <van-dialog id="van-dialog" confirmButtonColor="red" />
+</view>

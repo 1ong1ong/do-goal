@@ -22,7 +22,7 @@
 .slide_btn {
   width: 100%;
   position: fixed;
-  bottom: 100rpx;
+  bottom: 220rpx;
   z-index: 10;
   display: flex;
   flex-wrap: wrap;

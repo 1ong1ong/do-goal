@@ -23,3 +23,8 @@ export function getGoalMakeDetail(goalId) {
 export function getGoalRankList(goalId) {
   return http.get(`/goals/rank/${goalId}`);
 }
+
+
+export function deleteUserGoal(goalId) {
+  return http.delete(`/goals/${goalId}`);
+}

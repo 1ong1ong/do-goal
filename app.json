@@ -12,7 +12,8 @@
     "pages/goal-add/index",
     "pages/discovery/index",
     "pages/my/index",
-    "pages/login/index"
+    "pages/login/index",
+    "pages/goal-manage/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,12 +32,6 @@
         "iconPath": "assets/imgs/up-unselect.png",
         "pagePath": "pages/index/index",
         "text": "目标"
-      },
-      {
-        "selectedIconPath": "assets/imgs/discovery-select.png",
-        "iconPath": "assets/imgs/discovery-unselect.png",
-        "pagePath": "pages/discovery/index",
-        "text": "发现"
       },
       {
         "selectedIconPath": "assets/imgs/my-select.png",

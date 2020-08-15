@@ -24,14 +24,19 @@ Page({
     goalId: 0,
     goalName: '',
     icon: '',
-    finishNum: 0
+    finishNum: 0,
+    userInfo: null
   },
   onLoad(options) {
+    console.log("enter======================")
+    let userInfo = wx.getStorageSync("userInfo");
+    console.log("enter======================", userInfo)
     this.setData({
       goalId: options.goalId,
       goalName: options.goalName,
       icon: options.icon,
-      finishNum: options.finishNum
+      finishNum: options.finishNum,
+      userInfo: userInfo
     })
   },
 

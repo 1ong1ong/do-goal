@@ -7,7 +7,7 @@
           <van-image width="100%" height="100%" round src="{{avatarUrl}}" />
         </view>
         <view class="right">
-         <button class="user-info-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{authorize == false}}">点击显示微信头像</button>
+          <button class="user-info-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{authorize == false}}">点击显示微信头像</button>
           <view class="username" wx:if="{{authorize == true}}">
             <view class="up">{{nickName}}</view>
             <view class="down"> {{country}} {{province}} {{city}}</view>
@@ -21,44 +21,44 @@
   </view>
 
   <view class="content-down">
-    <van-cell icon="todo-list" size="large" center>
+    <!-- <van-cell icon="todo-list" size="large" center >
       <view slot="title">
         <view style="padding-left:20rpx;">蜕变记录</view>
       </view>
       <view slot="right-icon">
         <van-icon name="arrow"/>
       </view>
-    </van-cell>
-    <van-cell icon="award" size="large" center>
-     <view slot="title">
+    </van-cell> -->
+    <van-cell icon="award" size="large" center bind:click="routeToPage" data-path="/pages/goal-manage/index">
+      <view slot="title">
         <view style="padding-left:20rpx;">目标管理</view>
       </view>
       <view slot="right-icon">
         <van-icon name="arrow" />
       </view>
     </van-cell>
-    <van-cell icon="invition" size="large" center>
+    <!-- <van-cell icon="invition" size="large" center>
      <view slot="title">
         <view style="padding-left:20rpx;">打卡周报</view>
       </view>
       <view slot="right-icon">
         <van-icon name="arrow" />
       </view>
-    </van-cell>
-    <van-cell icon="friends" size="large" center>
+    </van-cell> -->
+    <!-- <van-cell icon="friends" size="large" center>
      <view slot="title">
         <view style="padding-left:20rpx;">邀请好友</view>
       </view>
       <view slot="right-icon">
         <van-icon name="arrow" />
       </view>
-    </van-cell>
+    </van-cell> -->
   </view>
   <view class="content-down">
     <van-cell icon="phone" size="large" center>
-     <view slot="title">
+      <button slot="title" class="contact-btn" open-type="contact">
         <view style="padding-left:20rpx;">联系我们</view>
-      </view>
+      </button>
       <view slot="right-icon">
         <van-icon name="arrow" />
       </view>

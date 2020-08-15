@@ -42,9 +42,9 @@ page {
 }
 
 .user-info-btn {
- background-color: white;
- border-radius: 0;
- font-weight: bold;
+  background-color: white;
+  border-radius: 0;
+  font-weight: bold;
 }
 
 .user-info-btn::after {
@@ -80,4 +80,30 @@ page {
   border-bottom: 1px solid #efefef;
   border-top: 1px solid #efefef;
   margin-top: 14rpx;
+}
+
+.contact-btn {
+  text-align: left;
+  font-size: 32rpx;
+}
+
+button::after {
+  border: none;
+  background-color: transparent;
+}
+
+button {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: inherit;
+}
+
+button {
+  border-radius: 0;
+}
+
+.button-hover {
+  background-color: white;
+  color: black
 }

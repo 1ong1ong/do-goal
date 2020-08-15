@@ -68,6 +68,11 @@ Page({
 
   },
 
+  routeToPage(e){
+    wx.navigateTo({
+      url: e.target.dataset.path,
+    })
+  },
   /**
    * 用户信息授权成功回调
    */

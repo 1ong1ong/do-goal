@@ -1,0 +1,58 @@
+/* pages/goal-manage/index.wxss */
+
+.container {
+  /* padding: 20rpx; */
+  /* background-color: blueviolet */
+}
+
+.content {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.content_title {
+  padding: 20rpx;
+  height: 50rpx;
+  padding-right: 20rpx;
+  border-radius: 100rpx;
+  text-align: left;
+  line-height: 50rpx;
+  font-weight: 600;
+  font-size: 40rpx;
+  margin-top: 30rpx;
+}
+
+.goal_icon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.goal_title {
+  /* font-weight: bold; */
+  font-size: 30rpx;
+}
+
+.van-swipe-cell_right {
+  height: 100%;
+  width: 130rpx;
+}
+
+.van-swipe-cell_right_text {
+  background-color: rgb(255, 41, 41);
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.cell {
+  padding-top:40rpx;
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-cell": "../../components/vant/cell",
+    "do-icon": "../../components/my/icon",
+    "van-swipe-cell": "../../components/vant/swipe-cell",
+    "van-dialog": "../../components/vant/dialog"
+  },
+  "disableScroll": true
+}

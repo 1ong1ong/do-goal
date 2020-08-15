@@ -27,7 +27,6 @@ App({
    
   },
   globalData: {
-    userInfo: null,
     screenWidth: 0,
     screenHeight: 0
   }

@@ -106,6 +106,15 @@ function putWithTokenCheck(url, data) {
 }
 
 /**
+ * DELETE请求，有token检查，
+ * URL：接口
+ * data：参数，json类型
+ */
+function deleteWithTokenCheck(url, data) {
+  return requestWithTokenCheck("DELETE", url, data);
+}
+
+/**
  * GET请求，有token检查，
  * URL：接口
  * data：参数，json类型
@@ -235,7 +244,7 @@ function checkSuccessRes(res, resolved, rejected) {
   } else {
     wx.showModal({
       title: '提示',
-      content: '网络不稳定，请稍后再试',
+      content: '攻城狮正在抢修，请稍后再试！',
       showCancel: false,
       success: function (res) {
         wx.reLaunch({
@@ -253,6 +262,7 @@ module.exports = {
   post: postWithTokenCheck,
   put: putWithTokenCheck,
   get: getWithTokenCheck,
+  delete: deleteWithTokenCheck,
   refreshToken: refreshToken,
   checkoutToken: checkoutToken
 }

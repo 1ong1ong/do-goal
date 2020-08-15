@@ -190,6 +190,13 @@
 					"id": -1,
 					"name": "pages/login/index",
 					"pathName": "pages/login/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goal-manage/index",
+					"pathName": "pages/goal-manage/index",
 					"scene": null
 				}
 			]
