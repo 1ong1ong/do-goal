@@ -1,18 +1,12 @@
 // pages/feature-intro/index.js
+import { getUpdateLogs } from '../../api/article.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    updateLogList:[
-      {
-        id:1,
-        title:'Do目标1.0.0主要更新内容',
-        time:'2020年08月11日',
-        webUrl:'https://www.cxlsky.com/archives/doris-mysql-table'
-      }
-    ]
+    updateLogList:[]
   },
 
   /**
@@ -26,14 +20,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    getUpdateLogs().then(list=> {
+      this.setData({
+        updateLogList: list
+      })
+    })
   },
 
   goLogDetail(e) {
     console.log(e)
     let log = e.target.dataset.log;
     wx.navigateTo({
-      url: `/pages/web/index?webUrl=${log.webUrl}`,
+      url: `/pages/web/index?articleId=${log.id}&title=${log.title}`,
     })
   }
 })

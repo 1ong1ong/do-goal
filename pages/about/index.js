@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentVersion: app.globalData.currentVersion
+    currentVersion: app.globalData.currentVersion,
   },
 
   /**
@@ -32,7 +32,7 @@ Page({
 
   about() {
     wx.navigateTo({
-      url: '/pages/web/index?webUrl=http://www.cxlsky.com/s/about',
+      url: '/pages/web/index?articleId=1&title=关于作者',
     })
   },
 

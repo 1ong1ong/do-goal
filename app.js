@@ -9,7 +9,6 @@ import {
 App({
   onLaunch: function() {
     let that = this;
-
     // 检查更新
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
@@ -68,6 +67,11 @@ App({
 
 
   },
+
+  // 引入`towxml3.0`解析方法
+  towxml: require('/towxml/index'),
+
+  
   globalData: {
     screenWidth: 0,
     screenHeight: 0,

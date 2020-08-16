@@ -1,2 +1,2 @@
 <!--pages/web/index.wxml-->
-  <web-view src="{{webUrl}}"></web-view>
+<towxml nodes="{{article}}" />

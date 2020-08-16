@@ -80,7 +80,7 @@
     </van-cell> -->
     <van-cell icon="info" size="large" center is-link bind:click="routeToPage" data-path="/pages/about/index">
       <view slot="title" style="display:flex;alian-items:center;justify-content:space-between;" class="cell-title">
-        <view style="padding-left:20rpx;">关于do目标</view>
+        <view style="padding-left:20rpx;">关于Do目标</view>
         <view style="font-size:28rpx;color:#999999">版本{{ currentVersion }}</view>
       </view>
       <!-- <view slot="right-icon">
