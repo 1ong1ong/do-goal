@@ -227,6 +227,12 @@
 					"pathName": "pages/about/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/theme-manage/index",
+					"pathName": "pages/theme-manage/index",
+					"scene": null
 				}
 			]
 		}

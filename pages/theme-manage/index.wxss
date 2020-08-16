@@ -14,7 +14,25 @@
 }
 
 .cell-title {
-  height: 100rpx;
-  line-height: 100rpx;
+  height: 180rpx;
   font-weight: bold;
+  font-size: 34rpx;
+}
+
+.cell-title_top {
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cell-title_down {
+  margin-top: 30rpx;
+  height: 100rpx;
+  width: 100%;
+}
+
+.cell-title_down image{
+  height: 100%;
+  width: 100%;
 }

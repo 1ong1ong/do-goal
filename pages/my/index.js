@@ -17,7 +17,8 @@ Page({
     country: '',
     province: '',
     city: '',
-    currentVersion: app.globalData.currentVersion
+    currentVersion: app.globalData.currentVersion,
+    globalColor: app.globalData.globalColor,
   },
 
   /**
@@ -58,16 +59,12 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    this.setData({
+      globalColor: app.globalData.globalColor
+    })
     this.getTabBar().init();
   },
 

@@ -93,7 +93,11 @@ page {
   text-align: left;
   font-size: 30rpx;
 }
-
+.cell-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 button::after {
   border: none;
   background-color: transparent;
