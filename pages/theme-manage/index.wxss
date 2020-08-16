@@ -19,7 +19,7 @@
   font-size: 34rpx;
 }
 
-.cell-title_top {
+.cell-title_top { 
   height: 50rpx;
   display: flex;
   justify-content: space-between;

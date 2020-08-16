@@ -88,10 +88,10 @@ page {
 }
 
 .cell-title {
-  height: 70rpx;
-  line-height: 70rpx;
+  height: 40rpx;
+  line-height: 40rpx;
   text-align: left;
-  font-size: 30rpx;
+  font-size: 28rpx;
 }
 .cell-icon {
   display: flex;
