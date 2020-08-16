@@ -7,3 +7,7 @@ export function updateUserInfo(userId, data) {
 export function getCurrentUserInfo() {
   return http.get('/user');
 }
+
+export function updateUserTheme(themeId) {
+  return http.put(`/user/theme/${themeId}`);
+}

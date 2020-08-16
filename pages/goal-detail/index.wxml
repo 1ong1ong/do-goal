@@ -21,8 +21,8 @@
         <view style="font-size:28rpx;height: 50rpx;line-height: 50rpx">指定时间前完成目标，我们会提醒你哦</view>
       </view>
       <view class="top_right">
-        <view class="add_btn" style="background-color:{{globalColor}};opacity:0.7;" bindtap="openPopup">
-          <van-icon name="plus" color="{{globalColor}}" />
+        <view class="add_btn" style="background-color:{{globalColor}};opacity:0.9;" bindtap="openPopup">
+          <van-icon name="plus" color="white" />
         </view>
       </view>
     </view>

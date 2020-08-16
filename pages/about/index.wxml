@@ -1,0 +1,29 @@
+<!--pages/about/index.wxml-->
+<view class="top">
+  <view class="top-icon">
+    <image src="/assets/imgs/main-icon.png" mode="scaleToFill" />
+  </view>
+  <view class="top_title">Do 目标</view>
+  <view class="top_sub_title">Version {{currentVersion}}</view>
+</view>
+<view class="middle">
+  <van-cell size="large" center is-link bind:click="routeTofeaturePage" border>
+    <view slot="title" class="cell-title">
+      <view style="padding-left:20rpx;">功能介绍</view>
+    </view>
+  </van-cell>
+  <van-cell size="large" center is-link bind:click="checkUpdate">
+    <view slot="title" class="cell-title">
+      <view style="padding-left:20rpx;">版本更新</view>
+    </view>
+  </van-cell>
+  <van-cell size="large" center is-link bind:click="about">
+    <view slot="title" class="cell-title">
+      <view style="padding-left:20rpx;">关于作者</view>
+    </view>
+  </van-cell>
+</view>
+
+<view class="footer" bindtap="about">
+  <view>Copyright © 2020 Xiaolong Chen All Rights Reserved.</view>
+</view>

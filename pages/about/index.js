@@ -1,15 +1,42 @@
-import http from './utils/httpUtils.js';
-import {
-  getUserInfo
-} from './api/user.js'
-import {
-  getTheme
-} from './utils/themeData.js'
-//app.js
-App({
-  onLaunch: function() {
-    let that = this;
+// pages/about/index.js
 
+let app = getApp();
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    currentVersion: app.globalData.currentVersion
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  routeTofeaturePage() {
+    wx.navigateTo({
+      url: '/pages/feature-intro/index',
+    })
+  },
+
+  about() {
+    wx.navigateTo({
+      url: '/pages/web/index?webUrl=http://www.cxlsky.com/s/about',
+    })
+  },
+
+  checkUpdate() {
     // 检查更新
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
@@ -39,45 +66,19 @@ App({
               content: '新版本已经上线啦~，请您删除当前小程序，重新搜索打开哟~'
             })
           })
+        } else {
+          wx.showToast({
+            title: '当前已是最新版本',
+            icon: 'success',
+            duration: 2000
+          })
+          // wx.showModal({
+          //   title: '更新提示',
+          //   content: '当前已是最新版本'
+          // })
         }
       })
     }
-
-    // 登录
-    wx.showLoading({
-      title: '加载中'
-    })
-    wx.login({
-      success: res => {
-        http.login(res.code).then((userInfo) => {
-          console.log(userInfo);
-          wx.hideLoading();
-        });
-      }
-    });
-
-
-    wx.getSystemInfo({
-      success(res) {
-        console.log(res);
-        that.globalData.screenWidth = res.screenWidth;
-        that.globalData.screenHeight = res.screenHeight;
-        that.mobileModel= res.model;
-      }
-    })
-
-
-  },
-  globalData: {
-    screenWidth: 0,
-    screenHeight: 0,
-    currentVersion: '1.0.0',
-    mobileModel: 'iPhone X',
-    // 默认：春天
-    globalColor: '#00a85d',
-    homeTopBackgroundImgSrc: '/assets/imgs/top-spring.png'
-    // 冬天
-    // globalColor: '#1989fa',
-    // homeTopBackgroundImgSrc: '/assets/imgs/top.png'
   }
+ 
 })

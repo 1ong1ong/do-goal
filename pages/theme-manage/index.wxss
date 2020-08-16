@@ -1,14 +1,20 @@
 /* pages/theme-manage/index.wxss */
 .container {
-  padding: 20rpx;
+  padding: 30rpx;
 }
 
 .title {
   margin-top: 30rpx;
   font-size: 42rpx;
+  font-weight: bold;
 }
 
 .content {
-  margin-top: 80rpx;
+  margin-top: 40rpx;
 }
 
+.cell-title {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: bold;
+}

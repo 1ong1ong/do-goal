@@ -23,10 +23,10 @@ Page({
     goalInfo: null,
     popupShow: false,
     notifyTimeList: [],
-    edit: false
   },
 
   onLoad(options) {
+    console.log(options);
     this.setData({
       goalInfo: options,
       notifyTimeList: options.notifyTime.split(",")
@@ -92,7 +92,7 @@ Page({
       notifyTimeList: that.data.notifyTimeList
     }
     // 修改目标
-    if (that.data.goalInfo.edit) {
+    if (that.data.goalInfo.edit === 'true') {
       modifySystemGoal(that.data.goalInfo.goalId, data).then(data => {
         if (data) {
           wx.navigateBack();

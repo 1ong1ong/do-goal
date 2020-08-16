@@ -29,18 +29,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    // 判断机型
     let model = app.globalData.mobileModel;
     let bottom = 130;
-    console.log("model", model)
     if (model === 'iPhone X' || model === 'iPhone XR' || model === 'iPhone XS Msx') {
       console.log("bottom",bottom)
       bottom = 200;
     }
-    getCurrentUserInfo().then((user) => {
-      let theme = getTheme(user.theme);
-      app.globalData.globalColor = theme.backgroundColor;
-      app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
-    });
+
+    // 获取用户的主题设置
+    this.getUserTheme();
+
+    // 获取用户的授权状态
     let authorize = false;
     let userInfo = wx.getStorageSync("userInfo");
     if (userInfo !== null && userInfo !== '') {
@@ -56,6 +56,14 @@ Page({
     this.checkThemeColorChange();
     this.getTabBar().init();
     this.getUserGoalList();
+  },
+
+  getUserTheme() {
+    getCurrentUserInfo().then((user) => {
+      let theme = getTheme(user.theme);
+      app.globalData.globalColor = theme.backgroundColor;
+      app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
+    });
   },
 
   checkThemeColorChange() {

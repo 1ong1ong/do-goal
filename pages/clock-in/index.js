@@ -30,7 +30,7 @@ Page({
   initNavigationBar() {
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
-      backgroundColor: this.data.globalColor,
+      backgroundColor: app.globalData.globalColor,
     });
     wx.setNavigationBarTitle({
       title: this.data.goalName,

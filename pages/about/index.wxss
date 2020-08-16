@@ -1,0 +1,48 @@
+/* pages/about/index.wxss */
+
+.top {
+  
+  text-align: center;
+}
+
+.top-icon {
+  height: 140rpx;
+  width: 140rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  /* background-color: black; */
+}
+
+.top-icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.top_title {
+  width: 100%;
+  margin-top: 40rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+
+.top_sub_title {
+  width: 100%;
+  margin-top: 15rpx;
+}
+.middle {
+  
+  
+  margin-top: 80rpx;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+}
+
+.footer {
+  position: fixed;
+  bottom: 80rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 22rpx;
+  color: #999999;
+}

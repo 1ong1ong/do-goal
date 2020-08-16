@@ -1,7 +1,7 @@
 /* pages/goal-manage-setting/index.wxss */
 
 .container {
-  padding: 20rpx;
+  padding: 30rpx;
 }
 
 .title {
@@ -26,5 +26,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120rpx;
+  height: 90rpx;
 }

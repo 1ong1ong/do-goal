@@ -15,7 +15,10 @@
     "pages/login/index",
     "pages/goal-manage/index",
     "pages/goal-manage-setting/index",
-    "pages/theme-manage/index"
+    "pages/theme-manage/index",
+    "pages/about/index",
+    "pages/web/index",
+    "pages/feature-intro/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

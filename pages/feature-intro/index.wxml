@@ -1,0 +1,15 @@
+<!--pages/feature-intro/index.wxml-->
+<view class="content">
+  <van-cell wx:for="{{updateLogList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goLogDetail" data-log="{{item}}" is-link center>
+    <view slot="title">
+      <view class="cell-title">
+        {{item.title}}
+      </view>
+    </view>
+    <view slot="label">
+      <view class="cell-label">
+        {{item.time}}
+      </view>
+    </view>
+  </van-cell>
+</view>

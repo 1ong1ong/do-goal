@@ -13,7 +13,7 @@
                 <do-icon name="{{item.icon}}" size="46rpx" color="{{globalColor}}" />
               </view>
             </view>
-            <view slot="title">
+            <view slot="title" class="cell-title">
               <view class="goal_title">
                 {{item.name}}
               </view>

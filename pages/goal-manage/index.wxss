@@ -6,20 +6,20 @@
 }
 
 .content {
-  padding-left: 20rpx;
-  padding-right: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
 
 .content_title {
-  padding: 20rpx;
+  padding: 30rpx;
   height: 50rpx;
-  padding-right: 20rpx;
   border-radius: 100rpx;
   text-align: left;
   line-height: 50rpx;
   font-weight: 600;
   font-size: 40rpx;
-  margin-top: 30rpx;
+  margin-top: 34rpx;
+  margin-bottom: 30rpx;
 }
 
 .goal_icon {
@@ -55,4 +55,11 @@
 
 .cell {
   padding-top:40rpx;
+}
+
+.cell-title {
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: left;
+  font-size: 34rpx;
 }

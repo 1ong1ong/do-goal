@@ -1,14 +1,14 @@
 <!--pages/theme-manage/index.wxml-->
 <view class="container">
 
-  <view class="title">
+  <!-- <view class="title">
     可选主题列表
-  </view>
+  </view> -->
   <view class="content">
     <van-radio-group value="{{ radio }}">
       <van-cell-group>
-        <van-cell wx:for="{{themeList}}" wx:for-item="item" wx:key="id"  size="large" clickable data-theme="{{item}}" bind:click="onClick" >
-          <view slot="title" style="color:{{item.backgroundColor}}">
+        <van-cell wx:for="{{themeList}}" wx:for-item="item" wx:key="id"  size="large" clickable data-theme="{{item}}" bind:click="onClick" center>
+          <view slot="title" style="color:{{item.backgroundColor}};" class="cell-title">
           {{item.name}}
           </view>
           <van-radio slot="right-icon" name="{{item.id}}" checked-color="{{item.backgroundColor}}"/>

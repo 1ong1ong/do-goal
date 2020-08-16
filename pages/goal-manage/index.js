@@ -28,12 +28,13 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
     this.setData({
       globalColor: app.globalData.globalColor
     })
+    this.getUserGoalList();
   },
 
   // 获取屏幕宽度
@@ -49,13 +50,6 @@ Page({
         })
       },
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-    this.getUserGoalList();
   },
 
   goGoalManage(e) {

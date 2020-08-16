@@ -4,5 +4,7 @@
     "van-cell-group": "../../components/vant/cell-group",
     "van-radio": "../../components/vant/radio",
     "van-radio-group": "../../components/vant/radio-group"
-  }
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "可选主题"
 }

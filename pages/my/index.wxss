@@ -87,6 +87,13 @@ page {
   font-size: 32rpx;
 }
 
+.cell-title {
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: left;
+  font-size: 30rpx;
+}
+
 button::after {
   border: none;
   background-color: transparent;
@@ -105,5 +112,5 @@ button {
 
 .button-hover {
   background-color: white;
-  color: black
+  color: black;
 }
