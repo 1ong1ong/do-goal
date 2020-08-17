@@ -1,13 +1,15 @@
 // pages/login/index.js
 
 import http from '../../utils/httpUtils.js';
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    width: app.globalData.screenWidth,
+    height: app.globalData.screenHeight,
   },
 
   /**
