@@ -259,12 +259,13 @@ page {
 
 .invite_btn {
   height: 50rpx;
-  width: 150rpx;
+  width: 156rpx;
   border-radius: 40rpx;
   opacity: 0.9;
   color: white;
   line-height: 50rpx;
   text-align: center;
+  font-size: 24rpx;
 }
 
 .no_talking_tip {

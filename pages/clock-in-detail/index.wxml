@@ -80,7 +80,7 @@
                 </view>
                 <view slot="right-icon">
                   <view class="view_icon_end">
-                    <button class="invite_btn" style="background-color:{{globalColor}}">
+                    <button class="invite_btn" open-type="share" style="background-color:{{globalColor}}">
                       邀请好友
                     </button>
                   </view>
