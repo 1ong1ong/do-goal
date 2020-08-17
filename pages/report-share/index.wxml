@@ -1,0 +1,2 @@
+<!--pages/report-share/index.wxml-->
+<canvas canvas-id="myCanvas" class="myCanvas" style="width:{{width}}px;height:{{height}}px"></canvas>

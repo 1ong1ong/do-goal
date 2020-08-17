@@ -18,7 +18,8 @@
     "pages/theme-manage/index",
     "pages/about/index",
     "pages/web/index",
-    "pages/feature-intro/index"
+    "pages/feature-intro/index",
+    "pages/report-share/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
