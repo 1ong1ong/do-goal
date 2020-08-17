@@ -30,7 +30,7 @@ Page({
     this.setData({
       goalInfo: options,
       notifyTimeList: options.notifyTime.split(",")
-    })
+    });
     console.log(this.data);
   },
 
@@ -90,7 +90,7 @@ Page({
     let data = {
       goalId: that.data.goalInfo.goalId,
       notifyTimeList: that.data.notifyTimeList
-    }
+    };
     // 修改目标
     if (that.data.goalInfo.edit === 'true') {
       modifySystemGoal(that.data.goalInfo.goalId, data).then(data => {
@@ -101,7 +101,7 @@ Page({
         }
       })
     } else { // 添加目标
-      
+
       addSystemGoal(that.data.goalInfo.goalId, data).then(data => {
         if (data) {
           wx.switchTab({
@@ -112,7 +112,7 @@ Page({
         }
       })
     }
-    
+
   },
   /**
    * 添加目标
