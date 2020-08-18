@@ -9,7 +9,6 @@
     "van-image": "../../components/vant/image",
     "do-icon": "../../components/my/icon"
   },
-  "backgroundColorTop": "#1989fa",
   "backgroundColorBottom": "#ffffff",
   "enablePullDownRefresh": false,
   "navigationBarTextStyle": "white"

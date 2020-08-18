@@ -37,16 +37,20 @@
             <do-icon name="{{item.icon}}" size="76rpx" color="{{globalColor}}" />
           </view>
         </view>
-        <view slot="title">
-          <view class="goal_title">
+        <view slot="title" class="goal_title">
+          <view class="goal_name">
             {{item.name}}
           </view>
-        </view>
-        <view slot="label">
           <view class="goal_label">
             已经完成目标
             <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
           </view>
+        </view>
+        <view slot="label">
+          <!-- <view class="goal_label">
+            已经完成目标
+            <text style="color:rgb(230, 175, 56)">{{item.finishDays}}</text>天
+          </view> -->
         </view>
         <view slot="right-icon">
           <view class="goal_right_icon">

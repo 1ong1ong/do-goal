@@ -38,11 +38,10 @@ Page({
       goalId: options.goalId,
       goalName: options.goalName,
       icon: options.icon
-    })
+    });
     wx.setNavigationBarTitle({
       title: options.goalName
-    })
-
+    });
   },
 
   onShow() {
@@ -58,6 +57,9 @@ Page({
       frontColor: '#ffffff',
       backgroundColor: app.globalData.globalColor,
     });
+    wx.setBackgroundColor({
+      backgroundColor: app.globalData.globalColor,
+    })
     wx.setNavigationBarTitle({
       title: this.data.goalName,
     })
@@ -75,13 +77,13 @@ Page({
       path: '/pages/index/index?fromUserId=' + 1,
       // imageUrl: 'https://......./img/groupshare.png',  //用户分享出去的自定义图片大小为5:4,
       success: function (res) {
-	   // 转发成功
-	        wx.showToast({
-	          title: "分享成功",
-	          icon: 'success',
-	          duration: 2000
-	        })
-       },
+        // 转发成功
+        wx.showToast({
+          title: "分享成功",
+          icon: 'success',
+          duration: 2000
+        })
+      },
       fail: function (res) {
         // 分享失败
       },
@@ -89,7 +91,7 @@ Page({
 
   },
   getGoalPostsByGoalId() {
-    getGoalPostsByGoalId(this.data.goalId).then(data=> {
+    getGoalPostsByGoalId(this.data.goalId).then(data => {
       this.setData({
         postList: data
       })

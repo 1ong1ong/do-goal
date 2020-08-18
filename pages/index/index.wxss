@@ -122,10 +122,26 @@
 }
 
 .goal_title {
-  /* font-weight: bold; */
-  font-size: 30rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
+.goal_name {
+  font-weight: 500;
+  font-size: 32rpx;
+  color: #333;
+  opacity: 0.8;
+}
+
+.goal_label {
+  font-size: 28rpx;
+  color: #999999;
+}
+.goal_label text{
+  font-size: 28rpx;
+}
 .goal_right_icon {
   height: 100%;
   width: 100%;
