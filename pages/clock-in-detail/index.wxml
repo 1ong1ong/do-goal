@@ -126,7 +126,7 @@
                     <text>{{item.nickName}}</text>
                     <view class="post_card_right_gender_info">
                       <do-icon name="nan" size="30rpx" color="{{globalColor}}" wx:if="{{ item.gender===1 }}" />
-                      <do-icon name="nv" size="30rpx" color="#d4237a" wx:if="{{ item.gender===0 }}" />
+                      <do-icon name="nv" size="30rpx" color="#d4237a" wx:if="{{ item.gender===2 }}" />
                     </view>
                   </view>
                   <view class="post_card_right_text_info">
