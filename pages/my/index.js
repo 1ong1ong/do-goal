@@ -17,6 +17,8 @@ Page({
     country: '',
     province: '',
     city: '',
+    height: app.globalData.screenHeight - 132,
+    width: app.globalData.screenWidth,
     currentVersion: app.globalData.currentVersion,
     globalColor: app.globalData.globalColor,
   },

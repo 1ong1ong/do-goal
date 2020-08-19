@@ -6,5 +6,6 @@
     "do-icon": "../../components/my/icon"
   },
   "navigationBarTitleText": "",
-  "disableScroll": true
+  "disableScroll": true,
+  "navigationStyle": "custom"
 }

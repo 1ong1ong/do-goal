@@ -10,35 +10,48 @@ page {
 
 .content-top {
   background-color: white;
-  height: 320rpx;
-  padding: 0 20rpx;
+  height: 350rpx;
+  /* padding: 0 20rpx; */
   border-bottom: 1px solid #efefef;
+ 
 }
 
 .top-profile {
   height: 100%;
-  padding-top: 60rpx;
+  /* padding-top: 20rpx; */
+  position: relative;
 }
 
 .avator {
+  width: 100%;
   height: 160rpx;
-  padding-left: 20rpx;
-  padding-right: 20rpx;
+  /* padding-left: 20rpx;
+  padding-right: 20rpx; */
   display: flex;
+  /* justify-content: start; */
+  width: 100%;
+  position: absolute;
+  bottom: 30rpx;
 }
 
 .left {
   height: 160rpx;
-  width: 160rpx;
-  flex: 1;
+  width: 25%;
+  /* float: left; */
+  padding-left: 40rpx;
+  /* background-color: yellow; */
 }
 
 .right {
   height: 160rpx;
-  width: 160rpx;
-  flex: 3;
+  /* display: 3; */
+  width: 75%;
+  /* float: left; */
+  /* padding-left: -20rpx; */
+  /* background-color: white; */
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .user-info-btn {
@@ -53,7 +66,6 @@ page {
 }
 
 .username {
-  flex: 9;
   margin-left: 20rpx;
 }
 .up-content {
@@ -63,24 +75,27 @@ page {
 }
 
 .up {
-  font-weight: bold;
+  /* font-weight: bold; */
   height: 60rpx;
   line-height: 60rpx;
-  font-size: 34rpx;
+  font-size: 44rpx;
+  color: white;
 }
 .gender-icon {
   margin-left: 20rpx;
 }
 .down {
-  color: #333;
+  color: white;
+  opacity: 0.8;
   font-size: 28rpx;
+  margin-top:10rpx;
 }
 
 .more {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-right: 40rpx;
 }
 
 .content-down {
@@ -97,8 +112,8 @@ page {
 }
 
 .cell-title {
-  height: 54rpx;
-  line-height: 54rpx;
+  height: 40rpx;
+  line-height: 40rpx;
   text-align: left;
   font-size: 32rpx;
   color: black;

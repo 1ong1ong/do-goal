@@ -1,10 +1,10 @@
 <!--pages/my/index.wxml-->
 <view class="container">
 	<view class="content-top">
-		<view class="top-profile">
+		<view class="top-profile" style="background-color:{{globalColor}}">
 			<view class="avator">
 				<view class="left">
-					<van-image width="100%" height="100%" round src="{{avatarUrl}}" />
+					<van-image width="160rpx" height="160rpx" round src="{{avatarUrl}}"/>
 				</view>
 				<view class="right">
 					<button class="user-info-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{authorize == false}}">点击显示微信头像</button>
@@ -13,16 +13,16 @@
 							<view class="up">
 								{{nickName}}
 							</view>
-							<view class="gender-icon">
+							<!-- <view class="gender-icon">
 								<do-icon name="nan" size="30rpx" color="#1989fa" wx:if="{{ gender===1 }}" />
 								<do-icon name="nv" size="30rpx" color="#d4237a" wx:if="{{ gender===2 }}" />
-							</view>
+							</view> -->
 						</view>
-						<view class="down"> {{country}} {{province}} {{city}}</view>
+						<view class="down">{{gender===0?'':gender===1?'男':'女'}} {{country}}-{{province}}-{{city}}</view>
 					</view>
-					<!-- <view class="more">
-            <van-icon name="arrow" />
-          </view> -->
+					<view class="more">
+            <van-icon name="arrow" color="#f5f5f5"/>
+          </view>
 				</view>
 			</view>
 		</view>
@@ -39,7 +39,7 @@
     </van-cell> -->
 		<van-cell size="large" center is-link bind:click="routeToPage" data-path="/pages/goal-manage/index">
 			<view slot="icon" class="cell-icon">
-				<van-icon name="award-o" size="40rpx" color="{{globalColor}}" />
+				<van-icon name="medal" size="50rpx" color="#E69F47" />
 			</view>
 			<view slot="title" class="cell-title">
 				<view style="padding-left:20rpx;">目标管理</view>
@@ -50,7 +50,7 @@
 		</van-cell>
 		<van-cell size="large" center is-link bind:click="routeToPage" data-path="/pages/theme-manage/index">
 			<view slot="icon" class="cell-icon">
-				<van-icon name="photo-o" size="40rpx" color="{{globalColor}}" />
+				<van-icon name="smile" size="50rpx" color="#D65E31" />
 			</view>
 			<view slot="title" class="cell-title">
 				<view style="padding-left:20rpx;">主题更换</view>
@@ -80,7 +80,7 @@
 
 		<van-cell size="large" center is-link>
 			<view slot="icon" class="cell-icon">
-				<van-icon name="question-o" size="40rpx" color="{{globalColor}}" />
+				<van-icon name="question" size="50rpx" color="#408CE1" />
 			</view>
 			<button slot="title" class="contact-btn" open-type="contact" class="cell-title">
 				<view style="padding-left:20rpx;">问题反馈</view>
@@ -97,7 +97,7 @@
     </van-cell> -->
 		<van-cell size="large" center is-link bind:click="routeToPage" data-path="/pages/about/index">
 			<view slot="icon" class="cell-icon">
-				<van-icon name="info-o" size="40rpx" color="{{globalColor}}" />
+				<van-icon name="info" size="50rpx" color="#3775F6" />
 			</view>
 			<view slot="title" style="display:flex;alian-items:center;justify-content:space-between;" class="cell-title">
 				<view style="padding-left:20rpx;">关于Do目标</view>
