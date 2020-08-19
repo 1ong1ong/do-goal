@@ -3,7 +3,8 @@ let app = getApp();
 import { userGoalList } from '../../api/goals';
 import { getUserInfo } from '../../utils/userInfoUtil';
 import { getCurrentUserInfo } from '../../api/user.js'
-import { getTheme } from '../../utils/themeData.js'
+import { getTheme } from '../../utils/themeData.js';
+import { getMobileModel } from '../../utils/systemUtils'
 Page({
 
   /**
@@ -31,9 +32,10 @@ Page({
   onLoad: function(options) {
     console.log(options);
     // 判断机型
-    let model = app.globalData.mobileModel;
+    let model = getMobileModel();
     let bottom = 130;
-    if (model === 'iPhone X' || model === 'iPhone XR' || model === 'iPhone XS Msx') {
+    console.log(model)
+    if (model.indexOf('iPhone X') != -1) {
       console.log("bottom",bottom)
       bottom = 200;
     }
@@ -59,6 +61,8 @@ Page({
     this.getUserGoalList();
   },
 
+  
+  
   getUserTheme() {
     getCurrentUserInfo().then((user) => {
       let theme = getTheme(user.theme);

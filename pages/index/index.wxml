@@ -28,7 +28,7 @@
     </view>
   </view>
 
-  <view class="content" style="width:{{width-40}}rpx; height:{{height-590}}rpx">
+  <view class="content" style="width:{{width-40}}rpx; height:{{height-360-bottom}}rpx">
     <view class="no_goal_tip" wx:if="{{ goalList.length===0 }}">还没有添加任何目标哦，点击下方按钮添加吧！</view>
     <view class="goal_list">
       <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">

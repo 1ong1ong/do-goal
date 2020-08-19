@@ -129,10 +129,8 @@
 }
 
 .goal_name {
-  font-weight: 500;
   font-size: 32rpx;
-  color: #333;
-  opacity: 0.8;
+  color: black;
 }
 
 .goal_label {

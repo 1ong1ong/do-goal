@@ -86,7 +86,9 @@ page {
 .goal_title {
   font-size: 30rpx;
 }
-
+.goal_label {
+  font-size: 28rpx;
+}
 .goal_right_icon {
   height: 100%;
   width: 100%;

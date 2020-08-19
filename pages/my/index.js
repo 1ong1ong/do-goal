@@ -11,7 +11,7 @@ Page({
   data: {
     authorize: false,
     nickName: '',
-    gender: '',
+    gender: 0,
     avatarUrl: '',
     location: '',
     country: '',
@@ -37,6 +37,7 @@ Page({
       this.setData({
         nickName: userInfo.nickName,
         avatarUrl: userInfo.avatar,
+        gender: userInfo.gender,
         location: userInfo.country + " " + userInfo.province + " " + userInfo.city,
         country: userInfo.country,
         province: userInfo.province,
@@ -95,6 +96,7 @@ Page({
         updateUserInfo(userInfoTmp.userId, userInfo);
         _this.setData({
           nickName: userInfo.nickName,
+          gender: userInfo.gender,
           avatarUrl: userInfo.avatarUrl,
           location: userInfo.country + " " + userInfo.province + " " + userInfo.city,
           country: userInfo.country,

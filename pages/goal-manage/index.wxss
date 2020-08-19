@@ -34,7 +34,8 @@
 
 .goal_title {
   /* font-weight: bold; */
-  font-size: 30rpx;
+  font-size: 32rpx;
+  height: 40rpx;
 }
 
 .van-swipe-cell_right {
