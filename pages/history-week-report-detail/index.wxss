@@ -195,13 +195,53 @@ page {
   font-size: 24rpx;
   margin-top: -30rpx;
 }
-
+/* 
 .week_days {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 40rpx;
+} */
+
+.week_days {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.text-container {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.circle-img {
+  background-color: #1989fa;
+  border-radius: 200rpx;
+  height: 60rpx;
+  width: 60rpx;
+  line-height: 70rpx;
+}
+
+.circle-text {
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: rgba(145, 145, 145);
+}
+
+.point {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 8rpx;
+  background-color: #1989fa;
 }
 
 .share_btn_border {

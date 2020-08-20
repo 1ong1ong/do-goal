@@ -1,17 +1,24 @@
 // pages/week-report/index.js
-import { getWeekReport } from '../../api/goalWeekReport.js'
-
+import { getWeekReport } from '../../api/goalWeekReport.js';
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    size: 60 / (750 / app.globalData.screenWidth),
+    thisWeekReport: null,
+    lastWeekReport: null
   },
 
   onShow() {
-    getWeekReport()
+    getWeekReport().then(data=> {
+      this.setData({
+        thisWeekReport: data.thisWeekReport,
+        lastWeekReport: data.lastWeekReport
+      })
+    })
   },
   /**
    * 路由到历史周报页面

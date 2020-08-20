@@ -1,86 +1,103 @@
 <!--pages/week-report/index.wxml-->
 <view class="container">
-  <view class="up">
-    <view class="date_title">2020年03月09日 - 2020年03月15日</view>
-    <view class="week_line">
-      <view class="week">
-        第11周
-      </view>
-      <open-data class="avatar" type="userAvatarUrl"></open-data>
-    </view>
+	<view class="up">
+		<view class="date_title">{{thisWeekReport.beginDate}} - {{thisWeekReport.endDate}}</view>
+		<view class="week_line">
+			<view class="week">
+				第{{thisWeekReport.weeksInYear}}周
+			</view>
+			<open-data class="avatar" type="userAvatarUrl"></open-data>
+		</view>
 
-    <view class="divide_line">
-      <progress class="line"></progress>
-      <view class="font">目标完成率 90%</view>
-    </view>
+		<view class="divide_line">
+			<progress class="line" percent="{{thisWeekReport.finishRate}}"></progress>
+			<view class="font">目标完成率 {{thisWeekReport.finishRate}}%</view>
+		</view>
 
-    <view class="perfect_day">
-      <image src="../../assets/imgs/perfect-day.jpg" mode="scaleToFill" />
-      <view class="text">1</view>
-    </view>
-    <view class="foot_text">
-      收获1个完美日
-    </view>
-  </view>
+		<view class="perfect_day">
+			<image src="../../assets/imgs/perfect-day.jpg" mode="scaleToFill" />
+			<view class="text">{{thisWeekReport.perfectDays}}</view>
+		</view>
+		<view class="foot_text">
+			收获{{thisWeekReport.perfectDays}}个完美日
+		</view>
+	</view>
 
-  <van-divider contentPosition="center">上周周报</van-divider>
+	<van-divider contentPosition="center">上周周报</van-divider>
 
-  <view class="down">
-    <view class="date_title">2020年03月09日 - 2020年03月15日</view>
-    <view class="week_line">
-      <view class="week">
-        第11周
-      </view>
-      <view class="down_share" >
-        <van-button size="small" color="#FBB448" icon="friends-o" round>分享</van-button>
-      </view>
-    </view>
+	<view class="down">
+		<view class="date_title">{{lastWeekReport.beginDate}} - {{lastWeekReport.endDate}}</view>
+		<view class="week_line">
+			<view class="week">
+				第{{lastWeekReport.weeksInYear}}周
+			</view>
+			<view class="down_share">
+				<van-button size="small" color="#FBB448" icon="friends-o" round>分享</van-button>
+			</view>
+		</view>
 
-    <view class="divide_line">
-      <progress class="line"></progress>
-      <view class="font">目标完成率 90%</view>
-    </view>
+		<view class="divide_line">
+			<progress class="line" percent="{{lastWeekReport.finishRate}}"></progress>
+			<view class="font">目标完成率 {{lastWeekReport.finishRate}}%</view>
+		</view>
 
-    <view class="perfect_day">
-      <image src="../../assets/imgs/perfect-day.jpg" mode="scaleToFill" />
-      <view class="text">1</view>
-    </view>
-    <view class="down_perfect_day_text">
-      这周有一天完成了所有目标的打卡
-    </view>
-    <view class="down_tooltip">
-      <view class="triangle"/>
-      逆风的方向更适合飞翔，不怕万人阻挡只怕自己投降
-    </view>
+		<view class="perfect_day">
+			<image src="../../assets/imgs/perfect-day.jpg" mode="scaleToFill" />
+			<view class="text">{{thisWeekReport.perfectDays}}</view>
+		</view>
+		<view class="down_perfect_day_text" wx:if="{{lastWeekReport.perfectDays<7}}">
+			收获{{thisWeekReport.perfectDays}}个完美日
+		</view>
+		<view class="down_perfect_day_text" wx:if="{{lastWeekReport.perfectDays===7}}">
+			这周有一天完成了所有目标的打卡
+		</view>
+		<view class="down_tooltip">
+			<view class="triangle" />
+			逆风的方向更适合飞翔，不怕万人阻挡只怕自己投降
+		</view>
 
-    <view class="down_count">
-      <view class="count_item">
-        <view class="count_num">5</view>
-        <view class="count_text">坚持天数</view>
-      </view>
-      <view class="count_item">
-        <view class="count_num">8</view>
-        <view class="count_text">打卡次数</view>
-      </view>
-    </view>
+		<view class="down_count">
+			<view class="count_item">
+				<view class="count_num">{{lastWeekReport.doingDays}}</view>
+				<view class="count_text">坚持天数</view>
+			</view>
+			<view class="count_item">
+				<view class="count_num">{{lastWeekReport.makeGoalNums}}</view>
+				<view class="count_text">打卡次数</view>
+			</view>
+		</view>
 
-    <view class="week_days">
-      <day-circle circleColor="#e23c1e" draw-id="day01" percent="10" text="一"/>
-      <day-circle circleColor="#e23c1e" draw-id="day02" percent="50" text="二"/>
-      <day-circle circleColor="#e23c1e" draw-id="day03" percent="20" text="三"/>
-      <day-circle circleColor="#e23c1e" draw-id="day04" percent="80" text="四"/>
-      <day-circle circleColor="#e23c1e" draw-id="day05" percent="100" text="五"/>
-      <day-circle circleColor="#e23c1e" draw-id="day06" percent="40" text="六"/>
-      <day-circle circleColor="#e23c1e" draw-id="day07" percent="0" text="日"/>
-    </view>
+		<!-- <view class="week_days">
+			<day-circle circleColor="#e23c1e" draw-id="day01" percent="10" text="一" />
+			<day-circle circleColor="#e23c1e" draw-id="day02" percent="50" text="二" />
+			<day-circle circleColor="#e23c1e" draw-id="day03" percent="20" text="三" />
+			<day-circle circleColor="#e23c1e" draw-id="day04" percent="80" text="四" />
+			<day-circle circleColor="#e23c1e" draw-id="day05" percent="100" text="五" />
+			<day-circle circleColor="#e23c1e" draw-id="day06" percent="40" text="六" />
+			<day-circle circleColor="#e23c1e" draw-id="day07" percent="0" text="日" />
+		</view> -->
+		<view class="week_days">
+			<van-circle wx:for="{{lastWeekReport.reportList}}" wx:for-index="index" wx:key="recordDate" wx:for-item="item" value="{{ item.finishedRate }}" size="{{size}}" stroke-width="3" layer-color="rgba(145, 145, 145, 0.3)" color="#e23c1e">
+				<view class="text-container">
+					<view class="circle-img" wx:if="{{ item.finishedRate === 100 }}" style="background-color:#e23c1e">
+						<van-icon name="success" color="white" size="{{size*3/5}}" />
+					</view>
+					<view class="circle-text" wx:if="{{ item.finishedRate !== 100 }}">
+						{{ item.dayDesc }}
+					</view>
+					<view class="point" wx:if="{{ currentDay === (index+1) }}" style="background-color:#e23c1e"></view>
+				</view>
 
-    <view class="share_btn">
-      <van-button size="normal" color="#e23c1e" round block>晒一晒 ></van-button>
-    </view>
-  </view>
+			</van-circle>
+		</view>
 
-  <view class="footer">
-    <van-cell bind:click='goHistoryWeekReport' title="查看更多历史周报" is-link border="{{false}}" custom-class="foot_cell" title-class="title_cell" value-class="value_cell"/>
-  </view>
+
+		<view class="share_btn">
+			<van-button size="normal" color="#e23c1e" round block>晒一晒 ></van-button>
+		</view>
+	</view>
+
+	<view class="footer">
+		<van-cell bind:click='goHistoryWeekReport' title="查看更多历史周报" is-link border="{{false}}" custom-class="foot_cell" title-class="title_cell" value-class="value_cell" />
+	</view>
 </view>
-

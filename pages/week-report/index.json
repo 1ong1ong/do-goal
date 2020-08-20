@@ -4,7 +4,9 @@
     "van-cell": "../../components/vant/cell",
     "van-divider": "../../components/vant/divider",
     "van-button": "../../components/vant/button",
-    "day-circle": "../../components/my/day-circle"
+    "day-circle": "../../components/my/day-circle",
+    "van-circle": "../../components/vant/circle",
+    "van-icon": "../../components/vant/icon"
   },
   "navigationBarTitleText": "周报",
   "backgroundColor": "#F8F8F8"
