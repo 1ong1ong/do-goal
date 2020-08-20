@@ -1,4 +1,6 @@
 // pages/week-report/index.js
+import { getWeekReport } from '../../api/goalWeekReport.js'
+
 Page({
 
   /**
@@ -8,6 +10,9 @@ Page({
 
   },
 
+  onShow() {
+    getWeekReport()
+  },
   /**
    * 路由到历史周报页面
    */
