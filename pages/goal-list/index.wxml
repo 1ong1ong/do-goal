@@ -7,9 +7,9 @@
       <do-icon name="left" size="40rpx" color="black" custom-class="nav_icon"/>
     </view>
   </van-nav-bar>
-  <van-tabs active="{{1}}" swipeable animated border="{{false}}" color="{{globalColor}}" titleActiveColor="{{globalColor}}"
+  <van-tabs active="{{0}}" swipeable animated border="{{false}}" color="{{globalColor}}" titleActiveColor="{{globalColor}}"
             custom-class="tabs_custom" sticky swipeThreshold="4.5">
-    <van-tab title="自定义" custom-class="tabs_custom">
+    <!-- <van-tab title="自定义" custom-class="tabs_custom">
       <view class="diy_tab_view" style="height:{{height}}px">
         <image width="100%" class="diy_img_bg" style="height:{{width}}px" mode="aspectFit" src="https://imgs.cxlsky.com/blog/diy_background_1598029699525.png"/>
         <view class="foot_text">
@@ -24,7 +24,7 @@
           </view>
         </view>
       </view>
-    </van-tab>
+    </van-tab> -->
 
     <van-tab wx:for="{{goalList}}" wx:for-item="item" wx:key="id" wx:for-index="index" title="{{item.name}}">
       <scroll-view scroll-y enable-back-to-top style="height:{{height}}px">

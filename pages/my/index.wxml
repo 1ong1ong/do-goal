@@ -70,14 +70,6 @@
 				<van-icon name="arrow" />
 			</view>
 		</van-cell>
-		<!-- <van-cell icon="invition" size="large" center is-link>
-     <view slot="title">
-        <view style="padding-left:20rpx;">打卡周报</view>
-      </view>
-      <view slot="right-icon">
-        <van-icon name="arrow" />
-      </view>
-    </van-cell> -->
 		<!-- <van-cell icon="friends" size="large" center is-link>
      <view slot="title">
         <view style="padding-left:20rpx;">邀请好友</view>
@@ -91,21 +83,21 @@
 
 		<van-cell size="large" center is-link>
 			<view slot="icon" class="cell-icon">
-				<van-icon name="question" size="50rpx" color="#408CE1" />
+				<van-icon name="chat" size="50rpx" color="#408CE1" />
 			</view>
 			<button slot="title" class="contact-btn" open-type="contact" class="cell-title">
 				<view style="padding-left:20rpx;">问题反馈</view>
 			</button>
-			<!-- <view slot="right-icon">
-        <van-icon name="arrow" />
-      </view> -->
 		</van-cell>
-		<!-- <van-cell icon="info" size="large" center is-link bind:click="checkUpdate">
-      <view slot="title" style="display:flex;alian-items:center;justify-content:space-between;" class="cell-title">
-        <view style="padding-left:20rpx;">检查版本</view>
-        <view style="font-size:28rpx;color:#999999">{{ currentVersion }}</view>
-      </view>
-    </van-cell> -->
+		
+		<van-cell size="large" center is-link bind:click="routeToPage" data-path="/pages/web/index?articleId=2&title=帮助与支持">
+			<view slot="icon" class="cell-icon">
+				<van-icon name="question" size="50rpx" color="#408CE1" />
+			</view>
+			<view slot="title" class="cell-title">
+				<view style="padding-left:20rpx;">帮助支持</view>
+			</view>
+		</van-cell>
 		<van-cell size="large" center is-link bind:click="routeToPage" data-path="/pages/about/index">
 			<view slot="icon" class="cell-icon">
 				<van-icon name="info" size="50rpx" color="#3775F6" />
@@ -114,10 +106,6 @@
 				<view style="padding-left:20rpx;">关于Do目标</view>
 				<view style="font-size:28rpx;color:#999999">版本{{ currentVersion }}</view>
 			</view>
-			<!-- <view slot="right-icon">
-      1.0.0
-        <van-icon name="arrow" />
-      </view> -->
 		</van-cell>
 	</view>
 </view>
