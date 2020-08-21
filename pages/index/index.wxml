@@ -34,7 +34,7 @@
       <van-cell wx:for="{{goalList}}" wx:for-item="item" wx:key="id" use-label-slot="true" bind:click="goGoalDetail" data-goal="{{item}}">
         <view slot="icon">
           <view class="goal_icon">
-            <do-icon name="{{item.icon}}" size="76rpx" color="{{globalColor}}" />
+            <do-icon name="{{item.icon}}" size="96rpx" color="{{globalColor}}" />
           </view>
         </view>
         <view slot="title" class="goal_title">

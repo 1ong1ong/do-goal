@@ -79,13 +79,13 @@ page {
   height: 60rpx;
   line-height: 60rpx;
   font-size: 44rpx;
-  color: white;
+  /* color: white; */
 }
 .gender-icon {
   margin-left: 20rpx;
 }
 .down {
-  color: white;
+  /* color: white; */
   opacity: 0.8;
   font-size: 28rpx;
   margin-top:10rpx;

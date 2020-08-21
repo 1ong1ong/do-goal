@@ -24,11 +24,15 @@ Page({
   },
 
   onShow() {
+    wx.showLoading({
+      title: '加载中',
+    })
     let params = {
       startDate: this.data.startDate,
       endDate: this.data.endDate
     }
     getWeekReportHisDetail(params).then(data=> {
+      wx.hideLoading();
       this.setData({
         weekReportHisDetail: data
       })

@@ -13,7 +13,11 @@ Page({
   },
 
   onShow() {
+    wx.showLoading({
+      title: '加载中',
+    })
     getWeekReport().then(data=> {
+      wx.hideLoading();
       this.setData({
         thisWeekReport: data.thisWeekReport,
         lastWeekReport: data.lastWeekReport

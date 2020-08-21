@@ -1,7 +1,7 @@
 <!--pages/my/index.wxml-->
 <view class="container">
 	<view class="content-top">
-		<view class="top-profile" style="background-color:{{globalColor}}">
+		<view class="top-profile" >
 			<view class="avator">
 				<view class="left">
 					<van-image width="160rpx" height="160rpx" round src="{{avatarUrl}}" />
@@ -21,7 +21,7 @@
 						<view class="down">{{gender===0?'':gender===1?'男':'女'}} {{country}}-{{province}}-{{city}}</view>
 					</view>
 					<view class="more">
-						<van-icon name="arrow" color="#f5f5f5" />
+						<van-icon name="arrow" color="#333" />
 					</view>
 				</view>
 			</view>
@@ -59,7 +59,7 @@
 				<van-icon name="arrow" />
 			</view>
 		</van-cell>
-		<van-cell size="large" center is-link bind:click="routeToPage" data-path="/pages/history-week-report/index">
+		<van-cell size="large" center is-link bind:click="routeToPage" data-path="/pages/week-report/index">
 			<view slot="icon" class="cell-icon">
 				<van-icon name="invition" size="50rpx" color="#478EDA" />
 			</view>
