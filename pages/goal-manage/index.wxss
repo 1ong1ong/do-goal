@@ -1,10 +1,5 @@
 /* pages/goal-manage/index.wxss */
 
-.container {
-  /* padding: 20rpx; */
-  /* background-color: blueviolet */
-}
-
 .content {
   padding-left: 30rpx;
   padding-right: 30rpx;

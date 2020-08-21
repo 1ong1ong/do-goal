@@ -269,7 +269,8 @@ page {
 }
 
 .share_btn button {
-  width: 40%;
+  /* width: 40%; */
+  width: 80%;
   border: none;
   background-color: #e23c1e;
   border-radius: 100rpx;

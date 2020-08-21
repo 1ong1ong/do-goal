@@ -62,8 +62,8 @@
 	<view class="share_btn_border">
 	</view>
 	<cover-view class="share_btn">
-		<button round block>分享</button>
-		<button round block>保存</button>
+		<button round block open-type="share">分享</button>
+		<!-- <button round block open-type="share">保存</button> -->
 	</cover-view>
 
 
