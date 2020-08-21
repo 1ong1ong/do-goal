@@ -21,8 +21,9 @@ Page({
     reportList: [],
     topShow: false,
     authorize: false,
+    homeBgColor: app.globalData.homeBgColor,
     globalColor: app.globalData.globalColor,
-    tempColor: app.globalData.globalColor,
+    tempColor: app.globalData.homeBgColor,
     homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc
   },
 
@@ -66,16 +67,16 @@ Page({
   getUserTheme() {
     getCurrentUserInfo().then((user) => {
       let theme = getTheme(user.theme);
-      app.globalData.globalColor = theme.backgroundColor;
+      app.globalData.homeBgColor = theme.backgroundColor;
       app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
     });
   },
 
   checkThemeColorChange() {
-    if (this.data.tempColor !== app.globalData.globalColor) {
+    if (this.data.tempColor !== app.globalData.homeBgColor) {
       this.setData({
-        globalColor: app.globalData.globalColor,
-        tempColor: app.globalData.globalColor,
+        homeBgColor: app.globalData.homeBgColor,
+        tempColor: app.globalData.homeBgColor,
         homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc,
         reportList: []
       })

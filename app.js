@@ -77,11 +77,15 @@ App({
     screenHeight: 0,
     currentVersion: '1.0.0',
     mobileModel: 'iPhone X',
+    globalColor: '#27A4FB',
+
+
+
     // 默认：春天
-    globalColor: '#00a85d',
-    homeTopBackgroundImgSrc: '/assets/imgs/top-spring.png'
+    // homeBgColor: '#00a85d',
+    // homeTopBackgroundImgSrc: '/assets/imgs/top-spring.png'
     // 冬天
-    // globalColor: '#1989fa',
-    // homeTopBackgroundImgSrc: '/assets/imgs/top.png'
+    homeBgColor: '#27A4FB',
+    homeTopBackgroundImgSrc: '/assets/imgs/top.png'
   }
 })

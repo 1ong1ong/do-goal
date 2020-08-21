@@ -10,7 +10,7 @@
           <van-cell is-link size="large">
             <view slot="icon">
               <view class="goal_icon">
-                <do-icon name="{{item.icon}}" size="54rpx" color="{{globalColor}}" />
+                <do-icon name="{{item.icon}}" size="54rpx" color="{{item.color}}" />
               </view>
             </view>
             <view slot="title" class="cell-title">

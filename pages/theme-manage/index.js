@@ -17,7 +17,7 @@ Page({
       {
         id: 4,
         name: '冬季主题',
-        backgroundColor: '#1989fa',
+        backgroundColor: '#27A4FB',
         homeTopBackgroundImgSrc: '/assets/imgs/top.png'
       }
     ],
@@ -46,7 +46,7 @@ Page({
     getCurrentUserInfo().then((user) => {
       wx.hideLoading();
       let theme = getTheme(user.theme);
-      app.globalData.globalColor = theme.backgroundColor;
+      app.globalData.homeBgColor = theme.backgroundColor;
       app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
       this.setData({
         radio: user.theme
@@ -61,7 +61,7 @@ Page({
     })
     updateUserTheme(theme.id).then((res)=> {
       wx.hideLoading();
-      app.globalData.globalColor = theme.backgroundColor;
+      app.globalData.homeBgColor = theme.backgroundColor;
       app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
       this.setData({
         radio: theme.id,

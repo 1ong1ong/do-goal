@@ -3,7 +3,8 @@ Component({
   data: {
     active: 0,
     list: [{
-      icon: 'upgrade',
+      icon: 'app',
+      iconActive: 'app_fill',
       text: '首页',
       url: '/pages/index/index'
     }, 
@@ -13,7 +14,8 @@ Component({
     //   url: '/pages/discovery/index'
     // },
      {
-      icon: 'contact',
+      icon: 'mine_circle',
+      iconActive: 'mine_circle_fill',
       text: '我的',
       url: '/pages/my/index'
     }],

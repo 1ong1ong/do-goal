@@ -10,7 +10,7 @@ function getTheme(themeId) {
     return {
       id: "4",
       name: '冬季主题',
-      backgroundColor: '#1989fa',
+      backgroundColor: '#27A4FB',
       homeTopBackgroundImgSrc: '/assets/imgs/top.png'
     }
   }

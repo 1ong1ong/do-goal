@@ -32,7 +32,7 @@
           <van-cell wx:for="{{item.goalList}}" wx:for-item="subItem" wx:key="id" use-label-slot="true" center bind:click="routeGoalDetail" data-goal="{{ subItem }}">
             <view slot="icon">
               <view class="goal_icon">
-                <do-icon name="sun" size="76rpx" color="{{globalColor}}"/>
+                <do-icon name="{{subItem.icon}}" size="76rpx" color="{{subItem.color}}"/>
               </view>
             </view>
             <view slot="title">

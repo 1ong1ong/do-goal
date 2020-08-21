@@ -1,5 +1,7 @@
-<van-tabbar active="{{ active }}" bind:change="onChange" active-color="{{ globalColor }}" inactive-color="#000">
-  <van-tabbar-item wx:for="{{ list }}" wx:key="index" icon="{{ item.icon }}">{{
-    item.text
-  }}</van-tabbar-item>
+<van-tabbar active="{{ active }}" bind:change="onChange" active-color="{{globalColor}}" inactive-color="#999">
+	<van-tabbar-item wx:for="{{ list }}" wx:for-item="item" wx:key="index">
+    <do-icon slot="icon" name="{{item.iconActive}}" size="40rpx" />
+    <do-icon slot="icon-active" name="{{item.iconActive}}" size="40rpx" />
+		{{item.text}}
+	</van-tabbar-item>
 </van-tabbar>
