@@ -1,7 +1,7 @@
 <!--pages/about/index.wxml-->
 <view class="top">
   <view class="top-icon">
-    <image src="/assets/imgs/main-icon.png" mode="scaleToFill" />
+    <image src="https://imgs.cxlsky.com/blog/main-icon_1598029699475.png" mode="scaleToFill" />
   </view>
   <view class="top_title">Do 目标</view>
   <view class="top_sub_title">Version {{currentVersion}}</view>

@@ -19,7 +19,7 @@
 		</view>
 
 		<view class="perfect_day">
-			<image src="../../assets/imgs/perfect-day.jpg" mode="scaleToFill" />
+			<image src="https://imgs.cxlsky.com/blog/perfect-day_1598029701586.jpg" mode="scaleToFill" />
 			<view class="text">{{weekReportHisDetail.perfectDays}}</view>
 		</view>
 		<view class="down_perfect_day_text" wx:if="{{weekReportHisDetail.perfectDays<7}}">

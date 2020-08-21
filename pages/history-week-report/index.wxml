@@ -6,12 +6,5 @@
 	</view>
 	<view class="list">
 		<van-cell wx:for="{{historyList}}" wx:for-item="item" wx:key="weekStartDateFmt" data-item="{{item}}" bind:click='goWeekReport' is-link center title="{{item.year}}年第{{item.weeksInYear}}周" label="{{item.weekStartDateFmt}}-{{item.weekEndDateFmt}}" />
-		<!-- <van-cell bind:click='goWeekReport' is-link center title="2020年第11周" label="03.16-03.22"/>
-        <van-cell bind:click='goWeekReport' is-link center title="2020年第10周" label="03.16-03.22"/>
-        <van-cell bind:click='goWeekReport' is-link center title="2020年第09周" label="03.16-03.22"/>
-        <van-cell bind:click='goWeekReport' is-link center title="2020年第08周" label="03.16-03.22"/>
-        <van-cell bind:click='goWeekReport' is-link center title="2020年第07周" label="03.16-03.22"/>
-        <van-cell bind:click='goWeekReport' is-link center title="2020年第06周" label="03.16-03.22"/>
-        <van-cell bind:click='goWeekReport' is-link center title="2020年第05周" label="03.16-03.22"/> -->
 	</view>
 </view>

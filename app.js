@@ -1,10 +1,5 @@
 import http from './utils/httpUtils.js';
-import {
-  getUserInfo
-} from './api/user.js'
-import {
-  getTheme
-} from './utils/themeData.js'
+
 //app.js
 App({
   onLaunch: function() {
@@ -78,14 +73,5 @@ App({
     currentVersion: '1.0.0',
     mobileModel: 'iPhone X',
     globalColor: '#27A4FB',
-
-
-
-    // 默认：春天
-    // homeBgColor: '#00a85d',
-    // homeTopBackgroundImgSrc: '/assets/imgs/top-spring.png'
-    // 冬天
-    homeBgColor: '#27A4FB',
-    homeTopBackgroundImgSrc: '/assets/imgs/top.png'
   }
 })

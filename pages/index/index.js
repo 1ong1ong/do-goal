@@ -1,10 +1,20 @@
 // pages/index/index.js
 let app = getApp();
-import { userGoalList } from '../../api/goals';
-import { getUserInfo } from '../../utils/userInfoUtil';
-import { getCurrentUserInfo } from '../../api/user.js'
-import { getTheme } from '../../utils/themeData.js';
-import { getMobileModel } from '../../utils/systemUtils'
+import {
+  userGoalList
+} from '../../api/goals';
+import {
+  getUserInfo
+} from '../../utils/userInfoUtil';
+import {
+  getCurrentUserInfo
+} from '../../api/user.js'
+import {
+  getByThemeId
+} from '../../api/theme.js';
+import {
+  getMobileModel
+} from '../../utils/systemUtils'
 Page({
 
   /**
@@ -21,28 +31,24 @@ Page({
     reportList: [],
     topShow: false,
     authorize: false,
-    homeBgColor: app.globalData.homeBgColor,
-    globalColor: app.globalData.globalColor,
-    tempColor: app.globalData.homeBgColor,
-    homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc
+    homeBgColor: '#27A4FB',
+    homeTopBackgroundImgSrc: '',
+    globalColor: app.globalData.globalColor
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     console.log(options);
     // 判断机型
     let model = getMobileModel();
     let bottom = 130;
     console.log(model)
     if (model.indexOf('iPhone X') != -1) {
-      console.log("bottom",bottom)
+      console.log("bottom", bottom)
       bottom = 200;
     }
-
-    // 获取用户的主题设置
-    this.getUserTheme();
 
     // 获取用户的授权状态
     let authorize = false;
@@ -57,34 +63,23 @@ Page({
   },
 
   onShow() {
-    this.checkThemeColorChange();
+    // 获取用户的主题设置
+    this.getUserTheme();
     this.getTabBar().init();
     this.getUserGoalList();
   },
 
-  
-  
   getUserTheme() {
+    let that = this;
     getCurrentUserInfo().then((user) => {
-      let theme = getTheme(user.theme);
-      app.globalData.homeBgColor = theme.backgroundColor;
-      app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
+      getByThemeId(user.theme).then(data => {
+        that.setData({
+          homeBgColor: data.homeBgColor,
+          homeTopBackgroundImgSrc: data.homeTopBackgroundImgSrc
+        })
+      });
     });
   },
-
-  checkThemeColorChange() {
-    if (this.data.tempColor !== app.globalData.homeBgColor) {
-      this.setData({
-        homeBgColor: app.globalData.homeBgColor,
-        tempColor: app.globalData.homeBgColor,
-        homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc,
-        reportList: []
-      })
-    }
-  },
-
-
-
 
   /**
    *  用户目标列表

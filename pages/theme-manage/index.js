@@ -1,42 +1,47 @@
 // pages/theme-manage/index.js
 let app = getApp();
-import { getCurrentUserInfo, updateUserTheme } from '../../api/user.js'
-import { getTheme } from '../../utils/themeData.js'
+import {
+  getCurrentUserInfo,
+  updateUserTheme
+} from '../../api/user.js'
+import {
+  getThemes,
+  getByThemeId
+} from '../../api/theme.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    themeList: [{
-        id: 1,
-        name: '春季主题',
-        backgroundColor: '#00a85d',
-        homeTopBackgroundImgSrc: '/assets/imgs/top-spring.png'
-      },
-      {
-        id: 4,
-        name: '冬季主题',
-        backgroundColor: '#27A4FB',
-        homeTopBackgroundImgSrc: '/assets/imgs/top.png'
-      }
-    ],
+    themeList: [],
     radio: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-   
+  onLoad: function (options) {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
+    this.getThemes();
     this.getUserTheme()
   },
+
+  getThemes() {
+    getThemes().then(data => {
+      this.setData({
+        themeList: data
+      })
+    })
+  },
+
+
 
   getUserTheme() {
     // 获取用户的主题设置
@@ -45,9 +50,10 @@ Page({
     })
     getCurrentUserInfo().then((user) => {
       wx.hideLoading();
-      let theme = getTheme(user.theme);
-      app.globalData.homeBgColor = theme.backgroundColor;
-      app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
+      getByThemeId(user.theme).then(data => {
+        app.globalData.homeBgColor = data.backgroundColor;
+        app.globalData.homeTopBackgroundImgSrc = data.homeTopBackgroundImgSrc;
+      })
       this.setData({
         radio: user.theme
       })
@@ -59,14 +65,12 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
-    updateUserTheme(theme.id).then((res)=> {
+    updateUserTheme(theme.id).then((res) => {
       wx.hideLoading();
-      app.globalData.homeBgColor = theme.backgroundColor;
-      app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
       this.setData({
         radio: theme.id,
       });
     })
-    
+
   },
 })

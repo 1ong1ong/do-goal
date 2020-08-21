@@ -1,7 +1,7 @@
 <!--pages/login/index.wxml-->
 <view class="container" style="height:{{height}}px">
 	<view class="up-img">
-		<image src="/assets/imgs/login_bg.jpg" mode="aspectFit" />
+		<image src="https://imgs.cxlsky.com/blog/login_bg_1598029699522.jpg" mode="aspectFit" />
 	</view>
 	<view class="bottom-content">
 		<view class="bottom-content-body">
