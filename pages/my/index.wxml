@@ -7,7 +7,9 @@
 					<van-image width="160rpx" height="160rpx" round src="{{avatarUrl}}" />
 				</view>
 				<view class="right">
+					<view class="username" wx:if="{{authorize == false}}">
 					<button class="user-info-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{authorize == false}}">点击显示微信头像</button>
+					</view>
 					<view class="username" wx:if="{{authorize == true}}">
 						<view class="up-content">
 							<view class="up">

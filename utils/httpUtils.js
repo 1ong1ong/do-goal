@@ -1,6 +1,12 @@
+// 开发环境
 // const host = 'http://192.168.3.4:9000';
-const host = 'https://a.cxlsky.com';
 // var host = 'http://127.0.0.1:9000';
+
+// 测试环境
+// const host = 'http://111.19.162.139:18120';
+
+// 生产环境
+const host = 'https://a.cxlsky.com';
 const clientBasicAuthorization = "Basic ZG8tZ29hbDpkby1nb2Fs";
 
 /**

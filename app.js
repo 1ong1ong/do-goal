@@ -1,5 +1,4 @@
 import http from './utils/httpUtils.js';
-import {getByThemeId} from './api/theme.js';
 //app.js
 App({
   onLaunch: function() {
