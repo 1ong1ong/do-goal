@@ -1,5 +1,5 @@
 import http from './utils/httpUtils.js';
-
+import {getByThemeId} from './api/theme.js';
 //app.js
 App({
   onLaunch: function() {
@@ -59,8 +59,6 @@ App({
         that.mobileModel= res.model;
       }
     })
-
-
   },
 
   // 引入`towxml3.0`解析方法
@@ -73,5 +71,9 @@ App({
     currentVersion: '1.0.0',
     mobileModel: 'iPhone X',
     globalColor: '#27A4FB',
+
+    topBgColorChange: true,
+    homeBgColor: null,
+    homeTopBackgroundImgSrc: '',
   }
 })

@@ -36,7 +36,7 @@ Page({
     getArticleById(this.data.articleId).then(res=> {
       wx.hideLoading();
       let content = app.towxml(res.mdContent, 'markdown', {
-        // theme:'dark',
+        theme:'light',
         events: {
           tap: e => {
             console.log('tap', e);

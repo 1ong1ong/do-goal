@@ -238,7 +238,9 @@ function checkoutToken() {
 function checkSuccessRes(res, resolved, rejected) {
   if (res.statusCode === 200 || res.statusCode === 204) {
     return resolved(res.data);
-  } else if (res.statusCode === 400 || res.statusCode === 401) {
+  } else if (res.statusCode === 400) {
+    return rejected();
+  } else if (res.statusCode === 401) {
     wx.navigateTo({
       url: "/pages/login/index",
     })

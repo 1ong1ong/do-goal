@@ -31,9 +31,10 @@ Page({
     reportList: [],
     topShow: false,
     authorize: false,
-    homeBgColor: '#27A4FB',
-    homeTopBackgroundImgSrc: '',
-    globalColor: app.globalData.globalColor
+    homeBgColor: null,
+    homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc,
+    globalColor: app.globalData.globalColor,
+    topBgColorChange: app.globalData.topBgColorChange
   },
 
   /**
@@ -63,22 +64,51 @@ Page({
   },
 
   onShow() {
-    // 获取用户的主题设置
-    this.getUserTheme();
     this.getTabBar().init();
-    this.getUserGoalList();
+
+    // 获取用户的主题设置
+    this.getUserTheme().then(() => {
+      this.getUserGoalList();
+    });
   },
 
   getUserTheme() {
     let that = this;
-    getCurrentUserInfo().then((user) => {
-      getByThemeId(user.theme).then(data => {
-        that.setData({
-          homeBgColor: data.homeBgColor,
-          homeTopBackgroundImgSrc: data.homeTopBackgroundImgSrc
-        })
-      });
-    });
+    return new Promise((resolve, reject) => {
+      getCurrentUserInfo().then((user) => {
+        console.log("=========================",user)
+        getByThemeId(user.theme).then(data => {
+          wx.setStorage({
+            data: data,
+            key: 'theme',
+          })
+          that.setData({
+            homeBgColor: data.backgroundColor,
+            homeTopBackgroundImgSrc: data.homeTopBackgroundImgSrc,
+          });
+          app.globalData.homeBgColor = data.backgroundColor;
+          app.globalData.homeTopBackgroundImgSrc = data.homeTopBackgroundImgSrc;
+          that.checkThemeColorChange();
+          resolve();
+        });
+      }).catch(() => {
+        reject()
+      })
+    })
+
+  },
+
+
+  checkThemeColorChange() {
+    console.log(app.globalData.topBgColorChange)
+    if (app.globalData.topBgColorChange) {
+      this.setData({
+        homeBgColor: app.globalData.homeBgColor,
+        homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc,
+        reportList: [],
+      })
+      app.globalData.topBgColorChange = false;
+    }
   },
 
   /**

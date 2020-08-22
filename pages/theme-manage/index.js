@@ -67,6 +67,9 @@ Page({
     })
     updateUserTheme(theme.id).then((res) => {
       wx.hideLoading();
+      app.globalData.homeBgColor = theme.backgroundColor;
+      app.globalData.homeTopBackgroundImgSrc = theme.homeTopBackgroundImgSrc;
+      app.globalData.topBgColorChange = true;
       this.setData({
         radio: theme.id,
       });
