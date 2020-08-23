@@ -4,6 +4,16 @@
   height: 100%;
 }
 
+.loading-view{
+  position: fixed;
+  width: 100%;
+  top: 250rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+}
 .header {
   position: fixed;
   top: 10rpx;

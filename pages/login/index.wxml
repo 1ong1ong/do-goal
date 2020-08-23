@@ -5,7 +5,7 @@
 	</view>
 	<view class="bottom-content">
 		<view class="bottom-content-body">
-			<view class="content-text"> (^.^) 欢迎来到Do目标</view>
+			<view class="content-text"> (^_^) 欢迎回来</view>
 			<view class="begin-tural" bindtap="beginTural">开启蜕变之旅</view>
 		</view>
 	</view>

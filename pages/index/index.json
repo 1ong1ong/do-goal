@@ -5,7 +5,9 @@
     "day-circle": "../../components/my/day-circle",
     "do-icon": "../../components/my/icon",
     "van-circle": "../../components/vant/circle",
-    "van-icon": "../../components/vant/icon"
+    "van-icon": "../../components/vant/icon",
+    "van-transition": "../../components/vant/transition",
+    "van-loading":"../../components/vant/loading"
   },
   "navigationBarTitleText": "",
   "disableScroll": true

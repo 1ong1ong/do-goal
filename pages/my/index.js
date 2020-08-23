@@ -1,6 +1,7 @@
 // pages/my/index.js
 import {
-  updateUserInfo
+  updateUserInfo,
+  getCurrentUserInfo
 } from '../../api/user';
 let app = getApp();
 Page({
@@ -21,12 +22,13 @@ Page({
     width: app.globalData.screenWidth,
     currentVersion: app.globalData.currentVersion,
     globalColor: app.globalData.globalColor,
+    show: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     let _this = this;
     let authorize = false;
     let userInfo = wx.getStorageSync("userInfo");
@@ -64,9 +66,10 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
     this.setData({
-      globalColor: app.globalData.globalColor
+      globalColor: app.globalData.globalColor,
+      show: true
     })
     this.getTabBar().init();
   },
@@ -92,10 +95,17 @@ Page({
 
     wx.getUserInfo({
       lang: 'zh_CN',
-      success: function(res) {
+      success: function (res) {
         let userInfo = res.userInfo;
         // 授权成功，更新用户资料
-        updateUserInfo(userInfoTmp.userId, userInfo);
+        updateUserInfo(userInfoTmp.userId, userInfo).then(() => {
+          getCurrentUserInfo().then((userInfo) => {
+            wx.setStorage({
+              key: "userInfo",
+              data: userInfo
+            });
+          })
+        });
         _this.setData({
           nickName: userInfo.nickName,
           gender: userInfo.gender,
@@ -111,5 +121,5 @@ Page({
     })
   },
 
-  
+
 })

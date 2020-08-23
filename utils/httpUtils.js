@@ -3,10 +3,10 @@
 // var host = 'http://127.0.0.1:9000';
 
 // 测试环境
-// const host = 'http://111.19.162.139:18120';
+const host = 'http://111.19.162.139:18120';
 
 // 生产环境
-const host = 'https://a.cxlsky.com';
+// const host = 'https://a.cxlsky.com';
 const clientBasicAuthorization = "Basic ZG8tZ29hbDpkby1nb2Fs";
 
 /**
@@ -133,13 +133,10 @@ function getWithTokenCheck(url, data) {
       request("GET", url, data, resolved, rejected);
     }).catch(e => {
       console.log("check token not ok, will retrive token");
-      wx.showLoading({
-        title: '加载中'
-      })
+
       wx.login({
         success: res => {
           login(res.code).then(() => {
-            wx.hideLoading();
             request("GET", url, data, resolved, rejected);
           });
         }
@@ -152,17 +149,13 @@ function getWithTokenCheck(url, data) {
  * 带有token检查的基本请求
  */
 function requestWithTokenCheck(method, url, data) {
-  wx.showLoading({
-    title: '加载中'
-  });
+
   return new Promise((resolved, rejected) => {
     checkoutToken().then(res => {
       console.log("check token ok");
-      wx.hideLoading();
       request(method, url, data, resolved, rejected);
     }).catch(e => {
       console.log("check token not ok, will retrive token");
-      wx.hideLoading();
       wx.login({
         success: res => {
           login(res.code).then(() => {
@@ -245,7 +238,13 @@ function checkSuccessRes(res, resolved, rejected) {
   if (res.statusCode === 200 || res.statusCode === 204) {
     return resolved(res.data);
   } else if (res.statusCode === 400) {
-    return rejected();
+    if (res.data && res.data.error === 'invalid_token') {
+      wx.navigateTo({
+        url: "/pages/login/index",
+      })
+    } else {
+      return rejected();
+    }
   } else if (res.statusCode === 401) {
     wx.navigateTo({
       url: "/pages/login/index",

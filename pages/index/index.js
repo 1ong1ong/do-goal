@@ -1,5 +1,41 @@
 // pages/index/index.js
 let app = getApp();
+let reportList = [{
+	"totalNum": 0,
+	"finishedNum": 0,
+	"finishedRate": 0,
+	"dayDesc": "一"
+}, {
+	"totalNum": 0,
+	"finishedNum": 0,
+	"finishedRate": 0,
+	"dayDesc": "二"
+}, {
+	"totalNum": 0,
+	"finishedNum": 0,
+	"finishedRate": 0,
+	"dayDesc": "三"
+}, {
+	"totalNum": 0,
+	"finishedNum": 0,
+	"finishedRate": 0,
+	"dayDesc": "四"
+}, {
+	"totalNum": 0,
+	"finishedNum": 0,
+	"finishedRate": 0,
+	"dayDesc": "五"
+}, {
+	"totalNum": 0,
+	"finishedNum": 0,
+	"finishedRate": 0,
+	"dayDesc": "六"
+}, {
+	"totalNum": 0,
+	"finishedNum": 0,
+	"finishedRate": 0,
+	"dayDesc": "日"
+}]
 import {
   userGoalList
 } from '../../api/goals';
@@ -28,7 +64,7 @@ Page({
     currentDay: 0,
     goalList: [],
     perfectDays: 0,
-    reportList: [],
+    reportList: reportList,
     topShow: false,
     authorize: false,
     homeBgColor: null,
@@ -105,7 +141,8 @@ Page({
       this.setData({
         homeBgColor: app.globalData.homeBgColor,
         homeTopBackgroundImgSrc: app.globalData.homeTopBackgroundImgSrc,
-        reportList: [],
+        reportList: reportList,
+        topShow: false
       })
       app.globalData.topBgColorChange = false;
     }

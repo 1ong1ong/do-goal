@@ -1,4 +1,5 @@
 import http from './utils/httpUtils.js';
+
 //app.js
 App({
   onLaunch: function() {
@@ -37,14 +38,11 @@ App({
     }
 
     // 登录
-    wx.showLoading({
-      title: '加载中'
-    })
+
     wx.login({
       success: res => {
         http.login(res.code).then((userInfo) => {
           console.log(userInfo);
-          wx.hideLoading();
         });
       }
     });
@@ -67,7 +65,7 @@ App({
   globalData: {
     screenWidth: 0,
     screenHeight: 0,
-    currentVersion: '1.0.0',
+    currentVersion: '1.0.1',
     mobileModel: 'iPhone X',
     globalColor: '#27A4FB',
 
