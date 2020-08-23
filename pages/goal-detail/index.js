@@ -120,7 +120,7 @@ Page({
   addGoal() {
     let that = this;
     wx.requestSubscribeMessage({
-      tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'],
+      tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8','QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8','QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'],
       success(res) {
         console.log("requestSubscribeMessage success result:", res);
         if (res['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'] === "accept") {
