@@ -247,6 +247,13 @@
 					"id": -1,
 					"name": "pages/report-share/index",
 					"pathName": "pages/report-share/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/week-report/index",
+					"pathName": "pages/week-report/index",
 					"scene": null
 				}
 			]

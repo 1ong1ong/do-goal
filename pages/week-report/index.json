@@ -6,7 +6,8 @@
     "van-button": "../../components/vant/button",
     "day-circle": "../../components/my/day-circle",
     "van-circle": "../../components/vant/circle",
-    "van-icon": "../../components/vant/icon"
+    "van-icon": "../../components/vant/icon",
+    "van-transition": "../../components/vant/transition"
   },
   "navigationBarTitleText": "周报",
   "backgroundColor": "#F8F8F8"
