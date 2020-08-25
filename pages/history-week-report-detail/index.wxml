@@ -62,7 +62,7 @@
 	<view class="share_btn_border">
 	</view>
 	<cover-view class="share_btn">
-		<button round block open-type="share">分享</button>
+		<button round block open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">晒一晒 ></button>
 		<!-- <button round block open-type="share">保存</button> -->
 	</cover-view>
 
@@ -71,3 +71,12 @@
     <van-cell bind:click='goHistoryWeekReport' title="查看更多历史周报" is-link border="{{false}}" custom-class="foot_cell" title-class="title_cell" value-class="value_cell"/>
   </view> -->
 </view>
+
+
+<van-transition show="{{ !canvasHide }}" name="fade-up" duration="{{600}}">
+	<view class="model" hidden="{{canvasHide}}" bindtap="hideCanvas" catchtouchmove="move" style="height:{{height}}px;width:{{width}}px">
+		<canvas canvas-id="Canvas" class="canvas"></canvas>
+		<view class="share-text">图片已保存到相册，快发朋友圈吧</view>
+		<view class="btn-save" catchtap="hideCanvas">好的</view>
+	</view>
+</van-transition>

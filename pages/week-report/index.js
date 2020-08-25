@@ -2,8 +2,12 @@
 import {
   getWeekReport
 } from '../../api/goalWeekReport.js';
-import {randomShareImg} from '../../api/shareImg.js'
-
+import {
+  randomShareImg
+} from '../../api/shareImg.js'
+import {
+  getUserInfo
+} from '../../utils/userInfoUtil';
 let app = getApp();
 Page({
 
@@ -38,8 +42,7 @@ Page({
         doingDays: lastWeekReport.doingDays,
         makeGoalNums: lastWeekReport.makeGoalNums,
         nickName: userInfo.nickName,
-        avatarImg: userInfo.avatar,
-        coverImg: 'https://imgs.cxlsky.com/blog/1_1598347424316.png'
+        avatarImg: userInfo.avatar
       };
       this.setData({
         thisWeekReport: data.thisWeekReport,
@@ -87,6 +90,38 @@ Page({
     });
   },
 
+  /**
+   * 用户信息授权成功回调
+   */
+  bindGetUserInfo(e) {
+    let _this = this;
+    console.log(e)
+    getUserInfo().then(() => {
+      _this.drawCanvas();
+    }).catch(()=>{
+      wx.showModal({
+        content: '需要授权获取您的头像才可以分享',
+        showCancel: false,
+        confirmText: '去设置',
+        confirmColor: 'red',
+        success: function (res) {
+          wx.openSetting({
+            success(res) {
+              if (res.authSetting['scope.userInfo']) {
+                _this.drawCanvas();
+              } else {
+                wx.showToast({
+                  title: '您没有授权，无法分享',
+                  icon: 'none'
+                });
+              }
+            }
+          })
+        }
+      })
+    });
+  },
+
   drawCanvas() {
     let that = this;
     wx.getSetting({
@@ -122,9 +157,6 @@ Page({
                       title: '您没有授权，无法保存到相册',
                       icon: 'none'
                     });
-                    that.setData({
-                      isSaving: false
-                    });
                   }
                 }
               })
@@ -146,7 +178,7 @@ Page({
     });
 
     let promise1 = new Promise(function (resolve, reject) {
-      randomShareImg().then(coverImgUrl=>{
+      randomShareImg().then(coverImgUrl => {
         console.log(coverImgUrl);
         wx.getImageInfo({
           src: coverImgUrl,
@@ -154,7 +186,7 @@ Page({
             resolve(res1);
           }
         })
-      }).catch(()=>reject());
+      }).catch(() => reject());
     });
 
     let promise2 = new Promise(function (resolve, reject) {
@@ -206,7 +238,7 @@ Page({
 
       ctx.font = 'normal 14px Arial,sans-serif ';
       ctx.setFillStyle('#ddd');
-      ctx.fillText(that.data.shareInfo.beginDate + ' ~ ' + that.data.shareInfo.endDate, avatar_w + avatar_x + 30, avatar_y + 42);
+      ctx.fillText(that.data.shareInfo.beginDate + ' ~ ' + that.data.shareInfo.endDate + ' 周报', avatar_w + avatar_x + 30, avatar_y + 42);
 
       // 完美日
       ctx.font = 'normal 14px 微软雅黑';

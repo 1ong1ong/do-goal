@@ -291,7 +291,7 @@
   width: 320px;
   height: 40px;
   line-height: 40px;
-  color: #999;
+  color: #ddd;
   text-align: center;
   z-index: 999;
   margin-top: 10rpx;
