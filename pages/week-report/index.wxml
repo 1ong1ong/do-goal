@@ -93,7 +93,7 @@
 
 
 		<view class="share_btn">
-			<van-button size="normal" color="#e23c1e" round block bindtap="drawCavas">晒一晒 ></van-button>
+			<van-button size="normal" color="#e23c1e" round block bindtap="drawCanvas">晒一晒 ></van-button>
 		</view>
 	</view>
 

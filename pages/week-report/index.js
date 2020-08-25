@@ -2,6 +2,8 @@
 import {
   getWeekReport
 } from '../../api/goalWeekReport.js';
+import {randomShareImg} from '../../api/shareImg.js'
+
 let app = getApp();
 Page({
 
@@ -15,21 +17,38 @@ Page({
     thisWeekReport: null,
     lastWeekReport: null,
     canvasHide: true,
-    canvasImg: ''
+    shareInfo: null,
   },
 
   onShow() {
+    this.getWeekReport();
+  },
+
+  getWeekReport() {
     wx.showLoading({
       title: '加载中',
-    })
+    });
     getWeekReport().then(data => {
       wx.hideLoading();
+      let userInfo = wx.getStorageSync("userInfo");
+      let lastWeekReport = data.lastWeekReport;
+      let shareInfo = {
+        beginDate: lastWeekReport.beginDateShare,
+        endDate: lastWeekReport.endDateShare,
+        doingDays: lastWeekReport.doingDays,
+        makeGoalNums: lastWeekReport.makeGoalNums,
+        nickName: userInfo.nickName,
+        avatarImg: userInfo.avatar,
+        coverImg: 'https://imgs.cxlsky.com/blog/1_1598347424316.png'
+      };
       this.setData({
         thisWeekReport: data.thisWeekReport,
-        lastWeekReport: data.lastWeekReport
+        lastWeekReport: lastWeekReport,
+        shareInfo: shareInfo
       })
     })
   },
+
   /**
    * 路由到历史周报页面
    */
@@ -40,8 +59,6 @@ Page({
   },
 
   onShareAppMessage(res) {
-    console.log("==============")
-    // let gbid = res.target.dataset.info.order_id;
     return {
       title: '分享',
       path: '/pages/index/index?fromUserId=' + 1,
@@ -61,7 +78,7 @@ Page({
   },
 
   move() {
-
+    // 不要删除，防止页面滚动
   },
 
   hideCanvas() {
@@ -70,8 +87,7 @@ Page({
     });
   },
 
-
-  drawCavas() {
+  drawCanvas() {
     let that = this;
     wx.getSetting({
       success(res) {
@@ -105,7 +121,7 @@ Page({
                     wx.showToast({
                       title: '您没有授权，无法保存到相册',
                       icon: 'none'
-                    })
+                    });
                     that.setData({
                       isSaving: false
                     });
@@ -114,16 +130,13 @@ Page({
               })
             }
           })
-
-
-
-
-
         }
       }
     })
   },
   canvas() {
+    let that = this;
+    console.log(that.data.shareInfo)
     this.setData({
       canvasHide: false
     });
@@ -132,28 +145,23 @@ Page({
       icon: 'loading'
     });
 
-    var item = {
-      headImg: "https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIlQFib1RvSYkHrndyOyvCTChibjLM5It7NorB7EAf1Wxia7f9tNA83Xo7daZxE2elSHNmXw15HeiaYxw/132",
-      cover: "https://imgs.cxlsky.com/blog/thumbnail-4_1588478003128.png",
-      nickName: "Longlongago",
-      title: "111111111"
-    };
-
     let promise1 = new Promise(function (resolve, reject) {
-      wx.getImageInfo({
-        src: item.cover,
-        success: function (res1) {
-          resolve(res1);
-        }
-      })
+      randomShareImg().then(coverImgUrl=>{
+        console.log(coverImgUrl);
+        wx.getImageInfo({
+          src: coverImgUrl,
+          success: function (res1) {
+            resolve(res1);
+          }
+        })
+      }).catch(()=>reject());
     });
 
     let promise2 = new Promise(function (resolve, reject) {
       wx.getImageInfo({
-        src: item.headImg,
+        src: that.data.shareInfo.avatarImg,
         success: function (res1) {
           resolve(res1);
-
         }
       })
     });
@@ -167,97 +175,87 @@ Page({
       })
     });
 
-    let that = this;
     Promise.all([
       promise1, promise2, promise3
     ]).then(res1 => {
-      console.log(res1)
+      console.log(res1);
       const ctx = wx.createCanvasContext('Canvas', this);
 
+      // 绘制背景
       let bg_x = 0;
       let bg_y = 0;
       let bg_w = 320;
       let bg_h = 320;
-      let bg_r = 10;
-      // 绘制海报背景图片圆角
-      // ctx.save()
-      // ctx.setFillStyle('transparent')
-      // ctx.beginPath()
-      // ctx.arc(bg_x + bg_r, bg_y + bg_r, bg_r, Math.PI, Math.PI * 1.5)
-      // ctx.arc(bg_x + bg_w - bg_r, bg_y + bg_r, bg_r, Math.PI * 1.5, Math.PI * 2)
-      // ctx.arc(bg_x + bg_w - bg_r, bg_y + bg_h - bg_r, bg_r, 0, Math.PI * 0.5)
-      // ctx.arc(bg_x + bg_r, bg_y + bg_h - bg_r, bg_r, Math.PI * 0.5, Math.PI)
-      // ctx.clip()
-      ctx.drawImage(res1[0].path, bg_x, bg_y, bg_w, bg_h)
-      // ctx.restore()
+      ctx.drawImage(res1[0].path, bg_x, bg_y, bg_w, bg_h);
 
-      ctx.save()
+      // 绘制头像
+      ctx.save();
       let avatar_x = 20;
       let avatar_y = 20;
       let avatar_w = 50;
       let avatar_h = 50;
-      // 绘制头像
       ctx.beginPath();
       ctx.arc(avatar_w / 2 + avatar_x, avatar_h / 2 + avatar_y, avatar_w / 2, 0, Math.PI * 2, false);
       ctx.clip();
       ctx.drawImage(res1[1].path, avatar_x, avatar_y, avatar_w, avatar_h);
-      ctx.restore()
+      ctx.restore();
 
-      ctx.font = 'normal 20px bolder 微软雅黑 '
-      ctx.setFillStyle('white')
-      ctx.fillText(item.nickName, avatar_w + avatar_x + 30, avatar_y + 20);
+      ctx.font = 'normal 20px bolder 微软雅黑 ';
+      ctx.setFillStyle('white');
+      ctx.fillText(that.data.shareInfo.nickName, avatar_w + avatar_x + 30, avatar_y + 20);
 
-      ctx.font = 'normal 14px Arial,sans-serif '
-      ctx.setFillStyle('#ddd')
-      ctx.fillText('2020.08.20 ~ 2020.08.27', avatar_w + avatar_x + 30, avatar_y + 42)
+      ctx.font = 'normal 14px Arial,sans-serif ';
+      ctx.setFillStyle('#ddd');
+      ctx.fillText(that.data.shareInfo.beginDate + ' ~ ' + that.data.shareInfo.endDate, avatar_w + avatar_x + 30, avatar_y + 42);
 
       // 完美日
-      ctx.font = 'normal 14px 微软雅黑'
-      ctx.setFillStyle('#ddd')
-      ctx.fillText('打卡天数', avatar_x, avatar_y + 90)
+      ctx.font = 'normal 14px 微软雅黑';
+      ctx.setFillStyle('#ddd');
+      ctx.fillText('打卡天数', avatar_x, avatar_y + 90);
 
-      ctx.font = 'normal 26px bolder 微软雅黑'
-      ctx.setFillStyle('white')
-      ctx.fillText('2', avatar_x, avatar_y + 122)
+      ctx.font = 'normal 26px bolder 微软雅黑';
+      ctx.setFillStyle('white');
+      ctx.fillText(that.data.shareInfo.doingDays + '', avatar_x, avatar_y + 122);
 
-      ctx.font = 'normal 14px 微软雅黑'
-      ctx.setFillStyle('#ddd')
-      ctx.fillText('天', avatar_x + 20, avatar_y + 122)
+      ctx.font = 'normal 14px 微软雅黑';
+      ctx.setFillStyle('#ddd');
+      ctx.fillText('天', avatar_x + 20, avatar_y + 122);
 
       // 打卡天数
-      ctx.font = 'normal 14px 微软雅黑'
-      ctx.setFillStyle('#ddd')
-      ctx.fillText('打卡次数', avatar_x, avatar_y + 160)
+      ctx.font = 'normal 14px 微软雅黑';
+      ctx.setFillStyle('#ddd');
+      ctx.fillText('打卡次数', avatar_x, avatar_y + 160);
 
-      ctx.font = 'normal 26px bolder 微软雅黑'
-      ctx.setFillStyle('white')
-      ctx.fillText('4', avatar_x, avatar_y + 192)
+      let makeGoalNums = that.data.shareInfo.makeGoalNums;
+      ctx.font = 'normal 26px bolder 微软雅黑';
+      ctx.setFillStyle('white');
+      ctx.fillText(makeGoalNums + '', avatar_x, avatar_y + 192);
 
-      ctx.font = 'normal 14px 微软雅黑'
-      ctx.setFillStyle('#ddd')
-      ctx.fillText('次', avatar_x + 20, avatar_y + 192)
+      ctx.font = 'normal 14px 微软雅黑';
+      ctx.setFillStyle('#ddd');
+      ctx.fillText('次', avatar_x + (makeGoalNums > 9 ? 30 : 20), avatar_y + 192);
 
-      ctx.font = 'normal 14px bolder 微软雅黑'
-      ctx.setFillStyle('white')
-      ctx.fillText('逆风的方向更适合飞翔', avatar_x, 282)
+      ctx.font = 'normal 14px bolder 微软雅黑';
+      ctx.setFillStyle('white');
+      ctx.fillText('逆风的方向更适合飞翔', avatar_x, 282);
 
-      ctx.font = 'normal 14px bolder 微软雅黑'
-      ctx.setFillStyle('white')
-      ctx.fillText('不怕万人阻挡只怕自己投降', avatar_x, 300)
+      ctx.font = 'normal 14px bolder 微软雅黑';
+      ctx.setFillStyle('white');
+      ctx.fillText('不怕万人阻挡只怕自己投降', avatar_x, 300);
 
+      // 绘制二维码
       let qr_x = 275;
       let qr_y = 275;
       let qr_w = 50;
       let qr_h = 50;
-      // 二维码位置
       ctx.beginPath();
-      ctx.drawImage(res1[2].path, qr_x - qr_w / 2, qr_y - qr_h / 2, qr_w, qr_h)
+      ctx.drawImage(res1[2].path, qr_x - qr_w / 2, qr_y - qr_h / 2, qr_w, qr_h);
 
-      ctx.setFontSize(10)
-      ctx.setFillStyle('white')
-      ctx.fillText('一起定目标', qr_x - qr_w / 2, qr_y - 5 - qr_h / 2)
+      ctx.setFontSize(10);
+      ctx.setFillStyle('white');
+      ctx.fillText('一起定目标', qr_x - qr_w / 2, qr_y - 5 - qr_h / 2);
 
-      ctx.stroke()
+      ctx.stroke();
       ctx.draw();
       ctx.restore();
 
@@ -272,9 +270,6 @@ Page({
           destHeight: 320 * 3,
           canvasId: 'Canvas',
           success: function (res) {
-            // that.setData({
-            //   canvasImg: res.tempFilePath,
-            // })
             that.setData({
               canvasHide: false
             });
@@ -289,29 +284,15 @@ Page({
     })
   },
 
+  // 保存到相册
   save(canvasImg) {
-    let that = this
-    //生产环境时 记得这里要加入获取相册授权的代码
+    let that = this;
     wx.saveImageToPhotosAlbum({
-
       filePath: canvasImg,
       success(res) {
         that.setData({
           canvasHide: false
         });
-        // wx.showModal({
-        //   content: '图片已保存到相册，赶紧晒一下吧~',
-        //   showCancel: false,
-        //   confirmText: '好',
-        //   confirmColor: '#000000',
-        //   success: function(res) {
-        //     if (res.confirm) {
-        //       that.setData({
-        //         canvasHide: false
-        //       })
-        //     }
-        //   }
-        // })
       }
     })
   },
