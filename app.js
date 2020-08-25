@@ -65,7 +65,7 @@ App({
   globalData: {
     screenWidth: 0,
     screenHeight: 0,
-    currentVersion: '1.0.1',
+    currentVersion: '1.1.0',
     mobileModel: 'iPhone X',
     globalColor: '#27A4FB',
 
