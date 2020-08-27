@@ -30,7 +30,8 @@ Page({
     goalRankList: [],
     selfRankInfo: {},
     postList: [],
-    globalColor: app.globalData.globalColor
+    globalColor: app.globalData.globalColor,
+    auditStatus: app.globalData.auditStatus
   },
 
   onLoad(options) {
@@ -45,6 +46,9 @@ Page({
   },
 
   onShow() {
+    this.setData({
+      auditStatus: app.globalData.auditStatus
+    })
     this.initNavigationBar();
     this.getGoalMakeDetail();
     this.getGoalRankList();
@@ -178,9 +182,9 @@ Page({
   /**
    * 发票动态
    */
-  routePostTalking() {
-    wx.navigateTo({
-      url: `/pages/post-talking/index?goalId=${this.data.goalId}&goalName=${this.data.goalName}&icon=${this.data.icon}&finishNum=${this.data.finishNum}`
-    })
-  }
+  // routePostTalking() {
+  //   wx.navigateTo({
+  //     url: `/pages/post-talking/index?goalId=${this.data.goalId}&goalName=${this.data.goalName}&icon=${this.data.icon}&finishNum=${this.data.finishNum}`
+  //   })
+  // }
 });

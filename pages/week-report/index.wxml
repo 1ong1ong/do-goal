@@ -32,7 +32,7 @@
 				第{{lastWeekReport.weeksInYear}}周
 			</view>
 			<view class="down_share">
-				<van-button size="small" color="#FBB448" icon="friends-o" round open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">分享</van-button>
+				<van-button size="small" color="#FBB448" icon="friends-o" round open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{auditStatus}}">分享</van-button>
 			</view>
 		</view>
 
@@ -92,7 +92,7 @@
 		</view>
 
 
-		<view class="share_btn">
+		<view class="share_btn" wx:if="{{auditStatus}}">
 			<van-button size="normal" color="#e23c1e" round block open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">晒一晒 ></van-button>
 		</view>
 	</view>

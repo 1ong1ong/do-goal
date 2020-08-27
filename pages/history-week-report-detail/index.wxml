@@ -59,9 +59,9 @@
 		</view>
 
 	</view>
-	<view class="share_btn_border">
+	<view class="share_btn_border" wx:if="{{auditStatus}}">
 	</view>
-	<cover-view class="share_btn">
+	<cover-view class="share_btn" wx:if="{{auditStatus}}">
 		<button round block open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">晒一晒 ></button>
 		<!-- <button round block open-type="share">保存</button> -->
 	</cover-view>

@@ -1,11 +1,11 @@
 <!--pages/post-talking/index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="top">
     <view class="avatar">
       <van-image width="100rpx" height="100rpx" src="{{userInfo.avatar}}" radius="6rpx" />
     </view>
     <view class="right">
-      <view class="name">{{userInfo.nickName}}</view>
+      <view class="name">{{userInfo.nickName === null ? '游客' : userInfo.nickName}}</view>
       <view class="auth">
         <view class="btn" bindtap="openPopup">
           <van-icon name="friends" wx:if="{{ allowWatch }}" color="{{globalColor}}" />
@@ -32,7 +32,7 @@
 
 
   <van-action-sheet show="{{ showPopup }}" actions="{{ authProps }}" cancel-text="取消" bind:select="confirmAuth" bind:cancel="closePopup" />
-</view>
+</view> -->
 
 <!-- <van-popup show="{{ false }}" position="bottom" custom-style="height: 20%;" bind:close="closePopup">
   <van-picker columns="{{ columns }}" show-toolbar="{{ true }}" default-index="{{ allowWatch?1:0 }}" bind:confirm="confirmAuth" bind:cancel="closePopup" />

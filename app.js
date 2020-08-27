@@ -1,8 +1,12 @@
 import http from './utils/httpUtils.js';
+import {
+  getVersionAuditStatus
+} from './api/version.js'
+
 
 //app.js
 App({
-  onLaunch: function() {
+  onLaunch: function () {
     let that = this;
     // 检查更新
     if (wx.canIUse('getUpdateManager')) {
@@ -37,8 +41,16 @@ App({
       })
     }
 
-    // 登录
 
+    let currentVersion = '1.1.0';
+    that.globalData.currentVersion = currentVersion;
+    // 获取当前版本审核状态
+    getVersionAuditStatus(currentVersion).then(status => {
+      console.log(status);
+      that.globalData.auditStatus = status;
+    })
+
+    // 登录
     wx.login({
       success: res => {
         http.login(res.code).then((userInfo) => {
@@ -53,7 +65,7 @@ App({
         console.log(res);
         that.globalData.screenWidth = res.screenWidth;
         that.globalData.screenHeight = res.screenHeight;
-        that.mobileModel= res.model;
+        that.mobileModel = res.model;
       }
     })
   },
@@ -61,11 +73,13 @@ App({
   // 引入`towxml3.0`解析方法
   towxml: require('/towxml/index'),
 
-  
+
   globalData: {
     screenWidth: 0,
     screenHeight: 0,
     currentVersion: '1.1.0',
+    auditStatus: false,
+
     mobileModel: 'iPhone X',
     globalColor: '#27A4FB',
 

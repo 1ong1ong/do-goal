@@ -21,6 +21,7 @@ Page({
     endDate:'',
     canvasHide: true,
     shareInfo: null,
+    auditStatus: app.globalData.auditStatus
   },
 
   onLoad(options) {
@@ -32,6 +33,9 @@ Page({
   },
 
   onShow() {
+    this.setData({
+      auditStatus: app.globalData.auditStatus
+    })
     this.getWeekReportHisDetail();
   },
 

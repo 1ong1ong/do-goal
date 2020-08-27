@@ -22,9 +22,13 @@ Page({
     lastWeekReport: null,
     canvasHide: true,
     shareInfo: null,
+    auditStatus: app.globalData.auditStatus
   },
 
   onShow() {
+    this.setData({
+      auditStatus: app.globalData.auditStatus
+    })
     this.getWeekReport();
   },
 

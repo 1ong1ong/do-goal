@@ -1,148 +1,104 @@
 <!--pages/clock-in-detail/index.wxml-->
 <view class="container">
-  <view class="blue_card" style="background-color:{{globalColor}}"/>
+	<view class="blue_card" style="background-color:{{globalColor}}" />
 
-  <view class="card" style="width:{{width}}rpx">
-    <view class="time">{{ finishTime }}</view>
-    <view class="status">今日打卡时间</view>
+	<view class="card" style="width:{{width}}rpx">
+		<view class="time">{{ finishTime }}</view>
+		<view class="status">今日打卡时间</view>
 
-    <view class="card_content">
-      <view class="top">
-        <view class="item">
-          <view class="title">{{ finishNum }}</view>
-          <view class="des">打卡天数</view>
-        </view>
-        <view class="item ">
-          <view class="title level">
-            <do-icon wx:for="{{ levelShowList }}" wx:for-item="name" name="{{name}}" wx:key="name" size="60rpx" color="#fbcd5b" />
-          </view>
-          <view class="des">目标等级</view>
-        </view>
-        <view class="item">
-          <view class="title">{{ finishNum }}/{{ nextLevelNum }}</view>
-          <view class="des">距离升级</view>
-        </view>
-      </view>
-      <van-divider customStyle="margin-top:6rpx;" />
-      <view class="down">
-        <view class="left">
-          <view class="day" wx:for="{{charts}}" wx:for-item="chart" wx:key="index" bindtouchstart="touchPercent" data-index="{{index}}" bindtouchend="touchPercentEnd">
-            <view class="tooltip" style="background-color: {{current === index && chart.percent !==0 ?globalColor:'white'}}">
-              <view class="text">{{chart.time}}</view>
-              <div class="bottom">
-                <view class="triangle" style="background-color: {{current === index&& chart.percent !==0?globalColor:'white'}}" />
-              </div>
-            </view>
-            <view class="percent">
-              <view class="inner" style="height:{{chart.percent}}%;background-color:{{globalColor}}" />
-              <view class="line" wx:if="{{current === index && chart.percent !==0}}" />
-            </view>
-            {{chart.date}}
-          </view>
-        </view>
-        <view class="right">
-          <view class="up">{{ latestTime }}</view>
-          <view class="down">{{ earliestTime }}</view>
-        </view>
-      </view>
-    </view>
+		<view class="card_content">
+			<view class="top">
+				<view class="item">
+					<view class="title">{{ finishNum }}</view>
+					<view class="des">打卡天数</view>
+				</view>
+				<view class="item ">
+					<view class="title level">
+						<do-icon wx:for="{{ levelShowList }}" wx:for-item="name" name="{{name}}" wx:key="name" size="60rpx" color="#fbcd5b" />
+					</view>
+					<view class="des">目标等级</view>
+				</view>
+				<view class="item">
+					<view class="title">{{ finishNum }}/{{ nextLevelNum }}</view>
+					<view class="des">距离升级</view>
+				</view>
+			</view>
+			<van-divider customStyle="margin-top:6rpx;" />
+			<view class="down">
+				<view class="left">
+					<view class="day" wx:for="{{charts}}" wx:for-item="chart" wx:key="index" bindtouchstart="touchPercent" data-index="{{index}}" bindtouchend="touchPercentEnd">
+						<view class="tooltip" style="background-color: {{current === index && chart.percent !==0 ?globalColor:'white'}}">
+							<view class="text">{{chart.time}}</view>
+							<div class="bottom">
+								<view class="triangle" style="background-color: {{current === index&& chart.percent !==0?globalColor:'white'}}" />
+							</div>
+						</view>
+						<view class="percent">
+							<view class="inner" style="height:{{chart.percent}}%;background-color:{{globalColor}}" />
+							<view class="line" wx:if="{{current === index && chart.percent !==0}}" />
+						</view>
+						{{chart.date}}
+					</view>
+				</view>
+				<view class="right">
+					<view class="up">{{ latestTime }}</view>
+					<view class="down">{{ earliestTime }}</view>
+				</view>
+			</view>
+		</view>
 
-    <view class="post-add" bindtap="routePostTalking">
-      <view class="post_input">
-        <text>记录一下</text>
-      </view>
-      <view class="post_photo_icon">
-        <van-icon name="photograph" size="60rpx" color="{{globalColor}}" style="opacity:0.8"/>
-      </view>
-    </view>
-
-    <view class="bottom_tabs">
-      <van-tabs swipeable animated active="0" color="{{globalColor}}" titleActiveColor="{{globalColor}}" custom-class="tabs_custom" sticky>
-        <van-tab title="总排名" name="0" custom-class="tabs_custom">
-          <view class="tab_view">
-            <view class="tab_view_head">
-              <van-cell use-label-slot="true" center>
-                <view slot="title">
-                  <view class="view_title">
-                    {{ selfRankInfo.nickName }}
-                  </view>
-                </view>
-                <view slot="label">
-                  <view class="view_label">
-                    已经坚持了
-                    <text style="color:{{globalColor}}">{{ selfRankInfo.finishDays }}</text>天
-                    <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text> 第
-                    <text style="color:{{globalColor}}">{{ selfRankInfo.rankNum }}</text>名
-                    <!-- <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text>
+		<view class="bottom_tabs">
+			<view class="tab_view">
+				<view class="tab_view_head">
+					<van-cell use-label-slot="true" center>
+						<view slot="title">
+							<view class="view_title">
+								{{ selfRankInfo.nickName }}
+							</view>
+						</view>
+						<view slot="label">
+							<view class="view_label">
+								已经坚持了
+								<text style="color:{{globalColor}}">{{ selfRankInfo.finishDays }}</text>天
+								<text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text> 第
+								<text style="color:{{globalColor}}">{{ selfRankInfo.rankNum }}</text>名
+								<!-- <text style="padding-left: 15rpx;padding-right: 15rpx;color: #d5d5d5">|</text>
                     <van-icon name="like" size="30rpx" color="{{ selfRankInfo.likeNum===0?'#d5d5d5':'red' }}" />
                     <view class="like-num1" >{{ selfRankInfo.likeNum===0 ? ' ' : selfRankInfo.likeNum }}</view> -->
-                  </view>
-                </view>
-                <view slot="right-icon">
-                  <view class="view_icon_end">
-                    <button class="invite_btn" open-type="share" style="background-color:{{globalColor}}">
-                      邀请好友
-                    </button>
-                  </view>
-                </view>
-              </van-cell>
-            </view>
-            <van-cell use-label-slot="true" center wx:for="{{ goalRankList }}" wx:for-item="item" wx:key="id">
-              <view slot="icon">
-                <view class="view_icon_start">
-                  <text style="margin-right: 30rpx;font-weight: bold;color: #999999">{{ item.rankNum }}</text>
-                  <image src="{{item.avatar}}" mode="scaleToFill" style="height: 90rpx;width: 90rpx;" />
-                </view>
-              </view>
-              <view slot="title">
-                <view class="view_title">
-                  {{item.nickName}}
-                </view>
-              </view>
-              <view slot="right-icon">
-                <view class="view_icon_end">
-                  <text style="color: red;margin-right: 10rpx;">{{ item.finishDays }}天</text>
-                  <!-- <view class="like-icon">
+							</view>
+						</view>
+						<view slot="right-icon">
+							<view class="view_icon_end">
+								<button wx:if="{{auditStatus}}" class="invite_btn" open-type="share" style="background-color:{{globalColor}}">
+									邀请好友
+								</button>
+							</view>
+						</view>
+					</van-cell>
+				</view>
+				<van-cell use-label-slot="true" center wx:for="{{ goalRankList }}" wx:for-item="item" wx:key="id">
+					<view slot="icon">
+						<view class="view_icon_start">
+							<text style="margin-right: 30rpx;font-weight: bold;color: #999999">{{ item.rankNum }}</text>
+							<image src="{{item.avatar}}" mode="scaleToFill" style="height: 90rpx;width: 90rpx;" />
+						</view>
+					</view>
+					<view slot="title">
+						<view class="view_title">
+							{{item.nickName === null ? '游客' : item.nickName}}
+						</view>
+					</view>
+					<view slot="right-icon">
+						<view class="view_icon_end">
+							<text style="color: red;margin-right: 10rpx;">{{ item.finishDays }}天</text>
+							<!-- <view class="like-icon">
                     <van-icon name="like" size="40rpx" color="{{item.likeNum===0?'#d5d5d5':'red'}}" />
                     <view class="like-num" >{{ item.likeNum===0 ? ' ' : item.likeNum }}</view>
                   </view> -->
-                </view>
-              </view>
-            </van-cell>
-
-          </view>
-        </van-tab>
-        <van-tab title="今日动态" name="1">
-          <scroll-view scroll-y enable-back-to-top >
-            <view class="no_talking_tip" wx:if="{{ postList.length===0 }}">还没有动态哦</view>
-            <view class="tab_view" >
-              <!--todo:-->
-              <view class="post_card" wx:if="{{ postList.length>0 }}" wx:for="{{ postList }}" wx:for-item="item" wx:key="id">
-                <view class="post_card_avatar">
-                  <van-image width="100rpx" height="100rpx" src="{{ item.avatar }}" radius="6rpx" />
-                </view>
-                <view class="post_card_right">
-                  <view class="post_card_right_name">
-                    <text>{{item.nickName}}</text>
-                    <view class="post_card_right_gender_info">
-                      <do-icon name="nan" size="30rpx" color="#1989fa" wx:if="{{ item.gender===1 }}" />
-                      <do-icon name="nv" size="30rpx" color="#d4237a" wx:if="{{ item.gender===2 }}" />
-                    </view>
-                  </view>
-                  <view class="post_card_right_text_info">
-                    <text>{{item.content}}</text>
-                  </view>
-                  <view class="post_card_right_goal_info">
-                    <!-- <do-icon name="{{item.icon}}" size="30rpx" color="#1989fa" />
-                    <text class="post_card_right_goal_info_goal_name">{{item.goalName}}</text> -->
-                    <text class="post_card_right_goal_info_finish_num" style="color:{{globalColor}}">坚持第{{item.currentFinishTimes}}天</text>
-                  </view>
-                </view>
-              </view>
-            </view>
-          </scroll-view>
-        </van-tab>
-      </van-tabs>
-    </view>
-  </view>
+						</view>
+					</view>
+				</van-cell>
+			</view>
+		</view>
+	</view>
 </view>
