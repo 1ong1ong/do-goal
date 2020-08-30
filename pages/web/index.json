@@ -1,5 +1,7 @@
 {
   "usingComponents": {
     "towxml": "/towxml/towxml"
-  }
+  },
+  "backgroundColorTop": "#ffffff",
+  "backgroundColorBottom": "#ffffff"
 }

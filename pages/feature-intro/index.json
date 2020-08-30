@@ -2,5 +2,7 @@
   "usingComponents": {
     "van-cell": "../../components/vant/cell"
   },
-  "navigationBarTitleText": "功能介绍"
+  "navigationBarTitleText": "功能介绍",
+  "backgroundColorTop": "#ffffff",
+  "backgroundColorBottom": "#ffffff"
 }

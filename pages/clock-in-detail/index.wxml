@@ -3,8 +3,12 @@
 	<view class="blue_card" style="background-color:{{globalColor}}" />
 
 	<view class="card" style="width:{{width}}rpx">
-		<view class="time">{{ finishTime }}</view>
-		<view class="status">今日打卡时间</view>
+		<view class="time" wx:if="{{finishTime != ''}}">{{ finishTime }}</view>
+		<view class="status" wx:if="{{finishTime != ''}}">今日打卡时间</view>
+
+		<view class="make-goal-btn-view" wx:if="{{finishTime == ''}}">
+			<button class="make-goal-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" bindtap="message">打卡</button>
+		</view>
 
 		<view class="card_content">
 			<view class="top">
@@ -41,8 +45,8 @@
 					</view>
 				</view>
 				<view class="right">
-					<view class="up">{{ latestTime }}</view>
-					<view class="down">{{ earliestTime }}</view>
+					<view class="up">{{ latestTime == null ? '00:00': latestTime}}</view>
+					<view class="down">{{ earliestTime  == null ? '00:00': earliestTime}}</view>
 				</view>
 			</view>
 		</view>
@@ -102,3 +106,16 @@
 		</view>
 	</view>
 </view>
+
+<van-transition show="{{ !canvasHide }}" name="fade-up" duration="{{600}}">
+	<view class="model" hidden="{{canvasHide}}" bindtap="hideCanvas" catchtouchmove="move" style="height:{{height}}px;width:{{widthCanvas}}px">
+		<canvas canvas-id="Canvas" class="canvas"></canvas>
+		<view class="model-footer">
+			<view class="btn-change" catchtap="canvas">换一张</view>
+			<view class="btn-save" catchtap="save">保存打卡图片</view>
+		</view>
+	</view>
+</van-transition>
+
+
+  <van-dialog id="van-dialog" />

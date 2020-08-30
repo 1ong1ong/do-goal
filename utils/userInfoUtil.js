@@ -7,7 +7,7 @@ import {
  */
 export function getUserInfo() {
   let userInfoTmp = wx.getStorageSync("userInfo");
-  console.log("getUserInfo");
+  console.log("getUserInfo",userInfoTmp);
   return new Promise((resolved, rejected) => {
     wx.getUserInfo({
       lang: 'zh_CN',
@@ -15,7 +15,7 @@ export function getUserInfo() {
         console.log("getUserInfo success", res);
         let userInfo = res.userInfo;
         // 授权成功，更新用户资料
-        updateUserInfo(userInfoTmp.userId, userInfo).then(()=> {
+        updateUserInfo(userInfoTmp.id, userInfo).then(()=> {
           getCurrentUserInfo().then((userInfo) => {
             wx.setStorage({
               key: "userInfo",

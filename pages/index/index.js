@@ -179,17 +179,20 @@ Page({
   goGoalDetail(e) {
     let goal = e.currentTarget.dataset.goal;
     // 今天打过打卡
-    if (goal.finishedToday) {
-      wx.navigateTo({
-        url: `/pages/clock-in-detail/index?goalId=${goal.id}&goalName=${goal.name}&icon=${goal.icon}`
-      });
-    }
-    // 今天没有打卡了
-    else {
-      wx.navigateTo({
-        url: `/pages/clock-in/index?goalId=${goal.id}&goalName=${goal.name}&icon=${goal.icon}`
-      });
-    }
+    wx.navigateTo({
+      url: `/pages/clock-in-detail/index?goalId=${goal.id}&goalName=${goal.name}&icon=${goal.icon}`
+    });
+    // if (goal.finishedToday) {
+    //   wx.navigateTo({
+    //     url: `/pages/clock-in-detail/index?goalId=${goal.id}&goalName=${goal.name}&icon=${goal.icon}`
+    //   });
+    // }
+    // // 今天没有打卡了
+    // else {
+    //   wx.navigateTo({
+    //     url: `/pages/clock-in/index?goalId=${goal.id}&goalName=${goal.name}&icon=${goal.icon}`
+    //   });
+    // }
 
   },
 

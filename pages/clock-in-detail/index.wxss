@@ -30,15 +30,65 @@ page {
 }
 
 .time {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
   font-size: 90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
   color: white;
   padding-left: 30rpx;
 }
 
 .status {
   color: white;
+  height: 30rpx;
+  line-height: 30rpx;
   font-size: 26rpx;
   padding-left: 30rpx;
+}
+
+.make-goal-btn-view {
+  /* background-color: salmon; */
+  position: relative;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+}
+
+.make-goal-btn {
+  border: 1px #fff solid;
+  width: 130rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  border-radius: 120rpx;
+  position: absolute;
+  left: 30rpx;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+button::after {
+  border: none;
+  background-color: transparent;
+}
+
+button {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: inherit;
+}
+
+button {
+  border-radius: 0;
+}
+
+.button-hover {
+  background-color: white;
+  color: #27A4FB;
+  border: none;
 }
 
 .card_content {
@@ -329,4 +379,70 @@ page {
 .post_card_right_goal_info_finish_num {
   /* margin-left: 10rpx; */
   font-size: 24rpx;
-}  
+}
+
+
+
+.model {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+  /* background-color: #FE2B54; */
+  left: 0;
+  top: 0; 
+  padding-top: 30%;
+}
+ 
+.canvas{
+  width: 320px;
+  height: 320px;
+  /* position: fixed; */
+  /* left: 0; */
+  /* right: 0; */
+  /* top: 20%; */
+  z-index: 999;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 10px;
+}
+
+
+.model-footer {
+  margin: 0 auto;
+  width: 320px;
+  height: 60rpx;
+  margin-top: 60rpx;
+  /* background-color: #1989fa; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn-change {
+  width: 130px;
+  height: 40px;
+  border-radius: 40px;
+  line-height: 40px;
+  background: transparent;
+  color: #e5e5e5;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px white solid;
+  z-index: 99999;
+}
+.btn-save {
+  width: 130px;
+  height: 40px;
+  border-radius: 40px;
+  line-height: 40px;
+  background: #FE2B54;
+  border: 2px #FE2B54 solid;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 99999;
+}
+
+

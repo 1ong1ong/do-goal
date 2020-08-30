@@ -41,11 +41,8 @@ App({
       })
     }
 
-
-    let currentVersion = '1.1.0';
-    that.globalData.currentVersion = currentVersion;
     // 获取当前版本审核状态
-    getVersionAuditStatus(currentVersion).then(status => {
+    getVersionAuditStatus(that.globalData.currentVersion).then(status => {
       console.log(status);
       that.globalData.auditStatus = status;
     })
@@ -77,7 +74,7 @@ App({
   globalData: {
     screenWidth: 0,
     screenHeight: 0,
-    currentVersion: '1.1.0',
+    currentVersion: '1.2.1',
     auditStatus: false,
 
     mobileModel: 'iPhone X',

@@ -7,9 +7,12 @@
     "van-tabs": "../../components/vant/tabs",
     "van-cell": "../../components/vant/cell",
     "van-image": "../../components/vant/image",
-    "do-icon": "../../components/my/icon"
+    "do-icon": "../../components/my/icon",
+    "van-transition": "../../components/vant/transition",
+    "van-dialog": "../../components/vant/dialog"
   },
-  "backgroundColorBottom": "#ffffff",
+  "backgroundColorTop": "#27A4FB",
+  "backgroundColorBottom": "#f5f5f5",
   "enablePullDownRefresh": false,
   "navigationBarTextStyle": "white"
 }

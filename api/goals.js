@@ -4,8 +4,8 @@ export function userGoalList() {
   return http.get(`/goals/user`);
 }
 
-export function userMakeGoal(goalId, userId) {
-  return http.put(`/goals/${goalId}/users/${userId}`);
+export function userMakeGoal(goalId) {
+  return http.put(`/goals/${goalId}`);
 }
 
 export function getGoalList() {

@@ -120,22 +120,27 @@ Page({
   addGoal() {
     let that = this;
     wx.requestSubscribeMessage({
-      tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8','QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8','QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'],
+      tmplIds: ['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8','UHggJVhRqb1k42hqxbdETUfuiIa2zTXvwOnqF7oNr0E'],
       success(res) {
         console.log("requestSubscribeMessage success result:", res);
-        if (res['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'] === "accept") {
+        if (res['QAEIUBgrncQV9hVxbhf4pPKVA0aaKivOm31jLhPpIM8'] === "accept" || ['UHggJVhRqb1k42hqxbdETUfuiIa2zTXvwOnqF7oNr0E'] === "accept") {
           that.addGoalReq();
         } else {
           Dialog.alert({
             title: '打卡提示',
-            message: '>.< 您狠心拒绝了消息提醒，下次将不会收到提醒消息！',
+            message: '>.< 您拒绝了消息提醒，将不会收到提醒消息！',
           }).then(() => {
             that.addGoalReq();
           });
         }
       },
       fail(res) {
-        console.log("requestSubscribeMessage fail result:", res);
+        Dialog.alert({
+          title: '打卡提示',
+          message: '>.< 您关闭拒绝了消息提醒，将不会收到提醒消息！',
+        }).then(() => {
+          that.addGoalReq();
+        });
       }
     })
   },
